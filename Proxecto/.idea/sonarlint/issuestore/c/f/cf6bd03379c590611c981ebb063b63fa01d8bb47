@@ -1,0 +1,24 @@
+
+
+java:S1186¿"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(»¸Õèıÿÿÿÿ
+|
+java:S4144›"`Update this method so that its implementation is not identical to "findByNomeCarta" on line 103.(ÿÅ·Šøÿÿÿÿ
+V	java:S125s"<This block of commented-out lines of code should be removed.(üÚÿøÿÿÿÿ
+W	java:S125§"<This block of commented-out lines of code should be removed.(üÚÿøÿÿÿÿ
+U
+java:S1128":Remove this unused import 'modelo.vo.Usuario.Propietario'.(åí•õùÿÿÿÿ
+d
+java:S1192;"IDefine a constant instead of duplicating this literal "id_carta" 5 times.(ò—À£øÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(“âÓêÿÿÿÿÿ
+e
+java:S2095O"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÓÌˆ
+f
+java:S2095 "OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÓÌˆ
+f
+java:S2095…"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÓÌˆ
+]
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(‘ö¬‹
+e
+java:S20957"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÓÌˆ
+e
+java:S2095l"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÓÌˆ

@@ -1,0 +1,10 @@
+
+E
+java:S1656"/Remove or correct this useless self-assignment.(∫É‘ß
+E
+java:S1656"/Remove or correct this useless self-assignment.(‚ˆÃ†
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(É‡µ≈
+x
+java:S4165"bRemove this useless assignment; "tipo" already holds the assigned value along all execution paths.(∫É‘ß
+~
+java:S4165"hRemove this useless assignment; "fabricante" already holds the assigned value along all execution paths.(‚ˆÃ†

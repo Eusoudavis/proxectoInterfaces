@@ -1,0 +1,10 @@
+Insert into tipo_bebida (nome_tipo_bebida) values ('cervexa');
+Insert into tipo_bebida (nome_tipo_bebida) values ('auga');
+Insert into tipo_bebida (nome_tipo_bebida) values ('Combinado');
+Insert into tipo_bebida (nome_tipo_bebida) values ('viño');
+Insert into tipo_bebida (nome_tipo_bebida) values ('refresco');
+Insert into tipo_bebida (nome_tipo_bebida) values ('zume');
+Insert into tipo_bebida (nome_tipo_bebida) values ('infusion');
+Insert into tipo_bebida (nome_tipo_bebida) values ('cafe');
+Insert into tipo_bebida (nome_tipo_bebida) values ('batido');
+Insert into tipo_bebida (nome_tipo_bebida) values ('cocktail');

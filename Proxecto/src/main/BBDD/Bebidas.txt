@@ -1,0 +1,14 @@
+Insert into bebida values (6, 'Cabreiroa', 19);
+Insert into bebida values (6, 'Cabreiroa', 20);
+Insert into bebida values (11, 'Hornimans', 21);
+Insert into bebida values (12, 'Lavazza', 22);
+Insert into bebida values (9, 'Fanta', 23);
+Insert into bebida values (8, 'Mar de Frades', 24);
+Insert into bebida values (8, 'Alma Atlantica', 25);
+Insert into bebida values (8, 'Emina Rose', 26);
+Insert into bebida values (8, 'Rectoral de Amandi', 27);
+Insert into bebida values (10, 'Juver', 28);
+Insert into bebida values (13, 'Puleva', 29);
+Insert into bebida values (14, 'TxinTxon', 30);
+Insert into bebida values (11, 'Hornimans', 31);
+Insert into bebida values (9, 'Schweppes', 32);

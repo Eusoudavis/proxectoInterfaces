@@ -1,0 +1,746 @@
+
+n	java:S116¶"XRename this field "BgPropietario" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶âóà
+u	java:S116·"ZRename this field "BotonActualizar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íÄ«şÿÿÿÿ
+v	java:S116¸"[Rename this field "BotonActualizar1" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àíÇ—üÿÿÿÿ
+l	java:S116¹"VRename this field "BotonBorrar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âõÚõ
+l	java:S116º"VRename this field "BotonBuscar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ëîà
+r	java:S116»"WRename this field "BotonBuscar1" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á·—Àùÿÿÿÿ
+q	java:S116¼"[Rename this field "BotonBuscarCarta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥ãÏÒ
+q	java:S116½"[Rename this field "BotonBuscarMarca" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÍ¹á
+m	java:S116¾"XRename this field "BotonEliminar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿö>
+q	java:S116¿"[Rename this field "BotonGardarCarta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃÉ±£
+p	java:S116À"[Rename this field "BotonGardarLocal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê€¹m
+q	java:S116Á"VRename this field "BotonLimpar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïßùÿÿÿÿ
+q	java:S116Â"[Rename this field "BotonSaveCartPro" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºĞÒö
+l	java:S116Ã"VRename this field "BuscaBebida" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á½”ç
+p	java:S116Ä"URename this field "BuscaPrato" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡ÿÖ¸şÿÿÿÿ
+p	java:S116Å"URename this field "ComboCarta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ş’ÒÊûÿÿÿÿ
+n	java:S116Æ"XRename this field "ComboConcello" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò‡’à
+x	java:S116Ç"]Rename this field "ComboConcelloLocal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³‚ö°üÿÿÿÿ
+l	java:S116È"WRename this field "ComboEncargo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õÿö
+s	java:S116É"]Rename this field "ComboEspecialidade" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü±äĞ
+n	java:S116Ê"XRename this field "ComboEstacion" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åôÔŠ
+q	java:S116Ë"[Rename this field "ComboIngrediente" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™àäÖ
+l	java:S116Ì"VRename this field "ComboMarcas" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©¢ùµ
+p	java:S116Í"URename this field "ComboPrato" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Üê…ñûÿÿÿÿ
+t	java:S116Î"^Rename this field "ComboProdutoBebidas" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã„Ü¾
+h	java:S116Ï"SRename this field "ComboRol" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´”è&
+v	java:S116Ğ"[Rename this field "ComboTipoBebidas" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é›Ó½ùÿÿÿÿ
+o	java:S116Ñ"YRename this field "ComboTipoLocal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Âî†”
+v	java:S116Ò"[Rename this field "LabeLEngadeLocal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÃß©ûÿÿÿÿ
+u	java:S116Ó"ZRename this field "LabelDatosLocal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ ÂÊúÿÿÿÿ
+s	java:S116Ô"XRename this field "LabelDatosPro" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨³õ“ıÿÿÿÿ
+n	java:S116Õ"XRename this field "LabelIconoPro" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø¢ÏŠ
+r	java:S116Ö"\Rename this field "LabelInfoCalCarta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âÂÅİ
+t	java:S116×"YRename this field "LabelInfoCarta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñà»Øúÿÿÿÿ
+o	java:S116Ø"YRename this field "LabelMarchoPro" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·Áó
+q	java:S116Ù"[Rename this field "LabelSuperiorPro" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô½Á˜
+o	java:S116Ú"TRename this field "PanelChau" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºñËÚùÿÿÿÿ
+n	java:S116Û"SRename this field "PanelCin" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıñ¥ùÿÿÿÿ
+o	java:S116Ü"TRename this field "PanelCuar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñ€‰»ÿÿÿÿÿ
+u	java:S116İ"ZRename this field "PanelDatosLocal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôâÿ¨ûÿÿÿÿ
+n	java:S116Ş"XRename this field "PanelDatosPro" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó§¢ü
+p	java:S116ß"[Rename this field "PanelEngadeLocal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÆ¦B
+u	java:S116à"ZRename this field "PanelFixoInicio" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êõ†ûÿÿÿÿ
+t	java:S116á"YRename this field "PanelInfoCarta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µöñÎøÿÿÿÿ
+q	java:S116â"VRename this field "PanelInfoLo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç€¾šûÿÿÿÿ
+v	java:S116ã"[Rename this field "PanelInicioLocal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôãƒ“üÿÿÿÿ
+u	java:S116ä"ZRename this field "PanelLateralPro" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÙøÿÿÿÿ
+t	java:S116å"YRename this field "PanelMarchoPro" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ©¹ıÿÿÿÿ
+n	java:S116æ"SRename this field "PanelPri" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é´Åäûÿÿÿÿ
+n	java:S116ç"XRename this field "PanelPriDatos" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õµ±ç
+q	java:S116è"[Rename this field "PanelPriDatosPro" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç©
+p	java:S116é"ZRename this field "PanelPriEngadir" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕğÍÍ
+l	java:S116ê"VRename this field "PanelPriPro" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾õç©
+n	java:S116ë"SRename this field "PanelSeg" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö¨Ô­øÿÿÿÿ
+q	java:S116ì"[Rename this field "PanelSuperiorPro" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò–ƒá
+i	java:S116í"SRename this field "PanelTer" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£Ã¬Ï
+s	java:S116î"XRename this field "TabInicialPro" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß¦úÈüÿÿÿÿ
+q	java:S116ï"VRename this field "TextApelido" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃÎ­ˆûÿÿÿÿ
+m	java:S116ğ"WRename this field "TextApelido2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›×ÖÌ
+q	java:S116ñ"VRename this field "TextBuscaID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÍ’‰øÿÿÿÿ
+t	java:S116ò"YRename this field "TextBuscaLocal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îúã ûÿÿÿÿ
+j	java:S116ó"TRename this field "TextCarta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑÃöÀ
+o	java:S116ô"TRename this field "TextEmail" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡õÎèøÿÿÿÿ
+o	java:S116õ"YRename this field "TextEmailLocal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â®’„
+w	java:S116ö"\Rename this field "TextEspecialidade" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªœŞÿüÿÿÿÿ
+q	java:S116÷"[Rename this field "TextIdLocalCarta" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓíïÜ
+q	java:S116ø"[Rename this field "TextIdPrezoVenda" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«ıİĞ
+n	java:S116ù"SRename this field "TextNome" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©Îöÿÿÿÿÿ
+n	java:S116ú"XRename this field "TextNomeLocal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦¯ñ
+m	java:S116û"RRename this field "TextNum" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îÒÔ±ıÿÿÿÿ
+r	java:S116ü"WRename this field "TextNumLocal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ÃÅùÿÿÿÿ
+p	java:S116ı"ZRename this field "TextPropietario" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–ùò¥
+h	java:S116ş"RRename this field "TextRua" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚Èçù
+m	java:S116ÿ"WRename this field "TextRuaLocal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÇÛ
+n	java:S116€"SRename this field "TextTelf" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úã˜¶üÿÿÿÿ
+n	java:S116"XRename this field "TextTelfLocal" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ´¤›
+‰
+java:S4144–"mUpdate this method so that its implementation is not identical to "LabelDatosLocalMouseEntered" on line 1754.(éöå÷şÿÿÿÿ
+Š
+java:S4144ß"nUpdate this method so that its implementation is not identical to "PanelEngadeLocalMouseEntered" on line 1762.(×“ÕÕùÿÿÿÿ
+‡
+java:S4144ï"kUpdate this method so that its implementation is not identical to "PanelDatosProMouseEntered" on line 1770.(àÆ—Úüÿÿÿÿ
+ƒ
+java:S4144Í"mUpdate this method so that its implementation is not identical to "PanelFixoInicioMouseEntered" on line 1786.(®Ù”
+ˆ
+java:S4144ÿ"lUpdate this method so that its implementation is not identical to "PanelDatosLocalMouseExited" on line 1806.(äã—±øÿÿÿÿ
+‰
+java:S4144ç"mUpdate this method so that its implementation is not identical to "PanelEngadeLocalMouseExited" on line 1822.(Ì„Ùéÿÿÿÿÿ
+†
+java:S4144÷"jUpdate this method so that its implementation is not identical to "PanelDatosProMouseExited" on line 1830.(’´ı¶ûÿÿÿÿ
+?
+java:S1659'"$Declare "yMouse" on a separate line.(ÏøÌ˜úÿÿÿÿ
+s
+java:S1450¶"\Remove the "BgPropietario" field and declare it as a local variable in the relevant methods.(¶âóà
+z
+java:S1450·"^Remove the "BotonActualizar" field and declare it as a local variable in the relevant methods.(íÄ«şÿÿÿÿ
+{
+java:S1450¸"_Remove the "BotonActualizar1" field and declare it as a local variable in the relevant methods.(àíÇ—üÿÿÿÿ
+q
+java:S1450¹"ZRemove the "BotonBorrar" field and declare it as a local variable in the relevant methods.(âõÚõ
+q
+java:S1450º"ZRemove the "BotonBuscar" field and declare it as a local variable in the relevant methods.(‡ëîà
+w
+java:S1450»"[Remove the "BotonBuscar1" field and declare it as a local variable in the relevant methods.(Á·—Àùÿÿÿÿ
+v
+java:S1450¼"_Remove the "BotonBuscarCarta" field and declare it as a local variable in the relevant methods.(¥ãÏÒ
+v
+java:S1450½"_Remove the "BotonBuscarMarca" field and declare it as a local variable in the relevant methods.(ØÍ¹á
+r
+java:S1450¾"\Remove the "BotonEliminar" field and declare it as a local variable in the relevant methods.(Ÿö>
+v
+java:S1450¿"_Remove the "BotonGardarCarta" field and declare it as a local variable in the relevant methods.(ÃÉ±£
+u
+java:S1450À"_Remove the "BotonGardarLocal" field and declare it as a local variable in the relevant methods.(Ê€¹m
+v
+java:S1450Á"ZRemove the "BotonLimpar" field and declare it as a local variable in the relevant methods.(ïßùÿÿÿÿ
+v
+java:S1450Â"_Remove the "BotonSaveCartPro" field and declare it as a local variable in the relevant methods.(ºĞÒö
+q
+java:S1450Ã"ZRemove the "BuscaBebida" field and declare it as a local variable in the relevant methods.(á½”ç
+u
+java:S1450Ä"YRemove the "BuscaPrato" field and declare it as a local variable in the relevant methods.(¡ÿÖ¸şÿÿÿÿ
+q
+java:S1450È"[Remove the "ComboEncargo" field and declare it as a local variable in the relevant methods.(Õÿö
+x
+java:S1450É"aRemove the "ComboEspecialidade" field and declare it as a local variable in the relevant methods.(ü±äĞ
+s
+java:S1450Õ"\Remove the "LabelIconoPro" field and declare it as a local variable in the relevant methods.(Ø¢ÏŠ
+w
+java:S1450Ö"`Remove the "LabelInfoCalCarta" field and declare it as a local variable in the relevant methods.(âÂÅİ
+y
+java:S1450×"]Remove the "LabelInfoCarta" field and declare it as a local variable in the relevant methods.(Ñà»Øúÿÿÿÿ
+v
+java:S1450Ù"_Remove the "LabelSuperiorPro" field and declare it as a local variable in the relevant methods.(ô½Á˜
+t
+java:S1450Ú"XRemove the "PanelChau" field and declare it as a local variable in the relevant methods.(ºñËÚùÿÿÿÿ
+s
+java:S1450Û"WRemove the "PanelCin" field and declare it as a local variable in the relevant methods.(ıñ¥ùÿÿÿÿ
+t
+java:S1450Ü"XRemove the "PanelCuar" field and declare it as a local variable in the relevant methods.(Ñ€‰»ÿÿÿÿÿ
+y
+java:S1450á"]Remove the "PanelInfoCarta" field and declare it as a local variable in the relevant methods.(µöñÎøÿÿÿÿ
+v
+java:S1450â"ZRemove the "PanelInfoLo" field and declare it as a local variable in the relevant methods.(Ç€¾šûÿÿÿÿ
+z
+java:S1450ä"^Remove the "PanelLateralPro" field and declare it as a local variable in the relevant methods.(ÜÙøÿÿÿÿ
+s
+java:S1450æ"WRemove the "PanelPri" field and declare it as a local variable in the relevant methods.(é´Åäûÿÿÿÿ
+s
+java:S1450ç"\Remove the "PanelPriDatos" field and declare it as a local variable in the relevant methods.(Õµ±ç
+v
+java:S1450è"_Remove the "PanelPriDatosPro" field and declare it as a local variable in the relevant methods.(ç©
+u
+java:S1450é"^Remove the "PanelPriEngadir" field and declare it as a local variable in the relevant methods.(ÕğÍÍ
+q
+java:S1450ê"ZRemove the "PanelPriPro" field and declare it as a local variable in the relevant methods.(¾õç©
+s
+java:S1450ë"WRemove the "PanelSeg" field and declare it as a local variable in the relevant methods.(ö¨Ô­øÿÿÿÿ
+v
+java:S1450ì"_Remove the "PanelSuperiorPro" field and declare it as a local variable in the relevant methods.(ò–ƒá
+n
+java:S1450í"WRemove the "PanelTer" field and declare it as a local variable in the relevant methods.(£Ã¬Ï
+y
+java:S1450ò"]Remove the "TextBuscaLocal" field and declare it as a local variable in the relevant methods.(îúã ûÿÿÿÿ
+|
+java:S1450ö"`Remove the "TextEspecialidade" field and declare it as a local variable in the relevant methods.(ªœŞÿüÿÿÿÿ
+v
+java:S1450ø"_Remove the "TextIdPrezoVenda" field and declare it as a local variable in the relevant methods.(«ıİĞ
+n
+java:S1450„"WRemove the "jButton1" field and declare it as a local variable in the relevant methods.(å……¶
+n
+java:S1450…"WRemove the "jButton2" field and declare it as a local variable in the relevant methods.(¤½ÃÜ
+s
+java:S1450†"WRemove the "jButton3" field and declare it as a local variable in the relevant methods.(ĞäğËıÿÿÿÿ
+s
+java:S1450‡"WRemove the "jButton4" field and declare it as a local variable in the relevant methods.(€„ˆÎÿÿÿÿÿ
+n
+java:S1450ˆ"WRemove the "jButton7" field and declare it as a local variable in the relevant methods.(İöÏÒ
+r
+java:S1450‰"VRemove the "jLabel1" field and declare it as a local variable in the relevant methods.(°ãÉ¸ÿÿÿÿÿ
+s
+java:S1450Š"WRemove the "jLabel10" field and declare it as a local variable in the relevant methods.(¼õò†şÿÿÿÿ
+s
+java:S1450‹"WRemove the "jLabel11" field and declare it as a local variable in the relevant methods.(‰Ó‚©øÿÿÿÿ
+n
+java:S1450Œ"WRemove the "jLabel12" field and declare it as a local variable in the relevant methods.(¶“¡
+s
+java:S1450"WRemove the "jLabel13" field and declare it as a local variable in the relevant methods.(ÑİĞİıÿÿÿÿ
+s
+java:S1450"WRemove the "jLabel14" field and declare it as a local variable in the relevant methods.(ÖóœÍıÿÿÿÿ
+s
+java:S1450"WRemove the "jLabel15" field and declare it as a local variable in the relevant methods.(³şâçøÿÿÿÿ
+s
+java:S1450"WRemove the "jLabel16" field and declare it as a local variable in the relevant methods.(š¼ª¯üÿÿÿÿ
+n
+java:S1450‘"WRemove the "jLabel17" field and declare it as a local variable in the relevant methods.(„Ç›Ä
+m
+java:S1450’"WRemove the "jLabel18" field and declare it as a local variable in the relevant methods.(†«=
+s
+java:S1450“"WRemove the "jLabel19" field and declare it as a local variable in the relevant methods.(Şù’±ıÿÿÿÿ
+r
+java:S1450”"VRemove the "jLabel2" field and declare it as a local variable in the relevant methods.(™úòˆüÿÿÿÿ
+s
+java:S1450•"WRemove the "jLabel20" field and declare it as a local variable in the relevant methods.(ëƒß›úÿÿÿÿ
+s
+java:S1450–"WRemove the "jLabel21" field and declare it as a local variable in the relevant methods.(Üœäÿûÿÿÿÿ
+s
+java:S1450—"WRemove the "jLabel22" field and declare it as a local variable in the relevant methods.(šíŒÒúÿÿÿÿ
+n
+java:S1450˜"WRemove the "jLabel23" field and declare it as a local variable in the relevant methods.(õöäò
+s
+java:S1450™"WRemove the "jLabel24" field and declare it as a local variable in the relevant methods.(¢×µæúÿÿÿÿ
+s
+java:S1450š"WRemove the "jLabel25" field and declare it as a local variable in the relevant methods.(ÍóÙ°şÿÿÿÿ
+s
+java:S1450›"WRemove the "jLabel26" field and declare it as a local variable in the relevant methods.(ÄšÔÃıÿÿÿÿ
+n
+java:S1450œ"WRemove the "jLabel27" field and declare it as a local variable in the relevant methods.(åõ„ß
+n
+java:S1450"WRemove the "jLabel28" field and declare it as a local variable in the relevant methods.(ŒÄöı
+s
+java:S1450"WRemove the "jLabel29" field and declare it as a local variable in the relevant methods.(ùôÜ®şÿÿÿÿ
+r
+java:S1450Ÿ"VRemove the "jLabel3" field and declare it as a local variable in the relevant methods.(Îä€øÿÿÿÿ
+s
+java:S1450 "WRemove the "jLabel30" field and declare it as a local variable in the relevant methods.(‰ˆã›ÿÿÿÿÿ
+n
+java:S1450¡"WRemove the "jLabel31" field and declare it as a local variable in the relevant methods.(ÀÇöô
+s
+java:S1450¢"WRemove the "jLabel32" field and declare it as a local variable in the relevant methods.(ğ¶Œ¸úÿÿÿÿ
+n
+java:S1450£"WRemove the "jLabel33" field and declare it as a local variable in the relevant methods.(½ë¤¨
+s
+java:S1450¤"WRemove the "jLabel34" field and declare it as a local variable in the relevant methods.(ÏË×ãùÿÿÿÿ
+s
+java:S1450¥"WRemove the "jLabel35" field and declare it as a local variable in the relevant methods.(›ª‘Ïÿÿÿÿÿ
+s
+java:S1450¦"WRemove the "jLabel36" field and declare it as a local variable in the relevant methods.(©¬´ışÿÿÿÿ
+s
+java:S1450§"WRemove the "jLabel37" field and declare it as a local variable in the relevant methods.(ÚåÃƒøÿÿÿÿ
+s
+java:S1450¨"WRemove the "jLabel38" field and declare it as a local variable in the relevant methods.(È´Ó şÿÿÿÿ
+n
+java:S1450©"WRemove the "jLabel39" field and declare it as a local variable in the relevant methods.(…ÕÊ·
+m
+java:S1450ª"VRemove the "jLabel4" field and declare it as a local variable in the relevant methods.(«¢•ã
+m
+java:S1450«"VRemove the "jLabel5" field and declare it as a local variable in the relevant methods.(ó Ù®
+r
+java:S1450¬"VRemove the "jLabel6" field and declare it as a local variable in the relevant methods.(¸ôÂøÿÿÿÿ
+m
+java:S1450­"VRemove the "jLabel7" field and declare it as a local variable in the relevant methods.(×ê˜Ÿ
+m
+java:S1450®"VRemove the "jLabel8" field and declare it as a local variable in the relevant methods.(å»«¢
+r
+java:S1450¯"VRemove the "jPanel1" field and declare it as a local variable in the relevant methods.(´œ½ÿÿÿÿÿ
+r
+java:S1450°"VRemove the "jPanel2" field and declare it as a local variable in the relevant methods.(õ òçüÿÿÿÿ
+q
+java:S1450±"ZRemove the "jSeparator1" field and declare it as a local variable in the relevant methods.(’©ìÉ
+w
+java:S1450²"[Remove the "jSeparator10" field and declare it as a local variable in the relevant methods.(û®üŠúÿÿÿÿ
+r
+java:S1450³"[Remove the "jSeparator11" field and declare it as a local variable in the relevant methods.(ÊÓø
+q
+java:S1450´"ZRemove the "jSeparator2" field and declare it as a local variable in the relevant methods.(èÅĞø
+v
+java:S1450µ"ZRemove the "jSeparator3" field and declare it as a local variable in the relevant methods.(Éø¹Êÿÿÿÿÿ
+v
+java:S1450¶"ZRemove the "jSeparator4" field and declare it as a local variable in the relevant methods.(¡¼äĞúÿÿÿÿ
+q
+java:S1450·"ZRemove the "jSeparator5" field and declare it as a local variable in the relevant methods.(‚ô…
+v
+java:S1450¸"ZRemove the "jSeparator6" field and declare it as a local variable in the relevant methods.(˜íüÿÿÿÿ
+v
+java:S1450¹"ZRemove the "jSeparator7" field and declare it as a local variable in the relevant methods.(è‘¦Ìûÿÿÿÿ
+p
+java:S1450º"ZRemove the "jSeparator8" field and declare it as a local variable in the relevant methods.(¨‰
+v
+java:S1450»"ZRemove the "jSeparator9" field and declare it as a local variable in the relevant methods.(‹¨ª»úÿÿÿÿ
+u
+java:S1450¼"^Remove the "labelIconoConec" field and declare it as a local variable in the relevant methods.(òÂö½
+y
+java:S1450½"]Remove the "labelconectado" field and declare it as a local variable in the relevant methods.(Œİ¼îÿÿÿÿÿ
+n
+java:S1450¾"WRemove the "textPaBu" field and declare it as a local variable in the relevant methods.(Œƒ©
+N
+java:S1948)"3Make "loxicaIngrediente" transient or serializable.(ÅŞåİûÿÿÿÿ
+J
+java:S1948*"/Make "loxicaUsuario" transient or serializable.(Ê òÁûÿÿÿÿ
+I
+java:S1948+"3Make "loxicaPropietario" transient or serializable.(õ‡…
+J
+java:S1948,"/Make "loxicaCliente" transient or serializable.(ÎØ­Óşÿÿÿÿ
+G
+java:S1948-"1Make "loxicaTipoLocal" transient or serializable.(Ôà˜‰
+C
+java:S1948."-Make "loxicaCarta" transient or serializable.(“”œÚ
+G
+java:S1948/"2Make "loxicaTipoBebida" transient or serializable.(‰ĞĞI
+K
+java:S19480"0Make "loxicaProducto" transient or serializable.(Ûº¨üşÿÿÿÿ
+C
+java:S19481".Make "loxicaBebida" transient or serializable.(£ñ’h
+H
+java:S19482"-Make "loxicaLocal" transient or serializable.(ƒ¸ÛÔşÿÿÿÿ
+S
+java:S19483"8Make "loxicaLocalPropietario" transient or serializable.(…Œ¯«şÿÿÿÿ
+L
+java:S19484"6Make "loxicaLocalTipoLocal" transient or serializable.(ÿ ”»
+F
+java:S19485"0Make "loxicaConcello" transient or serializable.(æÂ˜ã
+H
+java:S19486"2Make "loxicaCartaLocal" transient or serializable.(Ãğ¨
+@
+java:S19487"*Make "produtos" transient or serializable.(®¸ó
+C
+java:S19488"-Make "tipoBebidas" transient or serializable.(»‰Ÿœ
+>
+java:S19489"(Make "cartas" transient or serializable.(–ı¢
+F
+java:S1948:"+Make "concellos" transient or serializable.(€ØÙ€üÿÿÿÿ
+E
+java:S1948;"/Make "tipoLocalList" transient or serializable.(¡¸Œ¥
+I
+java:S1948<".Make "ingredientes" transient or serializable.(°ßê¥ùÿÿÿÿ
+S
+java:S1117J"=Rename "concellos" which hides the field declared at line 58.(Ê«‹Ì
+N	java:S106r"9Replace this use of System.out or System.err by a logger.(¯ïïª
+U
+java:S1117~":Rename "cartas" which hides the field declared at line 57.(ç‡³îûÿÿÿÿ
+Q
+java:S1161²":Add the "@Override" annotation above this method signature(†ŒË³
+Q
+java:S1161µ":Add the "@Override" annotation above this method signature(—¶Ğé
+V
+java:S1161¸":Add the "@Override" annotation above this method signature(™ÅšÊûÿÿÿÿ
+Q
+java:S1161Ã":Add the "@Override" annotation above this method signature(†ŒË³
+Q
+java:S1161Æ":Add the "@Override" annotation above this method signature(—¶Ğé
+V
+java:S1161É":Add the "@Override" annotation above this method signature(™ÅšÊûÿÿÿÿ
+Q
+java:S1161ä":Add the "@Override" annotation above this method signature(†ŒË³
+Q
+java:S1161ç":Add the "@Override" annotation above this method signature(—¶Ğé
+V
+java:S1161ê":Add the "@Override" annotation above this method signature(™ÅšÊûÿÿÿÿ
+Q
+java:S1161õ":Add the "@Override" annotation above this method signature(†ŒË³
+Q
+java:S1161ø":Add the "@Override" annotation above this method signature(—¶Ğé
+V
+java:S1161û":Add the "@Override" annotation above this method signature(™ÅšÊûÿÿÿÿ
+Q
+java:S1161’":Add the "@Override" annotation above this method signature(†ŒË³
+Q
+java:S1161•":Add the "@Override" annotation above this method signature(—¶Ğé
+V
+java:S1161˜":Add the "@Override" annotation above this method signature(™ÅšÊûÿÿÿÿ
+Q
+java:S1161£":Add the "@Override" annotation above this method signature(†ŒË³
+Q
+java:S1161¦":Add the "@Override" annotation above this method signature(—¶Ğé
+V
+java:S1161©":Add the "@Override" annotation above this method signature(™ÅšÊûÿÿÿÿ
+Q
+java:S1161Á":Add the "@Override" annotation above this method signature(†ŒË³
+Q
+java:S1161Ä":Add the "@Override" annotation above this method signature(—¶Ğé
+V
+java:S1161Ç":Add the "@Override" annotation above this method signature(™ÅšÊûÿÿÿÿ
+Q
+java:S1161Ò":Add the "@Override" annotation above this method signature(†ŒË³
+Q
+java:S1161Õ":Add the "@Override" annotation above this method signature(—¶Ğé
+V
+java:S1161Ø":Add the "@Override" annotation above this method signature(™ÅšÊûÿÿÿÿ
+Q
+java:S1161ğ":Add the "@Override" annotation above this method signature(†ŒË³
+Q
+java:S1161ó":Add the "@Override" annotation above this method signature(—¶Ğé
+V
+java:S1161ö":Add the "@Override" annotation above this method signature(™ÅšÊûÿÿÿÿ
+Q
+java:S1161™":Add the "@Override" annotation above this method signature(àãµ€
+Q
+java:S1161":Add the "@Override" annotation above this method signature(ö¦óş
+Q
+java:S1161¯":Add the "@Override" annotation above this method signature(†ŒË³
+Q
+java:S1161²":Add the "@Override" annotation above this method signature(—¶Ğé
+V
+java:S1161µ":Add the "@Override" annotation above this method signature(™ÅšÊûÿÿÿÿ
+Q
+java:S1161À":Add the "@Override" annotation above this method signature(†ŒË³
+Q
+java:S1161Ã":Add the "@Override" annotation above this method signature(—¶Ğé
+V
+java:S1161Æ":Add the "@Override" annotation above this method signature(™ÅšÊûÿÿÿÿ
+]
+java:S3252Ğ"AUse static access with "javax.swing.SwingConstants" for "CENTER".(éĞ½÷ûÿÿÿÿ
+W
+java:S3252İ"AUse static access with "javax.swing.SwingConstants" for "CENTER".(Éï>
+X
+java:S3252"AUse static access with "javax.swing.SwingConstants" for "CENTER".(’à†¬
+]
+java:S3252¿"AUse static access with "javax.swing.SwingConstants" for "CENTER".(·áÏ€øÿÿÿÿ
+]
+java:S3252Ê"AUse static access with "javax.swing.SwingConstants" for "CENTER".(İÃ˜¸øÿÿÿÿ
+X
+java:S3252Ï"AUse static access with "javax.swing.SwingConstants" for "CENTER".(É½öµ
+]
+java:S3252à"AUse static access with "javax.swing.SwingConstants" for "CENTER".(œ¼üáøÿÿÿÿ
+X
+java:S3252ñ"AUse static access with "javax.swing.SwingConstants" for "CENTER".(Ì¿µ•
+X
+java:S3252÷"AUse static access with "javax.swing.SwingConstants" for "CENTER".(²°ˆ†
+X
+java:S3252ˆ	"AUse static access with "javax.swing.SwingConstants" for "CENTER".(Ôá³ò
+X
+java:S3252Ÿ"AUse static access with "javax.swing.SwingConstants" for "CENTER".(Ü¡Ó
+X
+java:S3252¤"AUse static access with "javax.swing.SwingConstants" for "CENTER".(¬ÌÑÌ
+X
+java:S3252²"AUse static access with "javax.swing.SwingConstants" for "CENTER".(Ÿœô½
+X
+java:S3252À"AUse static access with "javax.swing.SwingConstants" for "CENTER".(»ÔÎ‘
+]
+java:S3252Å"AUse static access with "javax.swing.SwingConstants" for "CENTER".(˜‹Ì»şÿÿÿÿ
+]
+java:S3252Ê"AUse static access with "javax.swing.SwingConstants" for "CENTER".(Æù¢üÿÿÿÿ
+]
+java:S3252Ï"AUse static access with "javax.swing.SwingConstants" for "CENTER".(º¶õşÿÿÿÿ
+A
+java:S1172‹"*Remove this unused method parameter "evt".(™ÃŠñ
+N
+java:S1135"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+@
+java:S1172•"*Remove this unused method parameter "evt".(Š–ÿG
+N
+java:S1135˜"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+A
+java:S1172"*Remove this unused method parameter "evt".(‚À‡ä
+N
+java:S1135¢"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+F
+java:S1172¨"*Remove this unused method parameter "evt".(¹¾ûüÿÿÿÿ
+N
+java:S1135¬"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+d	java:S100²"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªàÂ
+A
+java:S1172²"*Remove this unused method parameter "evt".(ªàÂ
+d	java:S100¹"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ¹’ı
+A
+java:S1172¹"*Remove this unused method parameter "evt".(õ¹’ı
+i	java:S100À"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õœˆışÿÿÿÿ
+F
+java:S1172À"*Remove this unused method parameter "evt".(Õœˆışÿÿÿÿ
+i	java:S100Ç"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Å¤™Šüÿÿÿÿ
+F
+java:S1172Ç"*Remove this unused method parameter "evt".(Å¤™Šüÿÿÿÿ
+d	java:S100Î"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ ³×
+A
+java:S1172Î"*Remove this unused method parameter "evt".(¼ ³×
+W	java:S125Ó"<This block of commented-out lines of code should be removed.(ôÕñ¶ıÿÿÿÿ
+i	java:S100Ú"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ‹©ßøÿÿÿÿ
+F
+java:S1172Ú"*Remove this unused method parameter "evt".(œ‹©ßøÿÿÿÿ
+d	java:S100â"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨†í 
+A
+java:S1172â"*Remove this unused method parameter "evt".(¨†í 
+d	java:S100ê"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è‘è÷
+A
+java:S1172ê"*Remove this unused method parameter "evt".(è‘è÷
+d	java:S100ò"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(† ò¹
+A
+java:S1172ò"*Remove this unused method parameter "evt".(† ò¹
+i	java:S100ú"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áÍù“øÿÿÿÿ
+F
+java:S1172ú"*Remove this unused method parameter "evt".(áÍù“øÿÿÿÿ
+i	java:S100ÿ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÌüÿÿÿÿ
+F
+java:S1172ÿ"*Remove this unused method parameter "evt".(ÙÌüÿÿÿÿ
+d	java:S100†"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Îóò
+A
+java:S1172†"*Remove this unused method parameter "evt".(Îóò
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ÿÆüÿÿÿÿ
+F
+java:S1172"*Remove this unused method parameter "evt".(“ÿÆüÿÿÿÿ
+i	java:S100–"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éöå÷şÿÿÿÿ
+F
+java:S1172–"*Remove this unused method parameter "evt".(éöå÷şÿÿÿÿ
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´å€âûÿÿÿÿ
+F
+java:S1172"*Remove this unused method parameter "evt".(´å€âûÿÿÿÿ
+i	java:S100¦"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“¨Ñúÿÿÿÿ
+F
+java:S1172¦"*Remove this unused method parameter "evt".(“¨Ñúÿÿÿÿ
+d	java:S100®"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•ªƒï
+A
+java:S1172®"*Remove this unused method parameter "evt".(•ªƒï
+d	java:S100¶"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÔàÿ
+A
+java:S1172¶"*Remove this unused method parameter "evt".(ùÔàÿ
+d	java:S100¾"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶­Î
+A
+java:S1172¾"*Remove this unused method parameter "evt".(¶­Î
+d	java:S100Å"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ê÷´
+A
+java:S1172Å"*Remove this unused method parameter "evt".(°Ê÷´
+c	java:S100Í"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®Ù”
+@
+java:S1172Í"*Remove this unused method parameter "evt".(®Ù”
+i	java:S100Ö"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ĞüØøÿÿÿÿ
+F
+java:S1172Ö"*Remove this unused method parameter "evt".(ĞüØøÿÿÿÿ
+i	java:S100ß"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×“ÕÕùÿÿÿÿ
+F
+java:S1172ß"*Remove this unused method parameter "evt".(×“ÕÕùÿÿÿÿ
+i	java:S100ç"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì„Ùéÿÿÿÿÿ
+F
+java:S1172ç"*Remove this unused method parameter "evt".(Ì„Ùéÿÿÿÿÿ
+i	java:S100ï"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àÆ—Úüÿÿÿÿ
+F
+java:S1172ï"*Remove this unused method parameter "evt".(àÆ—Úüÿÿÿÿ
+i	java:S100÷"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’´ı¶ûÿÿÿÿ
+F
+java:S1172÷"*Remove this unused method parameter "evt".(’´ı¶ûÿÿÿÿ
+i	java:S100ÿ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äã—±øÿÿÿÿ
+F
+java:S1172ÿ"*Remove this unused method parameter "evt".(äã—±øÿÿÿÿ
+d	java:S100„"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã€Ö
+A
+java:S1172„"*Remove this unused method parameter "evt".(Ã€Ö
+N
+java:S1135…"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+i	java:S100ˆ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢àíêşÿÿÿÿ
+F
+java:S1172ˆ"*Remove this unused method parameter "evt".(¢àíêşÿÿÿÿ
+N
+java:S1135‰"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©´³¡ûÿÿÿÿ
+F
+java:S1172"*Remove this unused method parameter "evt".(©´³¡ûÿÿÿÿ
+N
+java:S1135¢"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+i	java:S100ª"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ô¢İÒûÿÿÿÿ
+F
+java:S1172ª"*Remove this unused method parameter "evt".(ô¢İÒûÿÿÿÿ
+8
+java:S1116·"Remove this empty statement.(ªÃŞåûÿÿÿÿ
+N
+java:S1135Ç"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+d	java:S100Ï"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â•ˆ¯
+N
+java:S1135Ô"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+A
+java:S1172Ü"*Remove this unused method parameter "evt".(âó¹æ
+N
+java:S1135Ş"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+A
+java:S1172å"*Remove this unused method parameter "evt".(°üŞ
+N
+java:S1135ë"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+A
+java:S1172ò"*Remove this unused method parameter "evt".(øú‹«
+N
+java:S1135÷"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+d	java:S100ş"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æ®ô÷
+N
+java:S1135ƒ"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+i	java:S100Š"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¶¦Ôÿÿÿÿÿ
+F
+java:S1172Š"*Remove this unused method parameter "evt".(Š¶¦Ôÿÿÿÿÿ
+N
+java:S1135Ÿ"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+i	java:S100¦"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦³Ú×ùÿÿÿÿ
+n
+java:S3776¦"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¦³Ú×ùÿÿÿÿ
+Z
+java:S1854¾">Remove this useless assignment to local variable "bebidaList".(¥Ú‘øÿÿÿÿ
+F
+java:S1172¦"*Remove this unused method parameter "evt".(¦³Ú×ùÿÿÿÿ
+8
+java:S1116²"Remove this empty statement.(È‹Šşşÿÿÿÿ
+N
+java:S1135Ì"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+i	java:S100ï"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†ú³İùÿÿÿÿ
+]
+java:S1854‡"ARemove this useless assignment to local variable "tipoLocalList".(ó¨Ê‡ùÿÿÿÿ
+F
+java:S1172ï"*Remove this unused method parameter "evt".(†ú³İùÿÿÿÿ
+]
+java:S1117‡"ARename "tipoLocalList" which hides the field declared at line 59.(ó¨Ê‡ùÿÿÿÿ
+N
+java:S1135š"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+d	java:S100¡"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( üí½
+A
+java:S1172¡"*Remove this unused method parameter "evt".( üí½
+N
+java:S1135¬"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+i	java:S100³"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ¢©Ëıÿÿÿÿ
+F
+java:S1172³"*Remove this unused method parameter "evt".(Œ¢©Ëıÿÿÿÿ
+N
+java:S1135¹"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+d	java:S100À"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡‹•†
+A
+java:S1172À"*Remove this unused method parameter "evt".(‡‹•†
+N
+java:S1135Ğ"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+d	java:S100×"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥—´…
+A
+java:S1172×"*Remove this unused method parameter "evt".(¥—´…
+N
+java:S1135ø"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+i	java:S100ÿ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚ÀÏäÿÿÿÿÿ
+F
+java:S1172ÿ"*Remove this unused method parameter "evt".(‚ÀÏäÿÿÿÿÿ
+N
+java:S1135Š"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+i	java:S100‘"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰îÅñûÿÿÿÿ
+F
+java:S1172‘"*Remove this unused method parameter "evt".(‰îÅñûÿÿÿÿ
+W	java:S125§"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
+N
+java:S1135©"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+i	java:S100°"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†°›Ãúÿÿÿÿ
+F
+java:S1172°"*Remove this unused method parameter "evt".(†°›Ãúÿÿÿÿ
+i	java:S100¹"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª¾Áÿÿÿÿÿ
+F
+java:S1172¹"*Remove this unused method parameter "evt".(ª¾Áÿÿÿÿÿ
+N
+java:S1135Ê"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+F
+java:S1172Ñ"*Remove this unused method parameter "evt".(ÄğÄúÿÿÿÿ
+N
+java:S1135Õ"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+A
+java:S1172Ü"*Remove this unused method parameter "evt".(À¬ÿ²
+N
+java:S1135á"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+A
+java:S1172è"*Remove this unused method parameter "evt".(Ä³øì
+N
+java:S1135ì"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+i	java:S100ï"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÂèµùÿÿÿÿ
+F
+java:S1172ï"*Remove this unused method parameter "evt".(ÀÂèµùÿÿÿÿ
+L
+java:S1481‚"6Remove this unused "ingredientesPrato" local variable.(£ŞÚB
+N
+java:S1135‡"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+F
+java:S1197"*Move the array designators [] to the type.(¡şÏÖøÿÿÿÿ
+]
+java:S2147"FCombine this catch with the one at line 2459, which has the same body.(¨¦Š½
+]
+java:S2147Ÿ"FCombine this catch with the one at line 2459, which has the same body.(ã€ 
+\
+java:S2147¡"FCombine this catch with the one at line 2459, which has the same body.(ñÎ¯%
+O	java:S106©"9Replace this use of System.out or System.err by a logger.(ı×¯Í
+]
+java:S1192«"GDefine a constant instead of duplicating this literal "Dialog" 5 times.(½ƒÖ	
+^
+java:S1192Ï"GDefine a constant instead of duplicating this literal "BUSCAR" 3 times.(¹ËÀ…
+d
+java:S1192¾"HDefine a constant instead of duplicating this literal "Tahoma" 63 times.(Öª÷ùÿÿÿÿ
+b
+java:S1192F"LDefine a constant instead of duplicating this literal "Propietario" 3 times.(ÍÊºÔ
+^
+java:S1192E"HDefine a constant instead of duplicating this literal "Cliente" 3 times.(€ı“Û
+^
+java:S1192¶"GDefine a constant instead of duplicating this literal "GARDAR" 3 times.(÷•‘¤
+l	java:S117Î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ôëß‹şÿÿÿÿ
+l	java:S117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Óé›¡ıÿÿÿÿ
+f	java:S117®"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š¹§,
+g	java:S117İ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾Ùº¨
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆìïıÿÿÿÿ
+f	java:S117Ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èê
+l	java:S117ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­¿ô©ùÿÿÿÿ
+g	java:S117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’Ú¡å
+l	java:S117É"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßÆ‡²ûÿÿÿÿ
+l	java:S117ç"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıÂÆ­ùÿÿÿÿ
+g	java:S117ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ÂçÂ
+g	java:S117•"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú«Ã
+l	java:S117©"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÚ‡ûÿÿÿÿ
+g	java:S117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä¾ƒù
+g	java:S117Ù	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïİ‹ì
+l	java:S117ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ‘¡Šşÿÿÿÿ
+l	java:S117ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÊªùÿÿÿÿ
+D
+java:S1604÷"(Make this anonymous inner class a lambda(üåêøÿÿÿÿ
+D
+java:S1604¥"(Make this anonymous inner class a lambda(…æ©âÿÿÿÿÿ
+>
+java:S1604Ã"(Make this anonymous inner class a lambda(¥Šîj
+?
+java:S1604á"(Make this anonymous inner class a lambda(ÿóÎ×
+D
+java:S1604Ğ"(Make this anonymous inner class a lambda(á“ôŞûÿÿÿÿ
+?
+java:S1604ã"(Make this anonymous inner class a lambda(‡ÏüÕ
+?
+java:S1604·"(Make this anonymous inner class a lambda(¡¡Úá
+D
+java:S1604À"(Make this anonymous inner class a lambda(úáŒıÿÿÿÿ
+D
+java:S1604æ"(Make this anonymous inner class a lambda(¢íÃıÿÿÿÿ
+>
+java:S1604ò"(Make this anonymous inner class a lambda(Ö¸ë~
+?
+java:S1604‚"(Make this anonymous inner class a lambda(‚±„ï
+?
+java:S1604¬"(Make this anonymous inner class a lambda(Ãê¶¢
+?
+java:S1604µ	"(Make this anonymous inner class a lambda(Á¸¤
+?
+java:S1604¿	"(Make this anonymous inner class a lambda(÷êñ–
+?
+java:S1604É	"(Make this anonymous inner class a lambda(î¨Ş
+D
+java:S1604Ó	"(Make this anonymous inner class a lambda(÷ºËıÿÿÿÿ
+?
+java:S1604Ö"(Make this anonymous inner class a lambda(ä”ë¬
+D
+java:S1604à"(Make this anonymous inner class a lambda(Ñ¡¹Üÿÿÿÿÿ
+D
+java:S1604ê"(Make this anonymous inner class a lambda(·­Â€şÿÿÿÿ
+?
+java:S1604ñ"(Make this anonymous inner class a lambda(Ú¦Ì¯
+D
+java:S1604®"(Make this anonymous inner class a lambda(¨í¡§úÿÿÿÿ
+m
+java:S1104'"RMake xMouse a static final constant or non-public and provide accessors if needed.(ÏøÌ˜úÿÿÿÿ
+m
+java:S1104'"RMake yMouse a static final constant or non-public and provide accessors if needed.(ÏøÌ˜úÿÿÿÿ
+I
+java:S1199¸"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+I
+java:S1199³"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÂÓ¸Í

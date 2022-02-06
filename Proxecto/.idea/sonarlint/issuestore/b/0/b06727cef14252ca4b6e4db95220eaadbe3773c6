@@ -1,0 +1,19 @@
+
+A
+java:S1168E"+Return an empty collection instead of null.(•πÔç
+V	java:S125H"<This block of commented-out lines of code should be removed.(≈“˛ú¸ˇˇˇˇ
+V	java:S125u"<This block of commented-out lines of code should be removed.(ÆŒπÜ˛ˇˇˇˇ
+V	java:S125w"<This block of commented-out lines of code should be removed.(Êæà¡˛ˇˇˇˇ
+S
+java:S1128"8Remove this unused import 'modelo.vo.Concello.Concello'.(í¿ï¯ˇˇˇˇˇ
+b
+java:S1192""GDefine a constant instead of duplicating this literal "' , '" 10 times.(∑ñπ˙ˇˇˇˇˇ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‹Èú®˚ˇˇˇˇ
+e
+java:S2095g"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ê”Ãà
+]
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ëˆ¨ã
+^
+java:S2095Æ"GUse try-with-resources or close this "Statement" in a "finally" clause.(ëˆ¨ã
+k
+java:S2095è"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(äüû¿˚ˇˇˇˇ

@@ -1,0 +1,246 @@
+@startuml
+class Modelo.Loxica.LoxicaCarta {
+- Coordinador miCoordinador
++ {static} boolean modifica
++ List<Carta> validarFindByIdLocal(Local)
++ Carta validarBuscarPorNome(Carta)
+}
+class Modelo.Dao.UsuarioDAO.ClienteDAO {
++ void create(Usuario)
++ List<Usuario> read()
++ Usuario findById(Usuario)
++ void update(Usuario)
++ void delete(Usuario)
+}
+class Modelo.Dao.UsuarioDAO.PropietarioDao {
++ void create(Usuario)
++ List<Usuario> read()
++ Usuario findById(Usuario)
++ void update(Usuario)
++ void delete(Usuario)
+}
+class Modelo.Loxica.LoxicaLocal {
+- Coordinador miCoordinador
++ {static} boolean modifica
+}
+class Modelo.Dao.LocalDAO.LocalDAO {
++ void create(Local)
++ List<Local> read()
++ Local findById(Local)
++ void update(Local)
++ void delete(Local)
+}
+class Modelo.Dao.ProdutoDAO.PratoDAO {
++ void create(Produto)
++ List<Produto> read()
++ Produto findById(Produto)
++ void update(Produto)
++ void delete(Produto)
+}
+class Modelo.vo.Usuario.Propietario {
+- int idPropietario
++ String accederInfoLocal()
++ void rexistrarLocal()
++ void eliminarLocal()
++ void modificarDatos()
++ boolean autenticarse()
+}
+class Modelo.vo.Carta.Carta {
+- int idCarta
+- String epocaAno
+- String nome
+- TipoCarta idTipoCarta
+}
+class Modelo.vo.Usuario.Cliente {
+- int idCliente
++ String buscarLocal()
++ void valorarLocal()
++ boolean autenticarse()
++ void gardarFavoritos()
+}
+class Modelo.Dao.ProdutoDAO.BebidaDAO {
++ void create(Bebida)
++ List<Bebida> read()
++ List<Bebida> findByIdTipo(TipoBebida)
++ Bebida findById(Bebida)
++ Produto findById(Produto)
++ void update(Bebida)
++ void delete(Bebida)
+}
+class Modelo.vo.Produto.Bebida {
+- TipoBebida tipo
+- String fabricante
+}
+class Modelo.Dao.UsuarioDAO.UsuarioDAO {
++ void create(Usuario)
++ List read()
++ Usuario findById(Usuario)
++ void update(Usuario)
++ void delete(Usuario)
+}
+class Modelo.vo.UsuarioNonSocio {
++ void altaUsuario()
++ String buscaLocal()
+}
+interface Modelo.Dao.Interfaces.Interfaz {
+~ void create(T)
+~ List<T> read()
+~ T findById(T)
+~ void update(T)
+~ void delete(T)
+}
+class Modelo.Dao.ProdutoDAO.TipoBebidaDAO {
++ List<TipoBebida> read()
++ TipoBebida findById(TipoBebida)
++ TipoBebida findByName(TipoBebida)
+}
+interface Modelo.Dao.Interfaces.InterfazReducida {
+~ List<T> read()
+~ T findById(T)
+~ T findByName(T)
+}
+class Modelo.vo.Local.Local {
+- String nomeLocal
+- TipoLocal tipo
+- Produto especialidade
+- Concello concello
+- double rangoPrezos
+- Horario idHorario
+- Estado estado
+- Carta carta
+- int idLocal
+- String rua
+- int numero
+- String telefono
+- String email
+}
+class Modelo.Conexion.Conexion {
+~ {static} String bd
+~ {static} String login
+~ {static} String password
+~ {static} String url
+~ Connection conn
++ Connection getConnection()
++ void desconectar()
+}
+class Modelo.Dao.ProdutoDAO.ProdutoDAO {
++ void create(Produto)
++ void insertPordutoCarta(Produto,Carta)
++ List<Produto> read()
++ List<Produto> findByIdTipoProduto(TipoBebida)
++ Produto findByName(Produto)
++ Produto findById(Produto)
++ void update(Produto)
++ void delete(Produto)
+}
+class Modelo.vo.Local.TipoLocal {
+- int idTipoLocal
+- String nomeTipo
+}
+class Modelo.Loxica.LoxicaConcello {
+- Coordinador miCoordinador
++ {static} boolean modifica
+}
+class Modelo.vo.Concello.Concello {
+- int idConcello
+- String nomeConcello
+- int codigoPostal
+}
+abstract class Modelo.vo.Produto.Ingrediente {
+- int idIngrediente
+- String nomeIngrediente
+}
+class Modelo.vo.Carta.TipoCarta {
+- int idTipoCarta
+- String nomeTipoCarta
+}
+abstract class Modelo.vo.Produto.Produto {
+- int id
+- String nome
+}
+class Modelo.vo.Produto.TipoBebida {
+- int idTipoBebida
+- String nomeTipoBebida
+}
+class Modelo.Loxica.LoxicaProducto {
+- Coordinador miCoordinador
++ {static} boolean modifica
++ List<Produto> validarFindIdTipoProdto(TipoBebida)
++ void validaerCrearProdutoCarta(Produto,Carta)
++ Produto validarByName(Produto)
+}
+class Modelo.Dao.ConcelloDAO.ConcelloDAO {
++ List<Concello> read()
++ Concello findById(Concello)
++ Concello findByName(Concello)
+}
+class Modelo.Dao.CartaDAO.CartaDAO {
++ void create(Carta)
++ List<Carta> read()
++ List<Carta> findByIdLocal(Local)
++ Carta findByNomeCarta(Carta)
++ Carta findById(Carta)
++ void update(Carta)
++ void delete(Carta)
+}
+class Modelo.vo.Produto.Produto_Carta {
+- Carta carta
+- Produto produto
+- double prezo
+- boolean encargo
+- boolean especialidade
+}
+class Modelo.vo.PropietarioNonSocio {
++ void altaPropietario()
+}
+class Modelo.Loxica.LoxicaUsuario {
+- Coordinador miCoordinador
++ {static} boolean modifica
++ void validarCreateUsuario(Usuario)
++ void validarCreatePropietario(Usuario)
++ void validarCreateCliente(Usuario)
+}
+class Modelo.vo.Produto.Prato {
+}
+class Modelo.vo.Horario {
+- int idHorario
+- int horaApertura
+- int horaPeche
+- String diaPeche
+}
+abstract class Modelo.vo.Usuario.Usuario {
+- int idUsuario
+- String nome
+- String apelido1
+- String apelido2
+- Concello concello
+- String contrasinal
+- Estado estado
+- String rua
+- int numero
+- String telefono
+- String email
+- String rol
+}
+class Modelo.Loxica.LoxicaTipoBebida {
+- Coordinador miCoordinador
++ {static} boolean modifica
++ List<TipoBebida> validarRead()
+}
+
+
+Modelo.Dao.Interfaces.Interfaz <|.. Modelo.Dao.UsuarioDAO.ClienteDAO
+Modelo.Dao.Interfaces.Interfaz <|.. Modelo.Dao.UsuarioDAO.PropietarioDao
+Modelo.Dao.Interfaces.Interfaz <|.. Modelo.Dao.LocalDAO.LocalDAO
+Modelo.Dao.Interfaces.Interfaz <|.. Modelo.Dao.ProdutoDAO.PratoDAO
+Modelo.vo.Usuario.Usuario <|-- Modelo.vo.Usuario.Propietario
+Modelo.vo.Usuario.Usuario <|-- Modelo.vo.Usuario.Cliente
+Modelo.Dao.Interfaces.Interfaz <|.. Modelo.Dao.ProdutoDAO.BebidaDAO
+Modelo.vo.Produto.Produto <|-- Modelo.vo.Produto.Bebida
+Modelo.Dao.Interfaces.Interfaz <|.. Modelo.Dao.UsuarioDAO.UsuarioDAO
+Modelo.Dao.Interfaces.InterfazReducida <|.. Modelo.Dao.ProdutoDAO.TipoBebidaDAO
+Modelo.Dao.Interfaces.Interfaz <|.. Modelo.Dao.ProdutoDAO.ProdutoDAO
+Modelo.Dao.Interfaces.InterfazReducida <|.. Modelo.Dao.ConcelloDAO.ConcelloDAO
+Modelo.Dao.Interfaces.Interfaz <|.. Modelo.Dao.CartaDAO.CartaDAO
+Modelo.vo.Produto.Produto <|-- Modelo.vo.Produto.Prato
+@enduml
