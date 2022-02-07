@@ -23,6 +23,7 @@ public class LoxicaProducto {
          return produtoDAO.readProduto(produto);
     }
 
+
     public List<Produto> validarRead(){
          ProdutoDAO produtoDAO = new ProdutoDAO();
          return produtoDAO.read();

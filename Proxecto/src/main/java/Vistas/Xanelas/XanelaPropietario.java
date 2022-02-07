@@ -28,16 +28,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Clase que representa XanelaPropietario na aplicación
+ * Clase que representa XanelaPropietario na aplicaciï¿½n
  * @author david
  */
 public class XanelaPropietario extends javax.swing.JFrame {
 
     /**
-     * Atributos de clase, declaracións e instanciacións
+     * Atributos de clase, declaraciï¿½ns e instanciaciï¿½ns
      */
     public int xMouse, yMouse;
 
+    LoxicaPrato loxicaPrato = new LoxicaPrato();
+    LoxicaIngredientePrato loxicaIngredientePrato = new LoxicaIngredientePrato();
     LoxicaIngrediente loxicaIngrediente = new LoxicaIngrediente();
     LoxicaUsuario loxicaUsuario = new LoxicaUsuario();
     LoxicaPropietario loxicaPropietario = new LoxicaPropietario();
@@ -57,6 +59,8 @@ public class XanelaPropietario extends javax.swing.JFrame {
     List<Carta> cartas;
     List<Concello> concellos;
     List<TipoLocal> tipoLocalList;
+    List<IngredientePrato> ingredientesPrato;
+    List<Prato> pratos;
     List<Ingrediente> ingredientes;
 
     /**
@@ -822,7 +826,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         LabelInfoCarta.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         LabelInfoCarta.setForeground(new java.awt.Color(0, 72, 193));
         LabelInfoCarta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LabelInfoCarta.setText("<html> <body> AGORA PROBA ISTO  <br> CREA UNHA CARTA, DE COMIDAS OU BEBIDAS <br> E DESPOIS ENGÁDELLE OS PRODUCTOS </body ></html>");
+        LabelInfoCarta.setText("<html> <body> AGORA PROBA ISTO  <br> CREA UNHA CARTA, DE COMIDAS OU BEBIDAS <br> E DESPOIS ENGï¿½DELLE OS PRODUCTOS </body ></html>");
         LabelInfoCarta.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         javax.swing.GroupLayout PanelInfoCartaLayout = new javax.swing.GroupLayout(PanelInfoCarta);
@@ -887,7 +891,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         LabelInfoCalCarta.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         LabelInfoCalCarta.setForeground(new java.awt.Color(0, 72, 193));
         LabelInfoCalCarta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LabelInfoCalCarta.setText("<html>\n<body>\nVALE, AGORA ISTO VAI IR ASÍ\n <br>\nELIXE UNHA DAS CARTAS QUE CREACHES\n<br>\nENGADE OS PRODUCTOS, LISTO\n</body\n></html>");
+        LabelInfoCalCarta.setText("<html>\n<body>\nVALE, AGORA ISTO VAI IR ASï¿½\n <br>\nELIXE UNHA DAS CARTAS QUE CREACHES\n<br>\nENGADE OS PRODUCTOS, LISTO\n</body\n></html>");
         LabelInfoCalCarta.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -1183,19 +1187,19 @@ public class XanelaPropietario extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 72, 193));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("<html>\n<body>\nVAMOS PASIÑO PASENIÑO A PASIÑO PASENIÑO. \n <br>\n PRIMEIRO INTRODUCE OS DATOS BÁSICOS PARA \n<br>\nRELACIONAR O TEU LOCAL CONTGO\n</body\n></html>");
+        jLabel14.setText("<html>\n<body>\nVAMOS PASIï¿½O PASENIï¿½O A PASIï¿½O PASENIï¿½O. \n <br>\n PRIMEIRO INTRODUCE OS DATOS Bï¿½SICOS PARA \n<br>\nRELACIONAR O TEU LOCAL CONTGO\n</body\n></html>");
         jLabel14.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 72, 193));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("<html>\n<body>\nAGORA QUÉ VEN?\n <br>\nPOIS DEIXAR OS DATOS DE CONTACTO E UBICACION\n<br>\nFIXATE BEN XA QUE TAMEN O VERAN NOS RESULTADOS\n<br>\nDAS BUSQUEDAS. TODOS OS CAMPOS SON OBLIGATORIOS\n<br>\nSE O TEU LOCAL TEN ALGUNHA ESPECIALIDADE, ENGADEA.\n</body\n></html>");
+        jLabel17.setText("<html>\n<body>\nAGORA QUï¿½ VEN?\n <br>\nPOIS DEIXAR OS DATOS DE CONTACTO E UBICACION\n<br>\nFIXATE BEN XA QUE TAMEN O VERAN NOS RESULTADOS\n<br>\nDAS BUSQUEDAS. TODOS OS CAMPOS SON OBLIGATORIOS\n<br>\nSE O TEU LOCAL TEN ALGUNHA ESPECIALIDADE, ENGADEA.\n</body\n></html>");
         jLabel17.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(0, 72, 193));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("<html> <body>  VEÑA, XA QUEDA POUCO   <br> SIMPLEMENTE ENGADE DE QUE TIPO É O TEU LOCAL E ALE <br> A CORRER <br> SE TES CARTA E A QUERES ENGADIR TAMEN PODES, FAINO </body> </html>");
+        jLabel18.setText("<html> <body>  VEï¿½A, XA QUEDA POUCO   <br> SIMPLEMENTE ENGADE DE QUE TIPO ï¿½ O TEU LOCAL E ALE <br> A CORRER <br> SE TES CARTA E A QUERES ENGADIR TAMEN PODES, FAINO </body> </html>");
         jLabel18.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         BotonGardarLocal.setBackground(new java.awt.Color(204, 255, 255));
@@ -1386,7 +1390,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
                 .addContainerGap(106, Short.MAX_VALUE))
         );
 
-        jLabel14.getAccessibleContext().setAccessibleName("VAMOS PASIÑO PASENIÑO A PASIÑO PASENIÑO. \n");
+        jLabel14.getAccessibleContext().setAccessibleName("VAMOS PASIï¿½O PASENIï¿½O A PASIï¿½O PASENIï¿½O. \n");
 
         TabInicialPro.addTab("tab3", PanelTer);
 
@@ -1461,7 +1465,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         jLabel38.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(0, 72, 193));
         jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel38.setText("Nº");
+        jLabel38.setText("Nï¿½");
         jLabel38.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         ComboConcello.setBackground(new java.awt.Color(0, 72, 193));
@@ -1529,7 +1533,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         jLabel39.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(0, 72, 193));
         jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel39.setText("<html>\n<body>\nAGORA QUÉ VEN?\n <br>\nPOIS DEIXAR OS DATOS DE CONTACTO E UBICACION\n<br>\nFIXATE BEN XA QUE TAMEN O VERAN NOS RESULTADOS\n<br>\nDAS BUSQUEDAS. TODOS OS CAMPOS SON OBLIGATORIOS\n<br>\nSE O TEU LOCAL TEN ALGUNHA ESPECIALIDADE, ENGADEA.\n</body\n></html>");
+        jLabel39.setText("<html>\n<body>\nAGORA QUï¿½ VEN?\n <br>\nPOIS DEIXAR OS DATOS DE CONTACTO E UBICACION\n<br>\nFIXATE BEN XA QUE TAMEN O VERAN NOS RESULTADOS\n<br>\nDAS BUSQUEDAS. TODOS OS CAMPOS SON OBLIGATORIOS\n<br>\nSE O TEU LOCAL TEN ALGUNHA ESPECIALIDADE, ENGADEA.\n</body\n></html>");
         jLabel39.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         javax.swing.GroupLayout PanelCuarLayout = new javax.swing.GroupLayout(PanelCuar);
@@ -1669,7 +1673,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     /**
-     * Método para navegar polos paneles do JFrame
+     * Mï¿½todo para navegar polos paneles do JFrame
      * @param evt
      */
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -1679,7 +1683,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
     /**
-     * Método para navegar polos paneles do JFrame
+     * Mï¿½todo para navegar polos paneles do JFrame
      * @param evt
      */
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -1688,7 +1692,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
     /**
-     * Método para navegar polos paneles do JFrame
+     * Mï¿½todo para navegar polos paneles do JFrame
      * @param evt
      */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -1698,7 +1702,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
     /**
-     * Método para navegar polos paneles do JFrame
+     * Mï¿½todo para navegar polos paneles do JFrame
      * @param evt
      */
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -1708,35 +1712,35 @@ public class XanelaPropietario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
     /**
-     * Método para navegar polos paneles do JFrame
+     * Mï¿½todo para navegar polos paneles do JFrame
      * @param evt
      */
     private void PanelInicioLocalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelInicioLocalMouseClicked
         TabInicialPro.setSelectedIndex(0);
     }//GEN-LAST:event_PanelInicioLocalMouseClicked
     /**
-     * Método para navegar polos paneles do JFrame
+     * Mï¿½todo para navegar polos paneles do JFrame
      * @param evt
      */
     private void PanelDatosLocalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelDatosLocalMouseClicked
         TabInicialPro.setSelectedIndex(1);
     }//GEN-LAST:event_PanelDatosLocalMouseClicked
     /**
-     * Método para navegar polos paneles do JFrame
+     * Mï¿½todo para navegar polos paneles do JFrame
      * @param evt
      */
     private void PanelEngadeLocalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelEngadeLocalMouseClicked
         TabInicialPro.setSelectedIndex(3);
     }//GEN-LAST:event_PanelEngadeLocalMouseClicked
     /**
-     * Método para navegar polos paneles do JFrame
+     * Mï¿½todo para navegar polos paneles do JFrame
      * @param evt
      */
     private void PanelDatosProMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelDatosProMouseClicked
         TabInicialPro.setSelectedIndex(2);
     }//GEN-LAST:event_PanelDatosProMouseClicked
     /**
-     * Método para abrir a Xanela1 e pechar esta
+     * Mï¿½todo para abrir a Xanela1 e pechar esta
      * @param evt
      */
     private void PanelMarchoProMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelMarchoProMouseClicked
@@ -1748,7 +1752,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         //   System.exit(0);
     }//GEN-LAST:event_PanelMarchoProMouseClicked
     /**
-     * Método para dar cor ao elemento definido
+     * Mï¿½todo para dar cor ao elemento definido
      * @param evt
      */
     private void LabelDatosLocalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelDatosLocalMouseEntered
@@ -1756,7 +1760,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         LabelDatosLocal.setForeground(Color.white);
     }//GEN-LAST:event_LabelDatosLocalMouseEntered
     /**
-     * Método para dar cor ao elemento definido
+     * Mï¿½todo para dar cor ao elemento definido
      * @param evt
      */
     private void PanelEngadeLocalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelEngadeLocalMouseEntered
@@ -1764,7 +1768,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         LabeLEngadeLocal.setForeground(Color.white);
     }//GEN-LAST:event_PanelEngadeLocalMouseEntered
     /**
-     * Método para dar cor ao elemento definido
+     * Mï¿½todo para dar cor ao elemento definido
      * @param evt
      */
     private void PanelDatosProMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelDatosProMouseEntered
@@ -1772,7 +1776,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         LabelDatosPro.setForeground(Color.white);
     }//GEN-LAST:event_PanelDatosProMouseEntered
     /**
-     * Método para dar cor ao elemento definido
+     * Mï¿½todo para dar cor ao elemento definido
      * @param evt
      */
     private void PanelMarchoProMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelMarchoProMouseEntered
@@ -1780,7 +1784,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         LabelMarchoPro.setForeground(Color.white);
     }//GEN-LAST:event_PanelMarchoProMouseEntered
     /**
-     * Método para dar cor ao elemento definido
+     * Mï¿½todo para dar cor ao elemento definido
      * @param evt
      */
     private void PanelFixoInicioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelFixoInicioMouseEntered
@@ -1792,7 +1796,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         TabInicialPro.setSelectedIndex(0);
     }//GEN-LAST:event_PanelFixoInicioMouseClicked
     /**
-     * Método para dar cor ao elemento definido
+     * Mï¿½todo para dar cor ao elemento definido
      * @param evt
      */
     private void PanelFixoInicioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelFixoInicioMouseExited
@@ -1800,7 +1804,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         PanelFixoInicio.setBackground(Color.white);
     }//GEN-LAST:event_PanelFixoInicioMouseExited
     /**
-     * Método para dar cor ao elemento definido
+     * Mï¿½todo para dar cor ao elemento definido
      * @param evt
      */
     private void PanelDatosLocalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelDatosLocalMouseExited
@@ -1808,7 +1812,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         LabelDatosLocal.setForeground(new Color(0, 72, 193));
     }//GEN-LAST:event_PanelDatosLocalMouseExited
     /**
-     * Método para dar cor ao elemento definido
+     * Mï¿½todo para dar cor ao elemento definido
      * @param evt
      */
     private void PanelDatosLocalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelDatosLocalMouseEntered
@@ -1816,7 +1820,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         LabelDatosLocal.setForeground(Color.white);
     }//GEN-LAST:event_PanelDatosLocalMouseEntered
     /**
-     * Método para dar cor ao elemento definido
+     * Mï¿½todo para dar cor ao elemento definido
      * @param evt
      */
     private void PanelEngadeLocalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelEngadeLocalMouseExited
@@ -1824,7 +1828,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         LabeLEngadeLocal.setForeground(new Color(0, 72, 193));
     }//GEN-LAST:event_PanelEngadeLocalMouseExited
     /**
-     * Método para dar cor ao elemento definido
+     * Mï¿½todo para dar cor ao elemento definido
      * @param evt
      */
     private void PanelDatosProMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelDatosProMouseExited
@@ -1832,7 +1836,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         LabelDatosPro.setForeground(new Color(0, 72, 193));
     }//GEN-LAST:event_PanelDatosProMouseExited
     /**
-     * Método para dar cor ao elemento definido
+     * Mï¿½todo para dar cor ao elemento definido
      * @param evt
      */
     private void PanelMarchoProMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelMarchoProMouseExited
@@ -1840,7 +1844,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         LabelMarchoPro.setForeground(new Color(0, 72, 193));
     }//GEN-LAST:event_PanelMarchoProMouseExited
     /**
-     * Método para navegar polos paneles do JFrame
+     * Mï¿½todo para navegar polos paneles do JFrame
      * @param evt
      */
     private void LabelDatosLocalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelDatosLocalMouseClicked
@@ -1848,14 +1852,14 @@ public class XanelaPropietario extends javax.swing.JFrame {
 
     }//GEN-LAST:event_LabelDatosLocalMouseClicked
     /**
-     * Método para navegar polos paneles do JFrame
+     * Mï¿½todo para navegar polos paneles do JFrame
      * @param evt
      */
     private void LabeLEngadeLocalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabeLEngadeLocalMouseClicked
         TabInicialPro.setSelectedIndex(2);
     }//GEN-LAST:event_LabeLEngadeLocalMouseClicked
     /**
-     * Método para navegar polos paneles do JFrame
+     * Mï¿½todo para navegar polos paneles do JFrame
      * @param evt
      */
     private void LabelDatosProMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelDatosProMouseClicked
@@ -1863,7 +1867,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     }//GEN-LAST:event_LabelDatosProMouseClicked
 
     /**
-     * Método para dar cor ao elemento definido
+     * Mï¿½todo para dar cor ao elemento definido
      * @param evt
      */
     private void PanelInicioLocalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelInicioLocalMouseEntered
@@ -1872,7 +1876,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
 
     }//GEN-LAST:event_PanelInicioLocalMouseEntered
     /**
-     * Método para dar cor ao elemento definido
+     * Mï¿½todo para dar cor ao elemento definido
      * @param evt
      */
     private void PanelInicioLocalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelInicioLocalMouseExited
@@ -1881,7 +1885,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
 
     }//GEN-LAST:event_PanelInicioLocalMouseExited
     /**
-     * Método para dar cor ao elemento definido
+     * Mï¿½todo para dar cor ao elemento definido
      * @param evt
      */
     private void LabeLEngadeLocalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabeLEngadeLocalMouseEntered
@@ -1889,7 +1893,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         LabeLEngadeLocal.setForeground(Color.white);
     }//GEN-LAST:event_LabeLEngadeLocalMouseEntered
     /**
-     * Método para dar cor ao elemento definido
+     * Mï¿½todo para dar cor ao elemento definido
      * @param evt
      */
     private void LabeLEngadeLocalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabeLEngadeLocalMouseExited
@@ -1897,7 +1901,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         LabeLEngadeLocal.setForeground(new Color(0, 72, 193));
     }//GEN-LAST:event_LabeLEngadeLocalMouseExited
     /**
-     * Método para dar cor ao elemento definido
+     * Mï¿½todo para dar cor ao elemento definido
      * @param evt
      */
     private void LabelDatosProMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelDatosProMouseEntered
@@ -1905,7 +1909,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         LabelDatosPro.setForeground(Color.white);
     }//GEN-LAST:event_LabelDatosProMouseEntered
     /**
-     * Método para dar cor ao elemento definido
+     * Mï¿½todo para dar cor ao elemento definido
      * @param evt
      */
     private void LabelDatosProMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelDatosProMouseExited
@@ -1913,7 +1917,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         LabelDatosPro.setForeground(new Color(0, 72, 193));
     }//GEN-LAST:event_LabelDatosProMouseExited
     /**
-     * Método para dar cor ao elemento definido
+     * Mï¿½todo para dar cor ao elemento definido
      * @param evt
      */
     private void LabelDatosLocalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelDatosLocalMouseExited
@@ -1930,7 +1934,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     }//GEN-LAST:event_ComboCartaActionPerformed
 
     /**
-     * Método para buscar carta na bbdd
+     * Mï¿½todo para buscar carta na bbdd
      * @param evt
      */
     private void BotonBuscarCartaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBuscarCartaActionPerformed
@@ -1947,7 +1951,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
                 ComboCarta.addItem(String.valueOf(card.getNome()));
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Usuario erróneo",
+            JOptionPane.showMessageDialog(null, "Usuario errï¿½neo",
                     "ERROR",
                     JOptionPane.ERROR_MESSAGE);
         }
@@ -1956,7 +1960,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
 
 
     /**
-     *Método para buscar bebida por tipo bebida
+     *Mï¿½todo para buscar bebida por tipo bebida
      * @param evt
      */
     private void BuscaBebidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscaBebidaActionPerformed
@@ -1993,7 +1997,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
 
 
     /**
-     * Método para control da interface na pantalla
+     * Mï¿½todo para control da interface na pantalla
      * @param evt
      */
     private void PanelSuperiorProMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelSuperiorProMouseDragged
@@ -2006,7 +2010,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
 
 
     /**
-     * Botón para peche da aplicación
+     * Botï¿½n para peche da aplicaciï¿½n
      * @param evt
      */
     private void btnSaidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSaidaMouseClicked
@@ -2015,7 +2019,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSaidaMouseClicked
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      * @param evt
      */
     private void btnSaidaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSaidaMouseEntered
@@ -2028,7 +2032,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSaidaMouseEntered
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      * @param evt
      */
     private void btnSaidaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSaidaMouseExited
@@ -2040,7 +2044,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSaidaMouseExited
 
     /**
-     * Método para control da interface na pantalla
+     * Mï¿½todo para control da interface na pantalla
      * @param evt
      */
     private void PanelSuperiorProMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelSuperiorProMousePressed
@@ -2052,7 +2056,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelSuperiorProMousePressed
 
     /**
-     * Método para gardar carta
+     * Mï¿½todo para gardar carta
      * @param evt
      */
     private void BotonSaveCartProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSaveCartProActionPerformed
@@ -2080,7 +2084,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonSaveCartProActionPerformed
 
     /**
-     * Método para buscar Produtos e Marcas
+     * Mï¿½todo para buscar Produtos e Marcas
      * @param evt
      */
     private void BotonBuscarMarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBuscarMarcaActionPerformed
@@ -2125,7 +2129,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
 //GEN-LAST:event_BotonBuscarMarcaActionPerformed
 
     /**
-     * Método para limpar cadros de texto
+     * Mï¿½todo para limpar cadros de texto
      */
     private void clean(){
         TextPropietario.setText(null);
@@ -2138,7 +2142,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     }
 
     /**
-     * Método para limpar cadros de texto
+     * Mï¿½todo para limpar cadros de texto
      */
     private void cleanDatos() {
         TextNome.setText(null);
@@ -2153,7 +2157,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     }
 
     /**
-     *Método para crear un local e gardalo na bbdd
+     *Mï¿½todo para crear un local e gardalo na bbdd
      * @param evt
      */
     private void BotonGardarLocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGardarLocalActionPerformed
@@ -2203,7 +2207,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonGardarLocalActionPerformed
 
     /**
-     *Método para actualizar local
+     *Mï¿½todo para actualizar local
      * @param evt
      */
     private void BotonActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActualizarActionPerformed
@@ -2221,7 +2225,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonActualizarActionPerformed
 
     /**
-     *Método para borrar local
+     *Mï¿½todo para borrar local
      * @param evt
      */
     private void BotonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEliminarActionPerformed
@@ -2234,7 +2238,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonEliminarActionPerformed
 
     /**
-     *Método para buscar local por nome
+     *Mï¿½todo para buscar local por nome
      * @param evt
      */
     private void BotonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBuscarActionPerformed
@@ -2257,7 +2261,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonBuscarActionPerformed
 
     /**
-     *Método para realizar a actualizacion de usuario
+     *Mï¿½todo para realizar a actualizacion de usuario
      * @param evt
      */
     private void BotonActualizar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActualizar1ActionPerformed
@@ -2297,7 +2301,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonActualizar1ActionPerformed
 
     /**
-     *Método para borrar o usuario según rol
+     *Mï¿½todo para borrar o usuario segï¿½n rol
      * @param evt
      */
     private void BotonBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarActionPerformed
@@ -2346,7 +2350,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonBuscar1ActionPerformed
 
     /**
-     *Botón para limpar os cadros de texto
+     *Botï¿½n para limpar os cadros de texto
      * @param evt
      */
     private void BotonLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonLimparActionPerformed
@@ -2355,7 +2359,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonLimparActionPerformed
 
     /**
-     * Método para gardar carta en bbdd
+     * Mï¿½todo para gardar carta en bbdd
      * @param evt
      */
     private void BotonGardarCartaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGardarCartaActionPerformed
@@ -2379,7 +2383,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonGardarCartaActionPerformed
 
     /**
-     * Método para minimizar interface
+     * Mï¿½todo para minimizar interface
      * @param evt
      */
     private void btnMinimizaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMinimizaMouseClicked
@@ -2431,7 +2435,20 @@ public class XanelaPropietario extends javax.swing.JFrame {
                 IngredientePrato ingredientePrato = new IngredientePrato();
                 ingredientePrato.setIngrediente(ingrediente);
 
-                List<IngredientePrato> ingredientesPrato;
+                 ingredientesPrato = loxicaIngredientePrato.validarfindByIdIngrediente(ingredientePrato);
+                 if (!ingredientesPrato.isEmpty()){
+                     for (IngredientePrato ingPrato : ingredientesPrato
+                          ) {
+                            Prato prato = new Prato();
+                            prato.setId(ingPrato.getPrato().getId());
+                            pratos = loxicaPrato.validarFindByIdList(prato);
+                         for (:
+                              ) {
+                             
+                         }
+
+                     }
+                 }
             }
         }
 

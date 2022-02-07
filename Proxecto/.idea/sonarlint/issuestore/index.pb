@@ -1,6 +1,4 @@
 
-p
-@src/main/java/modelo/dao/implementacion/produtoDAO/PratoDAO.java,0\c\0c5b1ce4c6c06ade38d1c4301419ed81e53d6953
 Z
 *src/main/java/modelo/vo/Produto/Prato.java,6\6\6651714047e9367e5636e1209c016dec0420cdcc
 \
@@ -37,15 +35,5 @@ a
 1src/main/java/Vistas/Xanelas/DialogoRexistro.java,7\5\756dfc0bbad140dd3d28f3213337aa79ed6b9cd1
 [
 +src/main/java/modelo/Conexion/Conexion.java,9\8\9845c74595818eb689b1c1d8fa35bdbba6c4cd2c
-g
-7src/main/java/modelo/Loxica/LoxicaIngredientePrato.java,e\3\e301b54affc371b35af8bcf42fea390fd1564e99
-v
-Fsrc/main/java/modelo/dao/implementacion/produtoDAO/IngredienteDAO.java,5\a\5a99e2c387a690e461671ba7f0be4786d2db53e8
-b
-2src/main/java/modelo/Loxica/LoxicaIngrediente.java,f\5\f56662877fbc5edd63bec69396a4272faf6a7b23
-c
-3src/main/java/Vistas/Xanelas/XanelaPropietario.java,a\5\a5197b574ad5527b44022dddaaf475d68dd9a57f
-{
-Ksrc/main/java/modelo/dao/implementacion/produtoDAO/IngredientePratoDAO.java,4\c\4ca051589475381370e0914ac82fcf123421afde
 q
 Asrc/main/java/modelo/dao/implementacion/produtoDAO/BebidaDAO.java,f\7\f76b31640e56af34a723ac4dcd5247f4cd3e5f27

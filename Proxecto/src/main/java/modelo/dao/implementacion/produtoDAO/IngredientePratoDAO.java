@@ -43,9 +43,29 @@ public class IngredientePratoDAO implements Interfaz<IngredientePrato> {
     }
 
     public List<IngredientePrato> findByIdIngrediente(IngredientePrato ingredientePrato) {
-
+        String sql = "Select * from ingrediente where nome_ingrediente = ? ";
         List<IngredientePrato> ingredientesPrato = new ArrayList<IngredientePrato>();
 
+        try {
+            Conexion conexion = new Conexion();
+            PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
+            sentenza.setInt(1, ingredientePrato.getIngrediente().getIdIngrediente());
+            ResultSet resultSet = sentenza.executeQuery();
+            if (resultSet.next()) {
+                ingredientePrato = new IngredientePrato();
+                Ingrediente ingrediente = new Ingrediente();
+                ingrediente.setIdIngrediente(resultSet.getInt("id_ingrediente"));
+                Prato prato = new Prato();
+                prato.setId(resultSet.getInt("id_prato"));
+                ingredientePrato.setIngrediente(ingrediente);
+                ingredientePrato.setPrato(prato);
+                ingredientesPrato.add(ingredientePrato);
+            }
+            sentenza.close();
+            conexion.desconectar();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
 
         return ingredientesPrato;
     }
@@ -53,6 +73,26 @@ public class IngredientePratoDAO implements Interfaz<IngredientePrato> {
 
         @Override
     public IngredientePrato findById(IngredientePrato ingredientePrato) {
+            String sql = "Select * from ingrediente where nome_ingrediente = ? ";
+            try {
+                Conexion conexion = new Conexion();
+                PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
+                sentenza.setInt(1, ingredientePrato.getIngrediente().getIdIngrediente());
+                ResultSet resultSet = sentenza.executeQuery();
+                if (resultSet.next()) {
+                    ingredientePrato = new IngredientePrato();
+                    Ingrediente ingrediente = new Ingrediente();
+                    ingrediente.setIdIngrediente(resultSet.getInt("id_ingrediente"));
+                    Prato prato = new Prato();
+                    prato.setId(resultSet.getInt("id_prato"));
+                    ingredientePrato.setIngrediente(ingrediente);
+                    ingredientePrato.setPrato(prato);
+                }
+                sentenza.close();
+                conexion.desconectar();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
         return ingredientePrato;
     }
 

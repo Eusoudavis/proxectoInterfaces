@@ -148,6 +148,8 @@ public class ProdutoDAO implements InterfazProduto<Produto> {
         return produtos;
     }
 
+
+
     /**
      * Método para buscar produtos por nome de produto
      * @param produto

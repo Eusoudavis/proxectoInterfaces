@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -71,7 +72,32 @@ public class PratoDAO implements Interfaz<Produto> {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        return null;
+        return prato;
+    }
+
+        public List<Prato> findByIdList(Prato prato){
+        List<Prato> pratos = new ArrayList<>();
+        String sql = "SELECT * FROM prato WHERE id_prato = ?";
+                ;
+
+        Conexion conexion = new Conexion();
+        try {
+            PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
+            sentenza.setInt(1, prato.getId());
+            ResultSet resultSet = sentenza.executeQuery();
+            while (resultSet.next()){
+                prato = new Prato();
+                prato.setId(resultSet.getInt("id_prato"));
+                prato.setNome(resultSet.getString("nome_prato"));
+                pratos.add(prato);
+            }
+            sentenza.close();
+            conexion.desconectar();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        return pratos;
     }
 
     @Override
