@@ -30,7 +30,7 @@ public class ConcelloDAO implements InterfazReducida<Concello> {
             ResultSet resultSet = sentenza.executeQuery();
             while (resultSet.next()){
                 concello = new Concello();
-                concello.setIdConcello(resultSet.getInt("id_concello"));
+             //   concello.setIdConcello(resultSet.getInt("id_concello"));
                 concello.setCodigoPostal(resultSet.getInt("codigo_postal"));
                 concello.setNomeConcello(resultSet.getString("nome_concello"));
                 concellos.add(concello);
@@ -64,7 +64,7 @@ public class ConcelloDAO implements InterfazReducida<Concello> {
             ResultSet resultSet = sentenza.executeQuery();
             if (resultSet.next()){
                 concello1 = new Concello();
-                concello1.setIdConcello(resultSet.getInt("id_concello"));
+              //  concello1.setIdConcello(resultSet.getInt("id_concello"));
                 concello1.setCodigoPostal(resultSet.getInt("codigo_postal"));
                 concello1.setNomeConcello(resultSet.getString("nome_concello"));
             }

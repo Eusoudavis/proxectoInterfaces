@@ -7,7 +7,7 @@ import lombok.Data;
  * Clase que representa a relación produto_carta na nosa aplicación.
  */
 @Data
-public class Produto_Carta {
+public class ProdutoCarta {
     /**
      * Atributos de clase que representan os campos para a táboa na bbdd
      */

@@ -177,6 +177,28 @@ public class ProdutoDAO implements InterfazProduto<Produto> {
         return produtos;
     }
 
+    public List<Produto> findByIdPrato(Produto produto){
+        List<Produto> produtos = new ArrayList<>();
+        String sql = "SELECT * FROM produto WHERE id_produto = ?";
+
+        try {
+            Conexion conexion = new Conexion();
+            PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
+            sentenza.setInt(1, produto.getId());
+            ResultSet resultSet = sentenza.executeQuery();
+
+            if (resultSet.next()){
+                produto = new Bebida();
+                produto.setId(resultSet.getInt("id_produto"));
+                produto.setNome(resultSet.getString("nome_produto"));
+                produtos.add(produto);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return produtos;
+    }
+
 
 
     @Override

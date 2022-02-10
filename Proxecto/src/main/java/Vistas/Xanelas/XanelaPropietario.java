@@ -118,6 +118,15 @@ public class XanelaPropietario extends javax.swing.JFrame {
             System.out.println("Petou neste punto");
         }
 
+        ComboEspecialidade.removeAllItems();
+        ComboEspecialidade.addItem("");
+        ComboEspecialidade.addItem("Si");
+        ComboEspecialidade.addItem("Non");
+
+        ComboEncargo.addItem("");
+        ComboEncargo.addItem("Si");
+        ComboEncargo.addItem("Non");
+
         ComboEstacion.addItem("");
         ComboEstacion.addItem(String.valueOf(EstacionAno.anual));
         ComboEstacion.addItem(String.valueOf(EstacionAno.primaveira));
@@ -1968,6 +1977,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         String nomeTipoBebida = String.valueOf(ComboTipoBebidas.getSelectedItem());
         String oTipo = "";
         ComboProdutoBebidas.removeAllItems();
+        ComboMarcas.removeAllItems();
 
         tipoBebidas = loxicaTipoBebida.validarRead();
         if (!tipoBebidas.isEmpty()) {
@@ -2064,8 +2074,19 @@ public class XanelaPropietario extends javax.swing.JFrame {
         Carta cartaBuscarNome = new Carta();
         cartaBuscarNome.setNome(String.valueOf(ComboCarta.getSelectedItem()));
         cartaBuscarNome.setIdCarta(loxicaCarta.validarBuscarPorNome(cartaBuscarNome).getIdCarta());
+        int prezoProd = Integer.parseInt(TextIdPrezoVenda.getText());
+        boolean encargoForm = false;
+        boolean especialidadeForm = false;
 
         String nomeProductoCombo = String.valueOf(ComboProdutoBebidas.getSelectedItem());
+
+        if (ComboEncargo.getSelectedItem().equals("Si")){
+            encargoForm = true;
+        }
+
+        if (ComboEspecialidade.getSelectedItem().equals("Si")){
+            especialidadeForm = true;
+        }
 
         Produto bebida = new Bebida();
 
@@ -2076,8 +2097,24 @@ public class XanelaPropietario extends javax.swing.JFrame {
                 break;
             }
         }
+        ProdutoCarta produtoCarta = new ProdutoCarta();
+        produtoCarta.setCarta(cartaBuscarNome);
+        produtoCarta.setProduto(bebida);
+        produtoCarta.setPrezo(prezoProd);
+        produtoCarta.setEncargo(encargoForm);
+        produtoCarta.setEspecialidade(especialidadeForm);
 
-        loxicaProducto.validaerCrearProdutoCarta(bebida, cartaBuscarNome);
+        LoxicaProdutoCarta loxicaProdutoCarta = new LoxicaProdutoCarta();
+        loxicaProdutoCarta.validarCreate(produtoCarta);
+
+        ComboEspecialidade.removeAllItems();
+        ComboEncargo.removeAllItems();
+        ComboMarcas.removeAllItems();
+        ComboPrato.removeAllItems();
+        ComboIngrediente.removeAllItems();
+        ComboTipoBebidas.removeAllItems();
+
+        // loxicaProducto.validaerCrearProdutoCarta(bebida, cartaBuscarNome);
 
 
         // TODO add your handling code here:
@@ -2430,6 +2467,9 @@ public class XanelaPropietario extends javax.swing.JFrame {
             for (Ingrediente ingre: ingredientes
                  ) {
                 oIngrediente = String.valueOf(ingre.getNomeIngrediente());
+                if (oIngrediente.equals(nomeIngrediente)){
+                    break;
+                }
             }
             if (oIngrediente.equals(nomeIngrediente)){
                 IngredientePrato ingredientePrato = new IngredientePrato();
@@ -2441,10 +2481,10 @@ public class XanelaPropietario extends javax.swing.JFrame {
                           ) {
                             Prato prato = new Prato();
                             prato.setId(ingPrato.getPrato().getId());
-                            pratos = loxicaPrato.validarFindByIdList(prato);
-                         for (:
+                            produtos = loxicaProducto.validarByIdPrato(prato);
+                         for (Produto prod : produtos
                               ) {
-                             
+                             ComboPrato.addItem(String.valueOf(prod.getNome()));
                          }
 
                      }

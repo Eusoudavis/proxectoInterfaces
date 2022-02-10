@@ -38,4 +38,9 @@ public class LoxicaProducto {
          ProdutoDAO produtoDAO = new ProdutoDAO();
          return produtoDAO.findByName(produto);
     }
+
+    public List<Produto> validarByIdPrato(Produto produto){
+        ProdutoDAO produtoDAO = new ProdutoDAO();
+        return produtoDAO.findByIdPrato(produto);
+    }
 }

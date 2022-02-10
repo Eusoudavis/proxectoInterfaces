@@ -259,3 +259,12 @@ CREATE TABLE `local_propietario` (
   CONSTRAINT `local_propietario_FK` FOREIGN KEY (`id_local`) REFERENCES `local` (`id_local`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `local_propietario_FK_1` FOREIGN KEY (`id_propietario`) REFERENCES `propietario` (`id_propietario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+CREATE TABLE `ingrediente_prato` (
+  `id_ingrediente` int(11) NOT NULL,
+  `id_prato` int(11) NOT NULL,
+  PRIMARY KEY (`id_ingrediente`,`id_prato`),
+  KEY `ingrediente_prato_FK` (`id_prato`),
+  CONSTRAINT `ingrediente_prato_FK_1` FOREIGN KEY (`id_ingrediente`) REFERENCES `ingrediente` (`id_ingrediente`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

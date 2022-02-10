@@ -43,7 +43,7 @@ public class IngredientePratoDAO implements Interfaz<IngredientePrato> {
     }
 
     public List<IngredientePrato> findByIdIngrediente(IngredientePrato ingredientePrato) {
-        String sql = "Select * from ingrediente where nome_ingrediente = ? ";
+        String sql = "Select * from ingrediente_prato where id_ingrediente = ? ";
         List<IngredientePrato> ingredientesPrato = new ArrayList<IngredientePrato>();
 
         try {
@@ -51,7 +51,7 @@ public class IngredientePratoDAO implements Interfaz<IngredientePrato> {
             PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
             sentenza.setInt(1, ingredientePrato.getIngrediente().getIdIngrediente());
             ResultSet resultSet = sentenza.executeQuery();
-            if (resultSet.next()) {
+            while (resultSet.next()) {
                 ingredientePrato = new IngredientePrato();
                 Ingrediente ingrediente = new Ingrediente();
                 ingrediente.setIdIngrediente(resultSet.getInt("id_ingrediente"));

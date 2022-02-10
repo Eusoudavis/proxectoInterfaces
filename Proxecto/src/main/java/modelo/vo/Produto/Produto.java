@@ -3,7 +3,7 @@ package modelo.vo.Produto;
 import lombok.Data;
 
 @Data
-public abstract class Produto {
+public class Produto {
 	/**
 	 * Atributos de clase que representan os campos para a táboa na bbdd
 	 */
