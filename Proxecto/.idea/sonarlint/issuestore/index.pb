@@ -21,16 +21,12 @@ X
 +src/main/java/modelo/vo/Produto/Bebida.java,4\7\474ce155991779f23e4e77eae4e5524073ad322b
 e
 5src/main/java/modelo/vo/Produto/IngredientePrato.java,4\c\4ce004f192cad5413c7e5f8445d746732250981d
-p
-@src/main/java/modelo/dao/implementacion/produtoDAO/PratoDAO.java,0\c\0c5b1ce4c6c06ade38d1c4301419ed81e53d6953
 \
 ,src/main/java/modelo/Loxica/LoxicaPrato.java,d\f\df2bcc6eff72e8577ba9f0a604711a84a1ada060
 v
 Fsrc/main/java/modelo/dao/implementacion/produtoDAO/IngredienteDAO.java,5\a\5a99e2c387a690e461671ba7f0be4786d2db53e8
 b
 2src/main/java/modelo/Loxica/LoxicaIngrediente.java,f\5\f56662877fbc5edd63bec69396a4272faf6a7b23
-g
-7src/main/java/modelo/Loxica/LoxicaIngredientePrato.java,e\3\e301b54affc371b35af8bcf42fea390fd1564e99
 a
 1src/main/java/Vistas/Xanelas/DialogoRexistro.java,7\5\756dfc0bbad140dd3d28f3213337aa79ed6b9cd1
 i
