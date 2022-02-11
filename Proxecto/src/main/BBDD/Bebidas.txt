@@ -18,3 +18,21 @@ Insert into bebida values (14, 'Schweppes', 5);
 Insert into ingrediente (nome_ingrediente) values ('Tenreira');
 Insert into ingrediente (nome_ingrediente) values ('Porco');
 Insert into ingrediente (nome_ingrediente) values ('Polo');
+
+
+Insert into prato  values (15);
+Insert into prato  values (16);
+Insert into prato  values (17);
+Insert into prato  values (18);
+
+
+Insert into ingrediente_prato  values (1, 15);
+Insert into ingrediente_prato  values (1, 16);
+Insert into ingrediente_prato  values (2, 17);
+Insert into ingrediente_prato  values (1, 18);
+Insert into ingrediente_prato  values (2, 15);
+Insert into ingrediente_prato  values (3, 16);
+Insert into ingrediente_prato  values (3, 17);
+Insert into ingrediente_prato  values (3, 18);
+Insert into ingrediente_prato  values (2, 18);
+Insert into ingrediente_prato  values (3, 15);

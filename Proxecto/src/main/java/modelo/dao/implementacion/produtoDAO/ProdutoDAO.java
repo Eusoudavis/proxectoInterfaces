@@ -102,7 +102,7 @@ public class ProdutoDAO implements InterfazProduto<Produto> {
             PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
             ResultSet resultSet = sentenza.executeQuery();
             while (resultSet.next()){
-                produtoTodo = new Bebida();
+                produtoTodo = new Produto();
                 produtoTodo.setId(resultSet.getInt("id_produto"));
                 produtoTodo.setNome(resultSet.getString("nome_produto"));
                 produtos.add(produtoTodo);

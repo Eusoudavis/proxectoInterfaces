@@ -13,3 +13,5 @@ Insert into produto (nome_produto) values ('margarita');
 Insert into produto (nome_produto) values ('te vermello');
 Insert into produto (nome_produto) values ('tonica');
 Insert into produto (nome_produto) values ('churrasco');
+Insert into produto (nome_produto) values ('carne asada');
+Insert into produto (nome_produto) values ('raxos');

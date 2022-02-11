@@ -21,8 +21,6 @@ X
 +src/main/java/modelo/vo/Produto/Bebida.java,4\7\474ce155991779f23e4e77eae4e5524073ad322b
 e
 5src/main/java/modelo/vo/Produto/IngredientePrato.java,4\c\4ce004f192cad5413c7e5f8445d746732250981d
-L
-src/main/BBDD/TipoBebida.txt,4\7\47dc70f70637584d2e8ff873f7dcc6f14e81aa7b
 p
 @src/main/java/modelo/dao/implementacion/produtoDAO/PratoDAO.java,0\c\0c5b1ce4c6c06ade38d1c4301419ed81e53d6953
 \
