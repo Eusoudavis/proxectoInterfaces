@@ -97,26 +97,9 @@ public class XanelaPropietario extends javax.swing.JFrame {
             ComboTipoLocal.addItem(String.valueOf(tipoLocal.getNomeTipo()));
         }
 
-        ComboIngrediente.removeAllItems();
-        ComboIngrediente.addItem("");
-        ingredientes = loxicaIngrediente.validarRead();
-        for (Ingrediente ingre: ingredientes
-             ) {
-            ComboIngrediente.addItem(String.valueOf(ingre.getNomeIngrediente()));
-        }
+        putIngredientCombo();
 
-        ComboTipoBebidas.removeAllItems();
-        ComboTipoBebidas.addItem("");
-
-        tipoBebidas = loxicaTipoBebida.validarRead();
-        if (!tipoBebidas.isEmpty()) {
-            for (TipoBebida bebidaTipo : tipoBebidas
-            ) {
-                ComboTipoBebidas.addItem(String.valueOf(bebidaTipo.getNomeTipoBebida()));
-            }
-        } else {
-            System.out.println("Petou neste punto");
-        }
+        putTipoBebidaCombo();
 
         ComboEspecialidade.removeAllItems();
         ComboEspecialidade.addItem("");
@@ -143,8 +126,28 @@ public class XanelaPropietario extends javax.swing.JFrame {
         }
     }
 
+    private void putTipoBebidaCombo() {
+        ComboTipoBebidas.removeAllItems();
+        ComboTipoBebidas.addItem("");
 
+        tipoBebidas = loxicaTipoBebida.validarRead();
+        if (!tipoBebidas.isEmpty()) {
+            for (TipoBebida bebidaTipo : tipoBebidas
+            ) {
+                ComboTipoBebidas.addItem(String.valueOf(bebidaTipo.getNomeTipoBebida()));
+            }
+        }
+    }
 
+    private void putIngredientCombo() {
+        ComboIngrediente.removeAllItems();
+        ComboIngrediente.addItem("");
+        ingredientes = loxicaIngrediente.validarRead();
+        for (Ingrediente ingre: ingredientes
+             ) {
+            ComboIngrediente.addItem(String.valueOf(ingre.getNomeIngrediente()));
+        }
+    }
 
 
     /**
@@ -2085,10 +2088,14 @@ public class XanelaPropietario extends javax.swing.JFrame {
 
         if (ComboEncargo.getSelectedItem().equals("Si")){
             encargoForm = true;
+        }else if (ComboEncargo.getSelectedItem().equals(null)){
+            encargoForm = false;
         }
 
         if (ComboEspecialidade.getSelectedItem().equals("Si")){
             especialidadeForm = true;
+        } else if (ComboEspecialidade.getSelectedItem().equals(null)){
+            especialidadeForm = false;
         }
 
         Produto produto = new Produto();
@@ -2099,10 +2106,10 @@ public class XanelaPropietario extends javax.swing.JFrame {
         ) {
             if (prod.getNome().equals(nomeProductoCombo)) {
                 produto.setId(prod.getId());
-                break;
+              //  break;
             }else if (prod.getNome().equals(nomeProductoCombo2) ) {
                 produto.setId(prod.getId());
-                break;
+               // break;
             }
 
         }
@@ -2117,11 +2124,14 @@ public class XanelaPropietario extends javax.swing.JFrame {
         loxicaProdutoCarta.validarCreate(produtoCarta);
 
         ComboEspecialidade.removeAllItems();
+        ComboProdutoBebidas.removeAllItems();
+        TextIdPrezoVenda.setText("");
         ComboEncargo.removeAllItems();
         ComboMarcas.removeAllItems();
         ComboPrato.removeAllItems();
-        ComboIngrediente.removeAllItems();
-        ComboTipoBebidas.removeAllItems();
+        putIngredientCombo();
+
+        putTipoBebidaCombo();
 
         // loxicaProducto.validaerCrearProdutoCarta(bebida, cartaBuscarNome);
 
