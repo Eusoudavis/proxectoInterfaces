@@ -12,6 +12,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -29,7 +30,7 @@ public class LocalDAO implements Interfaz<Local> {
 
         try {
             Statement estatuto = conexion.getConnection().createStatement();
-            estatuto.executeUpdate("INSERT INTO local (nome_local, nome_concello, rua, numero,telefono, email, estado) VALUES ('"
+            estatuto.executeUpdate("INSERT INTO local (nome_local, nome_concello, rua, numero,telefono, email, especialidade, estado) VALUES ('"
                     + local.getNomeLocal() +
                             "' , '"
                     + local.getConcello().getNomeConcello() +
@@ -42,8 +43,8 @@ public class LocalDAO implements Interfaz<Local> {
                             "' , '"
                     +local.getEmail() +
                             "' , '"
-//                    +local.getEspecialidade() +
-//                            "' , '"
+                    +local.getEspecialidade() +
+                           "' , '"
                     + Estado.ACTIVO +
                     "')");
             estatuto.close();
@@ -57,8 +58,37 @@ public class LocalDAO implements Interfaz<Local> {
 
     @Override
     public List<Local> read() {
-        return null;
-    }
+        List<Local> locais = new ArrayList<>();
+        String sql = "Select * from local";
+        Local local;
+        try {
+            Conexion conexion = new Conexion();
+            PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
+            ResultSet resultSet = sentenza.executeQuery();
+            while (resultSet.next()){
+                local = new Local();
+                local.setIdLocal(resultSet.getInt("id_local"));
+                local.setNomeLocal(resultSet.getString("nome_local"));
+                local.setRangoPrezos(resultSet.getInt("rango_prezos"));
+                Concello concello = new Concello();
+                concello.setNomeConcello(resultSet.getString("nome_concello"));
+                local.setConcello(concello);
+                local.setRua(resultSet.getString("rua"));
+                local.setNumero(resultSet.getInt("numero"));
+                local.setTelefono(resultSet.getString("telefono"));
+                local.setEmail(resultSet.getString("email"));
+                //local.getEstado(resultSet.getString("estado"));
+               // TipoLocal tipoLocal = new TipoLocal();
+              //  tipoLocal.setNomeTipo(resultSet.getString(""));
+                locais.add(local);
+
+            }sentenza.close();
+            conexion.desconectar();
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return locais;    }
 
     /**
      *Método para buscar local por nome
@@ -176,4 +206,25 @@ public class LocalDAO implements Interfaz<Local> {
             throwables.printStackTrace();
         }
     }
+
+//    public List<Local> findByIdMauitasCcisas(Local local){
+//        List<Local> locais = new ArrayList<>();
+//        String sql = "Select * from local where nome_concello = ? and ";
+//
+//        try {
+//            Conexion conexion = new Conexion();
+//            PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
+//            sentenza.setInt();
+//            ResultSet resultSet = sentenza.executeQuery();
+//
+//            if (resultSet.next()){
+//                local.setIdLocal(resultSet.getInt("id_local"));
+//            }sentenza.close();
+//            conexion.desconectar();
+//
+//        } catch (SQLException throwables) {
+//            throwables.printStackTrace();
+//        }
+//        return locais;
+   // }
 }

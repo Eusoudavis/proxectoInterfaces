@@ -4,6 +4,8 @@ import Controlador.Coordinador;
 import modelo.dao.implementacion.localDAO.LocalDAO;
 import modelo.vo.Local.Local;
 
+import java.util.List;
+
 public class LoxicaLocal {
     private Coordinador miCoordinador;
     public static boolean modifica = false;
@@ -11,6 +13,11 @@ public class LoxicaLocal {
     public void validarCreate (Local local){
         LocalDAO localDAO = new LocalDAO();
         localDAO.create(local);
+    }
+
+    public List<Local> validarRead(){
+        LocalDAO localDAO = new LocalDAO();
+        return localDAO.read();
     }
 
     public Local validarFindByIdMax(Local local){

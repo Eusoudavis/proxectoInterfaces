@@ -5,6 +5,11 @@
  */
 package Vistas.Xanelas;
 
+import modelo.vo.Local.Local;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author david
@@ -30,10 +35,10 @@ public class Busqueda extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        ComboConcelloBusc = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jButton2 = new javax.swing.JButton();
+        ComboTipoLocalBusc = new javax.swing.JComboBox<>();
+        botonBuscarLocal = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 255, 255));
         setMinimumSize(new java.awt.Dimension(480, 60));
@@ -49,28 +54,44 @@ public class Busqueda extends javax.swing.JPanel {
         jLabel3.setText("CONCELLO");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 100, 30));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 90, -1));
+        ComboConcelloBusc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(ComboConcelloBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 90, -1));
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, 80, -1));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 100, -1));
+        ComboTipoLocalBusc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(ComboTipoLocalBusc, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 100, -1));
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 72, 193));
-        jButton2.setText("DALLE");
-        jButton2.setPreferredSize(new java.awt.Dimension(51, 25));
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 5, 84, 50));
+        botonBuscarLocal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        botonBuscarLocal.setForeground(new java.awt.Color(0, 72, 193));
+        botonBuscarLocal.setText("DALLE");
+        botonBuscarLocal.setPreferredSize(new java.awt.Dimension(51, 25));
+        botonBuscarLocal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonBuscarLocalActionPerformed(evt);
+            }
+        });
+        add(botonBuscarLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 5, 84, 50));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonBuscarLocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarLocalActionPerformed
+
+        List<Local> locais = new ArrayList<>();
+        for (Local local: locais
+             ) {
+        }
+        
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonBuscarLocalActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> ComboConcelloBusc;
+    private javax.swing.JComboBox<String> ComboTipoLocalBusc;
+    private javax.swing.JButton botonBuscarLocal;
     private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

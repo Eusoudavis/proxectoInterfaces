@@ -11,7 +11,7 @@ public class LoxicaProdutoCarta {
 
     public void validarCreate(ProdutoCarta produtoCarta){
         ProdutoCarta produtoCarta1 = produtoCartaDao.findById(produtoCarta);
-        if (produtoCarta1.equals(null)){
+        if (produtoCarta1.getProduto() == null){
         produtoCartaDao.create(produtoCarta);
         } else {
             JOptionPane.showMessageDialog(null, "Produto xa existente na carta", "ERROR",

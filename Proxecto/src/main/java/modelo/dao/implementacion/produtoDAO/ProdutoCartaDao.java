@@ -35,16 +35,14 @@ public class ProdutoCartaDao implements Interfaz<ProdutoCarta> {
 
     @Override
     public ProdutoCarta findById(ProdutoCarta produtoCarta) {
-
         String sql = "SELECT * from produtos_carta where id_produto = ?";
         try {
             Conexion conexion = new Conexion();
             PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
             sentenza.setInt(1, produtoCarta.getProduto().getId());
             ResultSet resultSet = sentenza.executeQuery();
-
+            produtoCarta = new ProdutoCarta();
             if (resultSet.next()){
-                produtoCarta = new ProdutoCarta();
                 Carta carta = new Carta();
                 carta.setIdCarta(resultSet.getInt("id_carta"));
                 Produto produto = new Produto();
@@ -55,9 +53,10 @@ public class ProdutoCartaDao implements Interfaz<ProdutoCarta> {
                 produtoCarta.setEncargo(resultSet.getBoolean("encargo"));
                 produtoCarta.setEspecialidade(resultSet.getBoolean("especialidade"));
             }
-            sentenza.close();
-            conexion.desconectar();
+          //  sentenza.close();
+           // conexion.desconectar();
         } catch (SQLException throwables) {
+            produtoCarta = null;
             throwables.printStackTrace();
         }
         return produtoCarta;    }

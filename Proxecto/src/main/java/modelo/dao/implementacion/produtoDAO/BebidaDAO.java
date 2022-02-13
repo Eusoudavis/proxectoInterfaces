@@ -25,7 +25,6 @@ public class BebidaDAO implements Interfaz<Bebida> {
     @Override
     public void create(Bebida bebida) {
         Conexion conexion = new Conexion();
-
         try {
             Statement estatuto = conexion.getConnection().createStatement();
             estatuto.executeUpdate("Insert into bebida Values ("
@@ -88,7 +87,6 @@ public class BebidaDAO implements Interfaz<Bebida> {
                 bebida.setTipo(tipoBebidaBD);
             }
         } finally {
-
         }
         return bebidas;
     }

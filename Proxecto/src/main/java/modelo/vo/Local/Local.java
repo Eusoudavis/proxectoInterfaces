@@ -6,6 +6,7 @@ import modelo.vo.Estado;
 import modelo.vo.Horario;
 import modelo.vo.Produto.Produto;
 import lombok.Data;
+import modelo.vo.Produto.ProdutoCarta;
 
 import java.util.List;
 
@@ -20,7 +21,7 @@ public class Local {
 	 */
 	List<TipoLocal> tipoLocalList;
 	//private TipoLocal tipo;
-	private Produto especialidade;
+	private String especialidade;
 	private Concello concello;
 	private double rangoPrezos;
 	private Horario idHorario;

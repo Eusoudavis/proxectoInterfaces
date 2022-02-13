@@ -9,6 +9,7 @@ modelo\dao\implementacion\usuarioDAO\UsuarioDAO.class
 modelo\Loxica\LoxicaTipoBebida.class
 Vistas\Xanelas\XanelaCliente$16.class
 Vistas\Xanelas\XanelaPropietario$12.class
+Vistas\Xanelas\XanelaCliente$26.class
 Vistas\Xanelas\XanelaPropietario$18.class
 Vistas\Xanelas\XanelaPropietario$28.class
 Vistas\Xanelas\XanelaPropietario$32.class
@@ -23,6 +24,7 @@ Vistas\Xanelas\XanelaCliente$13.class
 Vistas\Xanelas\DialogoRexistro$6.class
 Vistas\Xanelas\XanelaCliente$5.class
 modelo\Loxica\LoxicaConcello.class
+modelo\Loxica\LoxicaPrato.class
 modelo\Loxica\LoxicaIngredientePrato.class
 modelo\dao\interfaces\Interfaz.class
 modelo\vo\Local\TipoLocal.class
@@ -30,6 +32,7 @@ Vistas\Xanelas\Xanela1$5.class
 Vistas\Xanelas\XanelaCliente$21.class
 modelo\Loxica\LoxicaBebida.class
 modelo\dao\implementacion\usuarioDAO\PropietarioDao.class
+modelo\Loxica\LoxicaProdutoCarta.class
 modelo\vo\Local\Local.class
 modelo\Loxica\LoxicaIngrediente.class
 Vistas\Xanelas\XanelaCliente$8.class
@@ -43,12 +46,12 @@ Vistas\Xanelas\XanelaCliente$24.class
 modelo\dao\implementacion\concelloDAO\ConcelloDAO.class
 modelo\vo\Usuario\Usuario.class
 modelo\Loxica\LoxicaPropietario.class
-modelo\vo\Produto\Produto_Carta.class
 Vistas\Xanelas\XanelaCliente$14.class
 Vistas\Xanelas\XanelaPropietario$10.class
 Vistas\Xanelas\XanelaPropietario$6.class
 modelo\dao\implementacion\produtoDAO\IngredienteDAO.class
 Vistas\Xanelas\XanelaPropietario$17.class
+modelo\dao\implementacion\produtoDAO\ProdutoCartaDao.class
 Vistas\Xanelas\XanelaPropietario$27.class
 Vistas\Xanelas\XanelaPropietario$33.class
 Main.class
@@ -90,6 +93,7 @@ modelo\Loxica\LoxicaLocalPropietario.class
 modelo\vo\Produto\TipoBebida.class
 Vistas\Xanelas\XanelaPropietario$2.class
 Vistas\Xanelas\XanelaPropietario$14.class
+Vistas\Xanelas\XanelaPropietario$34.class
 modelo\vo\Estado.class
 Vistas\Xanelas\XanelaPropietario$5.class
 Vistas\Xanelas\XanelaCliente$15.class
@@ -106,6 +110,7 @@ Vistas\Xanelas\XanelaPropietario$11.class
 modelo\vo\EstacionAno.class
 modelo\dao\implementacion\cartaDAO\CartaDAO.class
 Vistas\Xanelas\XanelaCliente$4.class
+modelo\vo\Produto\ProdutoCarta.class
 Vistas\Xanelas\XanelaPropietario$13.class
 Vistas\Xanelas\XanelaPropietario$23.class
 Vistas\Xanelas\XanelaCliente$10.class

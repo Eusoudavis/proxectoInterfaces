@@ -15,8 +15,10 @@ import modelo.vo.Usuario.Propietario;
 import modelo.vo.Usuario.Usuario;
 
 import java.awt.Color;
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 
 /**
  * Clase que represena a nosa interfaz JFrame para clientes.
@@ -77,7 +79,7 @@ public class XanelaCliente extends javax.swing.JFrame {
         LabelDatosCli = new javax.swing.JLabel();
         PanelMarcho = new javax.swing.JPanel();
         LabelMarcho = new javax.swing.JLabel();
-        LabelIconoCli = new javax.swing.JLabel();
+        botonHelpCli = new javax.swing.JButton();
         PanelSuperior = new javax.swing.JPanel();
         LabelSuperior = new javax.swing.JLabel();
         btnSaida = new java.awt.Label();
@@ -98,9 +100,16 @@ public class XanelaCliente extends javax.swing.JFrame {
         PanelSeg = new javax.swing.JPanel();
         PanelBusquedaCli = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        ComboConcelloBusc = new javax.swing.JComboBox<>();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        ComboTipoLocalBusc = new javax.swing.JComboBox<>();
+        botonBuscarLocal = new javax.swing.JButton();
         PanelInfoLo = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        TaboaInfoLo = new javax.swing.JTable();
+        TaboaInfoLocal = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -404,8 +413,16 @@ public class XanelaCliente extends javax.swing.JFrame {
 
         PanelLateral.add(PanelMarcho, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 610, 250, -1));
 
-        LabelIconoCli.setBackground(new java.awt.Color(0, 72, 193));
-        PanelLateral.add(LabelIconoCli, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 250, 230));
+        botonHelpCli.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        botonHelpCli.setForeground(new java.awt.Color(0, 72, 193));
+        botonHelpCli.setText("Axuda");
+        botonHelpCli.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonHelpCli.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonHelpCliActionPerformed(evt);
+            }
+        });
+        PanelLateral.add(botonHelpCli, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 120, 45));
 
         Bgcliente.add(PanelLateral, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 110, 270, 690));
 
@@ -687,6 +704,27 @@ public class XanelaCliente extends javax.swing.JFrame {
 
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel3.setText("PRODUCTO");
+
+        jLabel4.setText("TIPO DE SERVIZO");
+
+        jLabel8.setText("CONCELLO");
+
+        ComboConcelloBusc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        ComboTipoLocalBusc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        botonBuscarLocal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        botonBuscarLocal.setForeground(new java.awt.Color(0, 72, 193));
+        botonBuscarLocal.setText("Dalle");
+        botonBuscarLocal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonBuscarLocalActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PanelBusquedaCliLayout = new javax.swing.GroupLayout(PanelBusquedaCli);
         PanelBusquedaCli.setLayout(PanelBusquedaCliLayout);
         PanelBusquedaCliLayout.setHorizontalGroup(
@@ -694,12 +732,50 @@ public class XanelaCliente extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBusquedaCliLayout.createSequentialGroup()
                 .addGap(0, 480, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBusquedaCliLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botonBuscarLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(PanelBusquedaCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PanelBusquedaCliLayout.createSequentialGroup()
+                    .addGap(0, 17, Short.MAX_VALUE)
+                    .addGroup(PanelBusquedaCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ComboConcelloBusc, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(10, 10, 10)
+                    .addGroup(PanelBusquedaCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(10, 10, 10)
+                    .addGroup(PanelBusquedaCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ComboTipoLocalBusc, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(0, 133, Short.MAX_VALUE)))
         );
         PanelBusquedaCliLayout.setVerticalGroup(
             PanelBusquedaCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelBusquedaCliLayout.createSequentialGroup()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 60, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(botonBuscarLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(PanelBusquedaCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PanelBusquedaCliLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(PanelBusquedaCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(PanelBusquedaCliLayout.createSequentialGroup()
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(ComboConcelloBusc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(PanelBusquedaCliLayout.createSequentialGroup()
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(PanelBusquedaCliLayout.createSequentialGroup()
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(ComboTipoLocalBusc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 10, Short.MAX_VALUE)))
         );
 
         PanelSeg.add(PanelBusquedaCli, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 480, 60));
@@ -717,24 +793,24 @@ public class XanelaCliente extends javax.swing.JFrame {
 
         PanelSeg.add(PanelInfoLo, new org.netbeans.lib.awtextra.AbsoluteConstraints(928, 149, -1, 553));
 
-        TaboaInfoLo.setModel(new javax.swing.table.DefaultTableModel(
+        TaboaInfoLocal.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Nome", "TipoLocal", "Especialidade", "Concello"
+                "Nome", "TipoLocal", "Concello"
             }
         ));
-        jScrollPane1.setViewportView(TaboaInfoLo);
+        jScrollPane1.setViewportView(TaboaInfoLocal);
 
         PanelSeg.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 149, 930, 553));
 
@@ -1332,10 +1408,10 @@ public class XanelaCliente extends javax.swing.JFrame {
         busqueda.setSize(580, 70);
         busqueda.setLocation(0, 0);
 
-        PanelBusquedaCli.removeAll();
+      /*  PanelBusquedaCli.removeAll();
         PanelBusquedaCli.add(busqueda);
         PanelBusquedaCli.revalidate();
-        PanelBusquedaCli.repaint();
+        PanelBusquedaCli.repaint();*/
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -1531,10 +1607,10 @@ public class XanelaCliente extends javax.swing.JFrame {
         busqueda.setSize(580, 70);
         busqueda.setLocation(0, 0);
 
-        PanelBusquedaCli.removeAll();
+        /*PanelBusquedaCli.removeAll();
         PanelBusquedaCli.add(busqueda);
         PanelBusquedaCli.revalidate();
-        PanelBusquedaCli.repaint();
+        PanelBusquedaCli.repaint();*/
     }//GEN-LAST:event_LabelBuscarMouseClicked
 
     /**
@@ -1849,7 +1925,23 @@ public class XanelaCliente extends javax.swing.JFrame {
      */
     private void BotonIrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonIrActionPerformed
 
-                TabInicial.setSelectedIndex(3);
+           String titalos[] = {"nome", "Direccion", "Concello"};
+        String datos[] = new String[3];
+        DefaultTableModel modelo = new DefaultTableModel(null, titalos);
+        //  TaboaInfoLocal = new JTable(modelo);
+
+        List<Local> locais = loxicaLocal.validarRead();
+        for (Local local: locais
+        ) {
+            datos[0] = local.getNomeLocal();
+            datos[1] = local.getRua();
+            datos[2] = local.getConcello().getNomeConcello();
+            modelo.addRow(datos);
+        }
+
+        TaboaInfoLocal.setModel(modelo);
+     
+               //TabInicial.setSelectedIndex(3);
 
         // TODO add your handling code here:
     }//GEN-LAST:event_BotonIrActionPerformed
@@ -1887,6 +1979,30 @@ public class XanelaCliente extends javax.swing.JFrame {
         btnMinimiza.setForeground(Color.WHITE);
         // TODO add your handling code here:
     }//GEN-LAST:event_btnMinimizaMouseExited
+
+    private void botonHelpCliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonHelpCliActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonHelpCliActionPerformed
+
+    private void botonBuscarLocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarLocalActionPerformed
+
+        String titalos[] = {"Nome", "Direccion", "Concello"};
+        String datos[] = new String[3];
+        DefaultTableModel modelo = new DefaultTableModel(null, titalos);
+        //  TaboaInfoLocal = new JTable(modelo);
+
+        List<Local> locais = loxicaLocal.validarRead();
+        for (Local local: locais
+        ) {
+            datos[0] = local.getNomeLocal();
+            datos[1] = local.getRua();
+            datos[2] = local.getConcello().getNomeConcello();
+            modelo.addRow(datos);
+        }
+
+        TaboaInfoLocal.setModel(modelo);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonBuscarLocalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1939,13 +2055,14 @@ public class XanelaCliente extends javax.swing.JFrame {
     private javax.swing.JButton BotonIr;
     private javax.swing.JButton BotonLimparCli;
     private javax.swing.JButton BotonLimparDatosLocal;
+    private javax.swing.JComboBox<String> ComboConcelloBusc;
     private javax.swing.JComboBox<String> ComboConcelloCli;
     private javax.swing.JComboBox<String> ComboEspecialidades;
     private javax.swing.JComboBox<String> ComboRolCli;
+    private javax.swing.JComboBox<String> ComboTipoLocalBusc;
     private javax.swing.JLabel LabelBuscar;
     private javax.swing.JLabel LabelDatosCli;
     private javax.swing.JLabel LabelFav;
-    private javax.swing.JLabel LabelIconoCli;
     private javax.swing.JLabel LabelMarcho;
     private javax.swing.JLabel LabelSuperior;
     private javax.swing.JPanel PanelBuscar;
@@ -1966,7 +2083,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     private javax.swing.JPanel PanelSuperior;
     private javax.swing.JPanel PanelTer;
     private javax.swing.JTabbedPane TabInicial;
-    private javax.swing.JTable TaboaInfoLo;
+    private javax.swing.JTable TaboaInfoLocal;
     private javax.swing.JTextField TextApelido2Cli;
     private javax.swing.JTextField TextApelidoCli;
     private javax.swing.JTextField TextBuscaID;
@@ -1983,12 +2100,15 @@ public class XanelaCliente extends javax.swing.JFrame {
     private javax.swing.JTextField TextTelfLocalCli;
     private javax.swing.JTextField TextTipoLocal;
     private javax.swing.JTextField TextoBuscarIr;
+    private javax.swing.JButton botonBuscarLocal;
+    private javax.swing.JButton botonHelpCli;
     private java.awt.Label btnMinimiza;
     private java.awt.Label btnSaida;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -2002,6 +2122,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
@@ -2010,9 +2131,11 @@ public class XanelaCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

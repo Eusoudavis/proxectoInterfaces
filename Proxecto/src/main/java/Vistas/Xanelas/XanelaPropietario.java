@@ -89,26 +89,22 @@ public class XanelaPropietario extends javax.swing.JFrame {
             ComboConcelloLocal.addItem(String.valueOf(concello.getNomeConcello()));
         }
 
-        ComboTipoLocal.removeAllItems();
-        ComboTipoLocal.addItem("");
-        tipoLocalList = loxicaTipoLocal.validarRead();
-        for (TipoLocal tipoLocal: tipoLocalList
-             ) {
-            ComboTipoLocal.addItem(String.valueOf(tipoLocal.getNomeTipo()));
-        }
-
+        putTipoLocal();
         putIngredientCombo();
-
         putTipoBebidaCombo();
+        putEncargo();
+        putEspecialidade();
 
-        ComboEspecialidade.removeAllItems();
-        ComboEspecialidade.addItem("");
-        ComboEspecialidade.addItem("Si");
-        ComboEspecialidade.addItem("Non");
-
-        ComboEncargo.addItem("");
-        ComboEncargo.addItem("Si");
-        ComboEncargo.addItem("Non");
+        ComboEspecialidadeLocal.removeAllItems();
+        ComboEspecialidadeLocal.addItem("");
+        ComboEspecialidadeLocal.addItem("Carne");
+        ComboEspecialidadeLocal.addItem("Pescado");
+        ComboEspecialidadeLocal.addItem("Veggie");
+        ComboEspecialidadeLocal.addItem("Marisco");
+        ComboEspecialidadeLocal.addItem("Tradicional");
+        ComboEspecialidadeLocal.addItem("Copas");
+        ComboEspecialidadeLocal.addItem("Si");
+        ComboEspecialidadeLocal.addItem("Non");
 
         ComboEstacion.addItem("");
         ComboEstacion.addItem(String.valueOf(EstacionAno.anual));
@@ -124,6 +120,30 @@ public class XanelaPropietario extends javax.swing.JFrame {
         ) {
             ComboCarta.addItem(String.valueOf(card.getIdCarta()));
         }
+    }
+
+    private void putTipoLocal() {
+        ComboTipoLocal.removeAllItems();
+        ComboTipoLocal.addItem("");
+        tipoLocalList = loxicaTipoLocal.validarRead();
+        for (TipoLocal tipoLocal: tipoLocalList
+             ) {
+            ComboTipoLocal.addItem(String.valueOf(tipoLocal.getNomeTipo()));
+        }
+    }
+
+    private void putEspecialidade(){
+        ComboEspecialidade.removeAllItems();
+        ComboEspecialidade.addItem("");
+        ComboEspecialidade.addItem("Si");
+        ComboEspecialidade.addItem("Non");
+    }
+
+    private void putEncargo() {
+
+        ComboEncargo.addItem("");
+        ComboEncargo.addItem("Si");
+        ComboEncargo.addItem("Non");
     }
 
     private void putTipoBebidaCombo() {
@@ -174,7 +194,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         LabelDatosPro = new javax.swing.JLabel();
         PanelMarchoPro = new javax.swing.JPanel();
         LabelMarchoPro = new javax.swing.JLabel();
-        LabelIconoPro = new javax.swing.JLabel();
+        botonHelpPro = new javax.swing.JButton();
         PanelSuperiorPro = new javax.swing.JPanel();
         LabelSuperiorPro = new javax.swing.JLabel();
         btnSaida = new java.awt.Label();
@@ -269,6 +289,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         BotonBuscar = new javax.swing.JButton();
         BotonEliminar = new javax.swing.JButton();
         TextBuscaLocal = new javax.swing.JTextField();
+        ComboEspecialidadeLocal = new javax.swing.JComboBox<>();
         PanelCuar = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
@@ -542,8 +563,16 @@ public class XanelaPropietario extends javax.swing.JFrame {
 
         PanelLateralPro.add(PanelMarchoPro, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 610, 240, -1));
 
-        LabelIconoPro.setBackground(new java.awt.Color(0, 72, 193));
-        PanelLateralPro.add(LabelIconoPro, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 250, 230));
+        botonHelpPro.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        botonHelpPro.setForeground(new java.awt.Color(0, 72, 193));
+        botonHelpPro.setText("Axuda");
+        botonHelpPro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonHelpPro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonHelpProActionPerformed(evt);
+            }
+        });
+        PanelLateralPro.add(botonHelpPro, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 120, 45));
 
         BgPropietario.add(PanelLateralPro, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 110, 270, 690));
 
@@ -782,7 +811,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
                 .addGroup(PanelPriProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(PanelPriDatosPro, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PanelPriDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
                 .addGroup(PanelPriProLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(PanelChau, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
                     .addComponent(PanelPriEngadir, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE))
@@ -838,7 +867,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         LabelInfoCarta.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         LabelInfoCarta.setForeground(new java.awt.Color(0, 72, 193));
         LabelInfoCarta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LabelInfoCarta.setText("<html> <body> AGORA PROBA ISTO  <br> CREA UNHA CARTA, DE COMIDAS OU BEBIDAS <br> E DESPOIS ENGï¿½DELLE OS PRODUCTOS </body ></html>");
+        LabelInfoCarta.setText("<html> <body> AGORA PROBA ISTO  <br> CREA UNHA CARTA, DE COMIDAS OU BEBIDAS <br> E DESPOIS ENGÁDELLE OS PRODUCTOS </body ></html>");
         LabelInfoCarta.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         javax.swing.GroupLayout PanelInfoCartaLayout = new javax.swing.GroupLayout(PanelInfoCarta);
@@ -903,7 +932,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         LabelInfoCalCarta.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         LabelInfoCalCarta.setForeground(new java.awt.Color(0, 72, 193));
         LabelInfoCalCarta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LabelInfoCalCarta.setText("<html>\n<body>\nVALE, AGORA ISTO VAI IR ASï¿½\n <br>\nELIXE UNHA DAS CARTAS QUE CREACHES\n<br>\nENGADE OS PRODUCTOS, LISTO\n</body\n></html>");
+        LabelInfoCalCarta.setText("<html>\n<body>\nVALE, AGORA ISTO VAI IR ASÍ\n <br>\nELIXE UNHA DAS CARTAS QUE CREACHES\n<br>\nENGADE OS PRODUCTOS, LISTO\n</body\n></html>");
         LabelInfoCalCarta.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -1199,19 +1228,19 @@ public class XanelaPropietario extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 72, 193));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("<html>\n<body>\nVAMOS PASIï¿½O PASENIï¿½O A PASIï¿½O PASENIï¿½O. \n <br>\n PRIMEIRO INTRODUCE OS DATOS Bï¿½SICOS PARA \n<br>\nRELACIONAR O TEU LOCAL CONTGO\n</body\n></html>");
+        jLabel14.setText("<html>\n<body>\nVAMOS PASIÑO PASENIÑO A PASIÑO PASENIÑO. \n <br>\n PRIMEIRO INTRODUCE OS DATOS BÁSICOS PARA \n<br>\nRELACIONAR O TEU LOCAL CONTGO\n</body\n></html>");
         jLabel14.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 72, 193));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("<html>\n<body>\nAGORA QUï¿½ VEN?\n <br>\nPOIS DEIXAR OS DATOS DE CONTACTO E UBICACION\n<br>\nFIXATE BEN XA QUE TAMEN O VERAN NOS RESULTADOS\n<br>\nDAS BUSQUEDAS. TODOS OS CAMPOS SON OBLIGATORIOS\n<br>\nSE O TEU LOCAL TEN ALGUNHA ESPECIALIDADE, ENGADEA.\n</body\n></html>");
+        jLabel17.setText("<html>\n<body>\nAGORA QUÉ VEN?\n <br>\nPOIS DEIXAR OS DATOS DE CONTACTO E UBICACION\n<br>\nFIXATE BEN XA QUE TAMEN O VERAN NOS RESULTADOS\n<br>\nDAS BUSQUEDAS. TODOS OS CAMPOS SON OBLIGATORIOS\n<br>\nSE O TEU LOCAL TEN ALGUNHA ESPECIALIDADE, ENGADEA.\n</body\n></html>");
         jLabel17.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(0, 72, 193));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("<html> <body>  VEï¿½A, XA QUEDA POUCO   <br> SIMPLEMENTE ENGADE DE QUE TIPO ï¿½ O TEU LOCAL E ALE <br> A CORRER <br> SE TES CARTA E A QUERES ENGADIR TAMEN PODES, FAINO </body> </html>");
+        jLabel18.setText("<html> <body>  VEÑA, XA QUEDA POUCO   <br> SIMPLEMENTE ENGADE DE QUE TIPO É O TEU LOCAL E ALE <br> A CORRER <br> SE TES CARTA E A QUERES ENGADIR TAMEN PODES, FAINO </body> </html>");
         jLabel18.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         BotonGardarLocal.setBackground(new java.awt.Color(204, 255, 255));
@@ -1254,6 +1283,9 @@ public class XanelaPropietario extends javax.swing.JFrame {
             }
         });
 
+        ComboEspecialidadeLocal.setBackground(new java.awt.Color(0, 72, 193));
+        ComboEspecialidadeLocal.setForeground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout PanelTerLayout = new javax.swing.GroupLayout(PanelTer);
         PanelTer.setLayout(PanelTerLayout);
         PanelTerLayout.setHorizontalGroup(
@@ -1290,7 +1322,6 @@ public class XanelaPropietario extends javax.swing.JFrame {
                                     .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(PanelTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(TextEspecialidade)
                                     .addComponent(TextEmailLocal)
                                     .addGroup(PanelTerLayout.createSequentialGroup()
                                         .addComponent(TextNumLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1299,7 +1330,8 @@ public class XanelaPropietario extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(TextTelfLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(TextRuaLocal)
-                                    .addComponent(ComboConcelloLocal, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(ComboConcelloLocal, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(ComboEspecialidadeLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelTerLayout.createSequentialGroup()
                                 .addGroup(PanelTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(BotonGardarLocal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1311,7 +1343,8 @@ public class XanelaPropietario extends javax.swing.JFrame {
                                         .addGap(0, 0, Short.MAX_VALUE)
                                         .addComponent(BotonActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(30, 30, 30)
-                                        .addComponent(BotonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                        .addComponent(BotonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(TextEspecialidade, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1375,7 +1408,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(PanelTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TextEspecialidade, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(ComboEspecialidadeLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(PanelTerLayout.createSequentialGroup()
                                 .addGap(75, 75, 75)
                                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -1399,10 +1432,12 @@ public class XanelaPropietario extends javax.swing.JFrame {
                             .addComponent(BotonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(BotonActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(BotonGardarLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addComponent(TextEspecialidade, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34))
         );
 
-        jLabel14.getAccessibleContext().setAccessibleName("VAMOS PASIï¿½O PASENIï¿½O A PASIï¿½O PASENIï¿½O. \n");
+        jLabel14.getAccessibleContext().setAccessibleName("VAMOS PASIÑO PASENIÑO A PASIÑO PASENIÑO. \n");
 
         TabInicialPro.addTab("tab3", PanelTer);
 
@@ -1477,7 +1512,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         jLabel38.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(0, 72, 193));
         jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel38.setText("Nï¿½");
+        jLabel38.setText("Nº");
         jLabel38.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         ComboConcello.setBackground(new java.awt.Color(0, 72, 193));
@@ -1545,7 +1580,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         jLabel39.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(0, 72, 193));
         jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel39.setText("<html>\n<body>\nAGORA QUï¿½ VEN?\n <br>\nPOIS DEIXAR OS DATOS DE CONTACTO E UBICACION\n<br>\nFIXATE BEN XA QUE TAMEN O VERAN NOS RESULTADOS\n<br>\nDAS BUSQUEDAS. TODOS OS CAMPOS SON OBLIGATORIOS\n<br>\nSE O TEU LOCAL TEN ALGUNHA ESPECIALIDADE, ENGADEA.\n</body\n></html>");
+        jLabel39.setText("<html>\n<body>\nAGORA QUÉ VEN?\n <br>\nPOIS DEIXAR OS DATOS DE CONTACTO E UBICACION\n<br>\nFIXATE BEN XA QUE TAMEN O VERAN NOS RESULTADOS\n<br>\nDAS BUSQUEDAS. TODOS OS CAMPOS SON OBLIGATORIOS\n<br>\nSE O TEU LOCAL TEN ALGUNHA ESPECIALIDADE, ENGADEA.\n</body\n></html>");
         jLabel39.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         javax.swing.GroupLayout PanelCuarLayout = new javax.swing.GroupLayout(PanelCuar);
@@ -2080,38 +2115,34 @@ public class XanelaPropietario extends javax.swing.JFrame {
         int prezoProd = Integer.parseInt(TextIdPrezoVenda.getText());
         boolean encargoForm = false;
         boolean especialidadeForm = false;
+        String nomeProductoComboBebida = String.valueOf(ComboProdutoBebidas.getSelectedItem());
+        String nomeProductoComboPrato = String.valueOf(ComboPrato.getSelectedItem());
+        String textComboEncargo = String.valueOf(ComboEncargo.getSelectedItem());
+        String textComboEspecialidade = String.valueOf(ComboEspecialidade.getSelectedItem());
 
-        //if (ComboProdutoBebidas.is)
-        String nomeProductoCombo = String.valueOf(ComboProdutoBebidas.getSelectedItem());
-        String nomeProductoCombo2 = String.valueOf(ComboPrato.getSelectedItem());
-
-
-        if (ComboEncargo.getSelectedItem().equals("Si")){
+        if (textComboEncargo.equals("Si")){
             encargoForm = true;
-        }else if (ComboEncargo.getSelectedItem().equals(null)){
+        }else if (textComboEncargo.isBlank() || textComboEncargo.equals("Non") ){
             encargoForm = false;
         }
 
-        if (ComboEspecialidade.getSelectedItem().equals("Si")){
+        if (textComboEspecialidade.equals("Si")){
             especialidadeForm = true;
-        } else if (ComboEspecialidade.getSelectedItem().equals(null)){
+        } else if (textComboEspecialidade.isBlank() || textComboEspecialidade.equals("Non")){
             especialidadeForm = false;
         }
 
         Produto produto = new Produto();
-
         produtos = loxicaProducto.validarRead();
-
         for (Produto prod : produtos
         ) {
-            if (prod.getNome().equals(nomeProductoCombo)) {
+            if (prod.getNome().equals(nomeProductoComboBebida)) {
                 produto.setId(prod.getId());
               //  break;
-            }else if (prod.getNome().equals(nomeProductoCombo2) ) {
+            }else if (prod.getNome().equals(nomeProductoComboPrato) ) {
                 produto.setId(prod.getId());
                // break;
             }
-
         }
         ProdutoCarta produtoCarta = new ProdutoCarta();
         produtoCarta.setCarta(cartaBuscarNome);
@@ -2130,12 +2161,9 @@ public class XanelaPropietario extends javax.swing.JFrame {
         ComboMarcas.removeAllItems();
         ComboPrato.removeAllItems();
         putIngredientCombo();
-
         putTipoBebidaCombo();
-
-        // loxicaProducto.validaerCrearProdutoCarta(bebida, cartaBuscarNome);
-
-
+        putEncargo();
+        putEspecialidade();
         // TODO add your handling code here:
     }//GEN-LAST:event_BotonSaveCartProActionPerformed
 
@@ -2225,6 +2253,8 @@ public class XanelaPropietario extends javax.swing.JFrame {
         Concello council = new Concello();
         council.setNomeConcello(concello);
         local.setConcello(council);
+        String especialidade = String.valueOf(ComboEspecialidadeLocal.getSelectedItem());
+        local.setEspecialidade(especialidade);
         local.setRua(TextRuaLocal.getText());
         local.setNumero(Integer.parseInt(TextNumLocal.getText()));
         local.setTelefono(TextTelfLocal.getText());
@@ -2515,6 +2545,10 @@ public class XanelaPropietario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BuscaPratoActionPerformed
 
+    private void botonHelpProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonHelpProActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonHelpProActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -2579,6 +2613,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> ComboConcelloLocal;
     private javax.swing.JComboBox<String> ComboEncargo;
     private javax.swing.JComboBox<String> ComboEspecialidade;
+    private javax.swing.JComboBox<String> ComboEspecialidadeLocal;
     private javax.swing.JComboBox<String> ComboEstacion;
     private javax.swing.JComboBox<String> ComboIngrediente;
     private javax.swing.JComboBox<String> ComboMarcas;
@@ -2590,7 +2625,6 @@ public class XanelaPropietario extends javax.swing.JFrame {
     private javax.swing.JLabel LabeLEngadeLocal;
     private javax.swing.JLabel LabelDatosLocal;
     private javax.swing.JLabel LabelDatosPro;
-    private javax.swing.JLabel LabelIconoPro;
     private javax.swing.JLabel LabelInfoCalCarta;
     private javax.swing.JLabel LabelInfoCarta;
     private javax.swing.JLabel LabelMarchoPro;
@@ -2635,6 +2669,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     private javax.swing.JTextField TextRuaLocal;
     private javax.swing.JTextField TextTelf;
     private javax.swing.JTextField TextTelfLocal;
+    private javax.swing.JButton botonHelpPro;
     private java.awt.Label btnMinimiza;
     private java.awt.Label btnSaida;
     private javax.swing.JButton jButton1;
