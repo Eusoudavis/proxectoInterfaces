@@ -43,8 +43,6 @@ Y
 )src/main/java/Vistas/Xanelas/Xanela1.java,1\9\1931140e2ca3e2e1672ea5da04ae26ae77d6cf57
 t
 Dsrc/main/java/modelo/dao/implementacion/concelloDAO/ConcelloDAO.java,c\4\c450d1c4d0e16edfc2576eaa92c855bce276abd6
-X
-(src/main/BBDD/ReiniciarAutoincrement.txt,6\e\6ebeebbb35dd481801f91ff514102a899bb2b7e4
 `
 0src/main/java/modelo/Loxica/LoxicaTipoLocal.java,6\7\67c406a52a573720a7a9239444ac8823da2ce193
 r
@@ -57,3 +55,15 @@ g
 7src/main/java/modelo/Loxica/LoxicaLocalPropietario.java,c\3\c31f476837d84bf0e1bdb8087762b71b224874bb
 p
 @src/main/java/modelo/dao/implementacion/LocalPropietarioDAO.java,e\7\e7b53ffd64261e9be70d0eb487b12ff86212c2ce
+p
+@src/main/java/modelo/dao/implementacion/produtoDAO/PratoDAO.java,0\c\0c5b1ce4c6c06ade38d1c4301419ed81e53d6953
+K
+src/main/BBDD/tipolocal.txt,f\9\f93062c4d7c12ff5e8e583ec75683169e846b089
+Q
+!src/main/BBDD/ProdutosBebidas.txt,c\3\c367d6a9fb3517b48a95bb7dd9bface80338fe99
+X
+(src/main/BBDD/ReiniciarAutoincrement.txt,6\e\6ebeebbb35dd481801f91ff514102a899bb2b7e4
+c
+3src/main/java/modelo/Loxica/LoxicaProdutoCarta.java,6\f\6f3d75e8dafcabf4906014c9c09550514055bae7
+w
+Gsrc/main/java/modelo/dao/implementacion/produtoDAO/ProdutoCartaDao.java,e\7\e7f6df9dba0722e84e98219694ea13bee36b01a0

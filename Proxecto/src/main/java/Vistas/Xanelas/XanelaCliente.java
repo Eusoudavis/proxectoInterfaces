@@ -46,13 +46,13 @@ public class XanelaCliente extends javax.swing.JFrame {
         ComboRolCli.addItem("Cliente");
         ComboRolCli.addItem("Propietario");
 
-//        ComboConcelloCli.addItem("");
-//       // ConcelloDAO concelloDAO = new ConcelloDAO();
-//        List<Concello> concellos = loxicaConcello.validarRead();
-//        for (Concello council : concellos
-//        ) {
-//            ComboConcelloCli.addItem(String.valueOf(council.getNomeConcello()));
-//        }
+        ComboConcello.addItem("");
+       // ConcelloDAO concelloDAO = new ConcelloDAO();
+        List<Concello> concellos = loxicaConcello.validarRead();
+        for (Concello council : concellos
+        ) {
+            ComboConcello.addItem(String.valueOf(council.getNomeConcello()));
+        }
     }
 
     /**
@@ -103,7 +103,7 @@ public class XanelaCliente extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        ComboConcelloBusc = new javax.swing.JComboBox<>();
+        ComboConcello = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
         ComboTipoLocalBusc = new javax.swing.JComboBox<>();
         botonBuscarLocal = new javax.swing.JButton();
@@ -710,8 +710,6 @@ public class XanelaCliente extends javax.swing.JFrame {
 
         jLabel8.setText("CONCELLO");
 
-        ComboConcelloBusc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         ComboTipoLocalBusc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -741,7 +739,7 @@ public class XanelaCliente extends javax.swing.JFrame {
                     .addGap(0, 17, Short.MAX_VALUE)
                     .addGroup(PanelBusquedaCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(ComboConcelloBusc, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ComboConcello, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(10, 10, 10)
                     .addGroup(PanelBusquedaCliLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -766,7 +764,7 @@ public class XanelaCliente extends javax.swing.JFrame {
                         .addGroup(PanelBusquedaCliLayout.createSequentialGroup()
                             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(0, 0, 0)
-                            .addComponent(ComboConcelloBusc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(ComboConcello, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(PanelBusquedaCliLayout.createSequentialGroup()
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(0, 0, 0)
@@ -775,7 +773,7 @@ public class XanelaCliente extends javax.swing.JFrame {
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(0, 0, 0)
                             .addComponent(ComboTipoLocalBusc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 10, Short.MAX_VALUE)))
+                    .addGap(0, 8, Short.MAX_VALUE)))
         );
 
         PanelSeg.add(PanelBusquedaCli, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 480, 60));
@@ -795,19 +793,19 @@ public class XanelaCliente extends javax.swing.JFrame {
 
         TaboaInfoLocal.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {},
+                {}
             },
             new String [] {
-                "Nome", "TipoLocal", "Concello"
+
             }
         ));
         jScrollPane1.setViewportView(TaboaInfoLocal);
@@ -1986,16 +1984,15 @@ public class XanelaCliente extends javax.swing.JFrame {
 
     private void botonBuscarLocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarLocalActionPerformed
 
-        String titalos[] = {"Nome", "Direccion", "Concello"};
+        String titalos[] = {"Nome", "Especialidade", "Concello"};
         String datos[] = new String[3];
         DefaultTableModel modelo = new DefaultTableModel(null, titalos);
-        //  TaboaInfoLocal = new JTable(modelo);
 
         List<Local> locais = loxicaLocal.validarRead();
         for (Local local: locais
         ) {
             datos[0] = local.getNomeLocal();
-            datos[1] = local.getRua();
+            datos[1] = local.getEspecialidade();
             datos[2] = local.getConcello().getNomeConcello();
             modelo.addRow(datos);
         }
@@ -2055,7 +2052,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     private javax.swing.JButton BotonIr;
     private javax.swing.JButton BotonLimparCli;
     private javax.swing.JButton BotonLimparDatosLocal;
-    private javax.swing.JComboBox<String> ComboConcelloBusc;
+    private javax.swing.JComboBox<String> ComboConcello;
     private javax.swing.JComboBox<String> ComboConcelloCli;
     private javax.swing.JComboBox<String> ComboEspecialidades;
     private javax.swing.JComboBox<String> ComboRolCli;

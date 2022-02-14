@@ -77,9 +77,7 @@ public class LocalDAO implements Interfaz<Local> {
                 local.setNumero(resultSet.getInt("numero"));
                 local.setTelefono(resultSet.getString("telefono"));
                 local.setEmail(resultSet.getString("email"));
-                //local.getEstado(resultSet.getString("estado"));
-               // TipoLocal tipoLocal = new TipoLocal();
-              //  tipoLocal.setNomeTipo(resultSet.getString(""));
+                local.setEspecialidade(resultSet.getString("especialidade"));
                 locais.add(local);
 
             }sentenza.close();

@@ -36,4 +36,5 @@ public class Local {
 	private int numero;
 	private String telefono;
 	private String email;
+
 }
