@@ -20,6 +20,20 @@ public class LoxicaLocal {
         return localDAO.read();
     }
 
+    public List<Local> validarReadConParametros(Local local){
+        LocalDAO localDAO = new LocalDAO();
+        return localDAO.readByParam(local);
+    }
+
+    public List<Local> validarReadConParametroConcello(Local local){
+        LocalDAO localDAO = new LocalDAO();
+        return localDAO.readByCouncilParam(local);
+    }
+    public List<Local> validarReadConParametroEspecialidade(Local local){
+        LocalDAO localDAO = new LocalDAO();
+        return localDAO.readBySpecialtyParam(local);
+    }
+
     public Local validarFindByIdMax(Local local){
         LocalDAO localDAO = new LocalDAO();
         return localDAO.findByIdMax(local);

@@ -77,11 +77,11 @@ public class LocalDAO implements Interfaz<Local> {
                 local.setNumero(resultSet.getInt("numero"));
                 local.setTelefono(resultSet.getString("telefono"));
                 local.setEmail(resultSet.getString("email"));
+                local.setEspecialidade(resultSet.getString("especialidade"));
                 //local.getEstado(resultSet.getString("estado"));
                // TipoLocal tipoLocal = new TipoLocal();
               //  tipoLocal.setNomeTipo(resultSet.getString(""));
                 locais.add(local);
-
             }sentenza.close();
             conexion.desconectar();
 
@@ -206,6 +206,112 @@ public class LocalDAO implements Interfaz<Local> {
             throwables.printStackTrace();
         }
     }
+
+    public List<Local> readByParam(Local local) {
+        List<Local> locais = new ArrayList<>();
+        String sql = "Select * from local where nome_concello =? and especialidade = ?";
+        //Local local;
+        try {
+            Conexion conexion = new Conexion();
+            PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
+            sentenza.setString(1, local.getConcello().getNomeConcello());
+            sentenza.setString(2, local.getEspecialidade());
+            ResultSet resultSet = sentenza.executeQuery();
+            while (resultSet.next()){
+                local = new Local();
+                local.setIdLocal(resultSet.getInt("id_local"));
+                local.setNomeLocal(resultSet.getString("nome_local"));
+                local.setRangoPrezos(resultSet.getInt("rango_prezos"));
+                Concello concello = new Concello();
+                concello.setNomeConcello(resultSet.getString("nome_concello"));
+                local.setConcello(concello);
+                local.setRua(resultSet.getString("rua"));
+                local.setNumero(resultSet.getInt("numero"));
+                local.setTelefono(resultSet.getString("telefono"));
+                local.setEmail(resultSet.getString("email"));
+                local.setEspecialidade(resultSet.getString("especialidade"));
+                //local.getEstado(resultSet.getString("estado"));
+                // TipoLocal tipoLocal = new TipoLocal();
+                //  tipoLocal.setNomeTipo(resultSet.getString(""));
+                locais.add(local);
+
+            }sentenza.close();
+            conexion.desconectar();
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return locais;    }
+
+    public List<Local> readByCouncilParam(Local local) {
+        List<Local> locais = new ArrayList<>();
+        String sql = "Select * from local l where l.nome_concello =?";
+        //Local local;
+        try {
+            Conexion conexion = new Conexion();
+            PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
+            sentenza.setString(1, local.getConcello().getNomeConcello());
+            ResultSet resultSet = sentenza.executeQuery();
+            while (resultSet.next()){
+                local = new Local();
+                local.setIdLocal(resultSet.getInt("id_local"));
+                local.setNomeLocal(resultSet.getString("nome_local"));
+                local.setRangoPrezos(resultSet.getInt("rango_prezos"));
+                Concello concello = new Concello();
+                concello.setNomeConcello(resultSet.getString("nome_concello"));
+                local.setConcello(concello);
+                local.setRua(resultSet.getString("rua"));
+                local.setNumero(resultSet.getInt("numero"));
+                local.setTelefono(resultSet.getString("telefono"));
+                local.setEmail(resultSet.getString("email"));
+                local.setEspecialidade(resultSet.getString("especialidade"));
+                //local.getEstado(resultSet.getString("estado"));
+                // TipoLocal tipoLocal = new TipoLocal();
+                //  tipoLocal.setNomeTipo(resultSet.getString(""));
+                locais.add(local);
+
+            }sentenza.close();
+            conexion.desconectar();
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return locais;    }
+
+    public List<Local> readBySpecialtyParam(Local local) {
+        List<Local> locais = new ArrayList<>();
+        String sql = "Select * from local where especialidade = ?";
+        //Local local;
+        try {
+            Conexion conexion = new Conexion();
+            PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
+            sentenza.setString(1, local.getEspecialidade());
+            ResultSet resultSet = sentenza.executeQuery();
+            while (resultSet.next()){
+                local = new Local();
+                local.setIdLocal(resultSet.getInt("id_local"));
+                local.setNomeLocal(resultSet.getString("nome_local"));
+                local.setRangoPrezos(resultSet.getInt("rango_prezos"));
+                Concello concello = new Concello();
+                concello.setNomeConcello(resultSet.getString("nome_concello"));
+                local.setConcello(concello);
+                local.setRua(resultSet.getString("rua"));
+                local.setNumero(resultSet.getInt("numero"));
+                local.setTelefono(resultSet.getString("telefono"));
+                local.setEmail(resultSet.getString("email"));
+                local.setEspecialidade(resultSet.getString("especialidade"));
+                //local.getEstado(resultSet.getString("estado"));
+                // TipoLocal tipoLocal = new TipoLocal();
+                //  tipoLocal.setNomeTipo(resultSet.getString(""));
+                locais.add(local);
+
+            }sentenza.close();
+            conexion.desconectar();
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return locais;    }
 
 //    public List<Local> findByIdMauitasCcisas(Local local){
 //        List<Local> locais = new ArrayList<>();
