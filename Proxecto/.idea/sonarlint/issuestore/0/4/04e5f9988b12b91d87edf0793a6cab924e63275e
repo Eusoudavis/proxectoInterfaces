@@ -1,0 +1,35 @@
+
+q	java:S116["\Rename this field "ComboConcelloBusc" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ¡è†
+r	java:S116\"]Rename this field "ComboTipoLocalBusc" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÅå³
+v
+java:S1450["`Remove the "ComboConcelloBusc" field and declare it as a local variable in the relevant methods.(Ÿ¡è†
+w
+java:S1450\"aRemove the "ComboTipoLocalBusc" field and declare it as a local variable in the relevant methods.(çÅå³
+u
+java:S1450]"_Remove the "botonBuscarLocal" field and declare it as a local variable in the relevant methods.(•ƒ©§
+t
+java:S1450^"YRemove the "jComboBox2" field and declare it as a local variable in the relevant methods.(ÃÛØÊşÿÿÿÿ
+q
+java:S1450_"VRemove the "jLabel1" field and declare it as a local variable in the relevant methods.(°ãÉ¸ÿÿÿÿÿ
+q
+java:S1450`"VRemove the "jLabel2" field and declare it as a local variable in the relevant methods.(™úòˆüÿÿÿÿ
+q
+java:S1450a"VRemove the "jLabel3" field and declare it as a local variable in the relevant methods.(Îä€øÿÿÿÿ
+E
+java:S1172N"*Remove this unused method parameter "evt".(â÷ÂÌûÿÿÿÿ
+@
+java:S1481Q"*Remove this unused "local" local variable.(ßªÿğ
+>	java:S108R")Either remove or fill this block of code.(­ïã
+M
+java:S1135V"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+b
+java:S11929"GDefine a constant instead of duplicating this literal "Item 4" 3 times.(àÙ¬Äıÿÿÿÿ
+b
+java:S11929"GDefine a constant instead of duplicating this literal "Item 3" 3 times.(àÙ¬Äıÿÿÿÿ
+b
+java:S11929"GDefine a constant instead of duplicating this literal "Item 2" 3 times.(àÙ¬Äıÿÿÿÿ
+b
+java:S11929"GDefine a constant instead of duplicating this literal "Item 1" 3 times.(àÙ¬Äıÿÿÿÿ
+C
+java:S1604F"(Make this anonymous inner class a lambda(èÛ¯¯úÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÂÓ¸Í

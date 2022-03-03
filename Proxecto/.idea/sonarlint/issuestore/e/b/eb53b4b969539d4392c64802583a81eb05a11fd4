@@ -1,0 +1,8 @@
+
+G
+java:S1068"1Remove this unused "miCoordinador" private field.(§”Ò«
+o
+java:S1104"TMake modifica a static final constant or non-public and provide accessors if needed.(½Ô¥Öýÿÿÿÿ
+I
+java:S1444".Make this "public static modifica" field final(½Ô¥Öýÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ï³¥Å

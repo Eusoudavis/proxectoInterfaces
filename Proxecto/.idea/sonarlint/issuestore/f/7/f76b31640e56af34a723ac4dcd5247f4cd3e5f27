@@ -1,0 +1,23 @@
+
+
+java:S1186 "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ξβύζ8υόμ/
+S
+java:S1172I"1Remove this unused method parameter "tipoBebida".(Άδφάόÿÿÿÿ8’όμ/
+E	java:S108Y")Either remove or fill this block of code.(Ϊξψ›8όμ/
+m
+java:S11925"PDefine a constant instead of duplicating this literal "nome_fabricante" 3 times.(δ«»8§όμ/
+g
+java:S11924"JDefine a constant instead of duplicating this literal "id_bebida" 3 times.(Ϊλόα8¨όμ/
+l
+java:S11927"ODefine a constant instead of duplicating this literal "id_tipo_bebida" 3 times.(€©ξ±8¦όμ/
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(κί­8²όμ/
+d
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(‘φ¬‹8ηόμ/
+l
+java:S20950"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ΣΜ8θόμ/
+m
+java:S2095„"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ΣΜ8θόμ/
+l
+java:S2095m"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ΣΜ8ηόμ/
+l
+java:S2095O"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ΣΜ8θόμ/

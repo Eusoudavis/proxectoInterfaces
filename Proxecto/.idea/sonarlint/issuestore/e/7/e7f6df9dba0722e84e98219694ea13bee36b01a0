@@ -1,0 +1,13 @@
+
+ó
+java:S1186F"ÄAdd a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(©Òã∫
+A
+java:S1168!"+Return an empty collection instead of null.(•πÔç
+W	java:S1258"<This block of commented-out lines of code should be removed.(ÿ˚≤8¡¥ﬂœÓ/
+O
+java:S1128"4Remove this unused import 'modelo.vo.Produto.Prato'.(Ê“ô¬˚ˇˇˇˇ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Íüﬂ≠
+e
+java:S2095)"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ê”Ãà
+]
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ëˆ¨ã

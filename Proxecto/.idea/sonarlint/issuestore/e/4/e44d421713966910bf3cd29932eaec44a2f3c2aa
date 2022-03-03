@@ -1,0 +1,8 @@
+
+Q	java:S125"<This block of commented-out lines of code should be removed.(ÏË´Ş
+V	java:S125!"<This block of commented-out lines of code should be removed.(èÒÊ¾şÿÿÿÿ
+X
+java:S1128"6Remove this unused import 'modelo.vo.Produto.Produto'.(£“²Ğùÿÿÿÿ8ÆÄ„ ï/
+]
+java:S1128	";Remove this unused import 'modelo.vo.Produto.ProdutoCarta'.(üìÆ¡ûÿÿÿÿ8ù‡ ï/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(•Ä„î
