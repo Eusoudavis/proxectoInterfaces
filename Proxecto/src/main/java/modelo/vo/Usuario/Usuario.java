@@ -8,7 +8,7 @@ import lombok.Data;
  * Clase que representa o usuario base na nosa aplicación
  */
 @Data
-public abstract class Usuario {
+public class Usuario {
 	/**
 	 * Atributos de clase que representan os campos para a táboa na bbdd
 	 */

@@ -37,7 +37,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
      * Atributos de clase, declaraciï¿½ns e instanciaciï¿½ns
      */
     public int xMouse, yMouse;
-
+    String idPropietario = System.getProperty("idPropietario");
     LoxicaPrato loxicaPrato = new LoxicaPrato();
     LoxicaIngredientePrato loxicaIngredientePrato = new LoxicaIngredientePrato();
     LoxicaIngrediente loxicaIngrediente = new LoxicaIngrediente();
@@ -69,9 +69,9 @@ public class XanelaPropietario extends javax.swing.JFrame {
     public XanelaPropietario() {
         initComponents();
 
-        ComboRol.addItem("");
-        ComboRol.addItem("Cliente");
-        ComboRol.addItem("Propietario");
+        //ComboRol.addItem("");
+        //ComboRol.addItem("Cliente");
+        //ComboRol.addItem("Propietario");
 
         ComboConcello.addItem("");
         ConcelloDAO concelloDAO = new ConcelloDAO();
@@ -257,8 +257,6 @@ public class XanelaPropietario extends javax.swing.JFrame {
         jLabel31 = new javax.swing.JLabel();
         BuscaPrato = new javax.swing.JButton();
         PanelTer = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        TextPropietario = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
         TextNomeLocal = new javax.swing.JTextField();
         TextRuaLocal = new javax.swing.JTextField();
@@ -268,7 +266,6 @@ public class XanelaPropietario extends javax.swing.JFrame {
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         TextNumLocal = new javax.swing.JTextField();
-        TextEspecialidade = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         TextEmailLocal = new javax.swing.JTextField();
@@ -285,11 +282,12 @@ public class XanelaPropietario extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         BotonGardarLocal = new javax.swing.JButton();
-        BotonActualizar = new javax.swing.JButton();
+        BotonActualizarLocal = new javax.swing.JButton();
         BotonBuscar = new javax.swing.JButton();
-        BotonEliminar = new javax.swing.JButton();
-        TextBuscaLocal = new javax.swing.JTextField();
+        BotonEliminarLocal = new javax.swing.JButton();
         ComboEspecialidadeLocal = new javax.swing.JComboBox<>();
+        TextPropietario = new javax.swing.JTextField();
+        jLabel37 = new javax.swing.JLabel();
         PanelCuar = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
@@ -300,8 +298,6 @@ public class XanelaPropietario extends javax.swing.JFrame {
         jLabel36 = new javax.swing.JLabel();
         TextEmail = new javax.swing.JTextField();
         TextTelf = new javax.swing.JTextField();
-        jLabel37 = new javax.swing.JLabel();
-        ComboRol = new javax.swing.JComboBox<>();
         TextNum = new javax.swing.JTextField();
         jLabel38 = new javax.swing.JLabel();
         ComboConcello = new javax.swing.JComboBox<>();
@@ -312,7 +308,6 @@ public class XanelaPropietario extends javax.swing.JFrame {
         BotonLimpar = new javax.swing.JButton();
         BotonActualizar1 = new javax.swing.JButton();
         BotonBorrar = new javax.swing.JButton();
-        TextBuscaID = new javax.swing.JTextField();
         BotonBuscar1 = new javax.swing.JButton();
         jSeparator11 = new javax.swing.JSeparator();
         jLabel39 = new javax.swing.JLabel();
@@ -1121,17 +1116,6 @@ public class XanelaPropietario extends javax.swing.JFrame {
 
         PanelTer.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 72, 193));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("ID PROPIETARIO");
-        jLabel3.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
-
-        TextPropietario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        TextPropietario.setForeground(new java.awt.Color(0, 72, 193));
-        TextPropietario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        TextPropietario.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
-
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(0, 72, 193));
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -1182,11 +1166,6 @@ public class XanelaPropietario extends javax.swing.JFrame {
         TextNumLocal.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         TextNumLocal.setAlignmentX(0.0F);
         TextNumLocal.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
-
-        TextEspecialidade.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        TextEspecialidade.setForeground(new java.awt.Color(0, 72, 193));
-        TextEspecialidade.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        TextEspecialidade.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(0, 72, 193));
@@ -1253,13 +1232,13 @@ public class XanelaPropietario extends javax.swing.JFrame {
             }
         });
 
-        BotonActualizar.setBackground(new java.awt.Color(204, 255, 255));
-        BotonActualizar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        BotonActualizar.setForeground(new java.awt.Color(0, 72, 193));
-        BotonActualizar.setText("ACTUALIZAR");
-        BotonActualizar.addActionListener(new java.awt.event.ActionListener() {
+        BotonActualizarLocal.setBackground(new java.awt.Color(204, 255, 255));
+        BotonActualizarLocal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        BotonActualizarLocal.setForeground(new java.awt.Color(0, 72, 193));
+        BotonActualizarLocal.setText("ACTUALIZAR");
+        BotonActualizarLocal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonActualizarActionPerformed(evt);
+                BotonActualizarLocalActionPerformed(evt);
             }
         });
 
@@ -1273,18 +1252,30 @@ public class XanelaPropietario extends javax.swing.JFrame {
             }
         });
 
-        BotonEliminar.setBackground(new java.awt.Color(204, 255, 255));
-        BotonEliminar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        BotonEliminar.setForeground(new java.awt.Color(0, 72, 193));
-        BotonEliminar.setText("ELIMINAR");
-        BotonEliminar.addActionListener(new java.awt.event.ActionListener() {
+        BotonEliminarLocal.setBackground(new java.awt.Color(204, 255, 255));
+        BotonEliminarLocal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        BotonEliminarLocal.setForeground(new java.awt.Color(0, 72, 193));
+        BotonEliminarLocal.setText("ELIMINAR");
+        BotonEliminarLocal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonEliminarActionPerformed(evt);
+                BotonEliminarLocalActionPerformed(evt);
             }
         });
 
         ComboEspecialidadeLocal.setBackground(new java.awt.Color(0, 72, 193));
         ComboEspecialidadeLocal.setForeground(new java.awt.Color(255, 255, 255));
+
+        TextPropietario.setEditable(false);
+        TextPropietario.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        TextPropietario.setForeground(new java.awt.Color(0, 72, 193));
+        TextPropietario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        TextPropietario.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
+
+        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(0, 72, 193));
+        jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel37.setText("ID LOCAL");
+        jLabel37.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         javax.swing.GroupLayout PanelTerLayout = new javax.swing.GroupLayout(PanelTer);
         PanelTer.setLayout(PanelTerLayout);
@@ -1301,8 +1292,8 @@ public class XanelaPropietario extends javax.swing.JFrame {
                                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(TextNomeLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(PanelTerLayout.createSequentialGroup()
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelTerLayout.createSequentialGroup()
+                                .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(TextPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
@@ -1341,18 +1332,14 @@ public class XanelaPropietario extends javax.swing.JFrame {
                                     .addComponent(ComboTipoLocal, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addGroup(PanelTerLayout.createSequentialGroup()
                                         .addGap(0, 0, Short.MAX_VALUE)
-                                        .addComponent(BotonActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(BotonActualizarLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(30, 30, 30)
-                                        .addComponent(BotonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(TextEspecialidade, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(BotonEliminarLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(18, 18, 18)
                         .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(PanelTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelTerLayout.createSequentialGroup()
-                                .addComponent(TextBuscaLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(BotonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(BotonBuscar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
                             .addComponent(jLabel18))))
                 .addGap(0, 19, Short.MAX_VALUE))
@@ -1363,24 +1350,21 @@ public class XanelaPropietario extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addGroup(PanelTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(PanelTerLayout.createSequentialGroup()
-                        .addGroup(PanelTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(PanelTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(PanelTerLayout.createSequentialGroup()
                                 .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(PanelTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(TextPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(PanelTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TextPropietario, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(PanelTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelTerLayout.createSequentialGroup()
-                                        .addComponent(TextNomeLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(11, 11, 11))
-                                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(PanelTerLayout.createSequentialGroup()
-                                .addGroup(PanelTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TextNomeLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(PanelTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(10, 10, 10)
                         .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(PanelTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PanelTerLayout.createSequentialGroup()
@@ -1420,21 +1404,17 @@ public class XanelaPropietario extends javax.swing.JFrame {
                     .addGroup(PanelTerLayout.createSequentialGroup()
                         .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addGroup(PanelTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(BotonBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-                            .addComponent(TextBuscaLocal)))
+                        .addComponent(BotonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(PanelTerLayout.createSequentialGroup()
                         .addGroup(PanelTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ComboTipoLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(PanelTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(BotonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BotonActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BotonEliminarLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BotonActualizarLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(BotonGardarLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addComponent(TextEspecialidade, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34))
+                .addContainerGap(105, Short.MAX_VALUE))
         );
 
         jLabel14.getAccessibleContext().setAccessibleName("VAMOS PASIÑO PASENIÑO A PASIÑO PASENIÑO. \n");
@@ -1494,15 +1474,6 @@ public class XanelaPropietario extends javax.swing.JFrame {
         TextTelf.setForeground(new java.awt.Color(0, 72, 193));
         TextTelf.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         TextTelf.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
-
-        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel37.setForeground(new java.awt.Color(0, 72, 193));
-        jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel37.setText("ROL");
-        jLabel37.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
-
-        ComboRol.setBackground(new java.awt.Color(0, 72, 193));
-        ComboRol.setForeground(new java.awt.Color(255, 255, 255));
 
         TextNum.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         TextNum.setForeground(new java.awt.Color(0, 72, 193));
@@ -1595,8 +1566,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addGroup(PanelCuarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PanelCuarLayout.createSequentialGroup()
-                                .addComponent(TextBuscaID, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
+                                .addGap(77, 77, 77)
                                 .addComponent(BotonBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(TextNome, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(PanelCuarLayout.createSequentialGroup()
@@ -1610,11 +1580,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
                     .addGroup(PanelCuarLayout.createSequentialGroup()
                         .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
-                        .addComponent(TextTelf, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(ComboRol, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(TextTelf, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(PanelCuarLayout.createSequentialGroup()
                         .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
@@ -1647,9 +1613,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
             PanelCuarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelCuarLayout.createSequentialGroup()
                 .addGap(104, 104, 104)
-                .addGroup(PanelCuarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TextBuscaID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BotonBuscar1))
+                .addComponent(BotonBuscar1)
                 .addGap(27, 27, 27)
                 .addGroup(PanelCuarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1679,9 +1643,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
                             .addGap(10, 10, 10)
                             .addGroup(PanelCuarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(TextTelf, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(ComboRol, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(TextTelf, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGap(10, 10, 10)
                             .addGroup(PanelCuarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2237,7 +2199,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         TextNum.setText(null);
         TextTelf.setText(null);
         TextEmail.setText(null);
-        ComboRol.setSelectedIndex(0);
+        //ComboRol.setSelectedIndex(0);
     }
 
     /**
@@ -2246,7 +2208,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
      */
     private void BotonGardarLocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGardarLocalActionPerformed
         Propietario usuarioLocal = new Propietario();
-        usuarioLocal.setIdUsuario(Integer.parseInt(TextPropietario.getText()));
+        usuarioLocal.setIdUsuario(Integer.parseInt(idPropietario));
         Local local = new Local();
         local.setNomeLocal(TextNomeLocal.getText());
         String concello = String.valueOf(ComboConcelloLocal.getSelectedItem());
@@ -2296,7 +2258,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
      *Mï¿½todo para actualizar local
      * @param evt
      */
-    private void BotonActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActualizarActionPerformed
+    private void BotonActualizarLocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActualizarLocalActionPerformed
         Local local = new Local();
         local.setNomeLocal(TextNomeLocal.getText());
         local.setRua(TextRuaLocal.getText());
@@ -2308,20 +2270,20 @@ public class XanelaPropietario extends javax.swing.JFrame {
 
 
         // TODO add your handling code here:
-    }//GEN-LAST:event_BotonActualizarActionPerformed
+    }//GEN-LAST:event_BotonActualizarLocalActionPerformed
 
     /**
      *Mï¿½todo para borrar local
      * @param evt
      */
-    private void BotonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEliminarActionPerformed
+    private void BotonEliminarLocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEliminarLocalActionPerformed
 
         Local localBorra = new Local();
         localBorra.setNomeLocal(TextNomeLocal.getText());
         loxicaLocal.validarDelete(localBorra);
 
         // TODO add your handling code here:
-    }//GEN-LAST:event_BotonEliminarActionPerformed
+    }//GEN-LAST:event_BotonEliminarLocalActionPerformed
 
     /**
      *Mï¿½todo para buscar local por nome
@@ -2331,12 +2293,13 @@ public class XanelaPropietario extends javax.swing.JFrame {
 
         Local local = new Local();
         local.setNomeLocal(TextNomeLocal.getText());
-        local.setNomeLocal(loxicaLocal.validarFindByName(local).getNomeLocal());
+        //local.setNomeLocal(loxicaLocal.validarFindByName(local).getNomeLocal());
         local.setRua(loxicaLocal.validarFindByName(local).getRua());
         local.setNumero(loxicaLocal.validarFindByName(local).getNumero());
         local.setTelefono(loxicaLocal.validarFindByName(local).getTelefono());
         local.setEmail(loxicaLocal.validarFindByName(local).getEmail());
-        TextNomeLocal.setText(local.getNomeLocal());
+       // TextNomeLocal.setText(local.getNomeLocal());
+        TextPropietario.setText(String.valueOf(loxicaLocal.validarFindByName(local).getIdLocal()));
         TextRuaLocal.setText(local.getRua());
         TextNumLocal.setText(String.valueOf(local.getNumero()));
         TextTelfLocal.setText(local.getTelefono());
@@ -2353,9 +2316,9 @@ public class XanelaPropietario extends javax.swing.JFrame {
     private void BotonActualizar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActualizar1ActionPerformed
 
         try {
-            if (String.valueOf(ComboRol.getSelectedItem()).equals("Cliente")) {
+           /* if (String.valueOf(ComboRol.getSelectedItem()).equals("Cliente")) {
                 Usuario usuarioCli = new Cliente();
-                usuarioCli.setIdUsuario(Integer.parseInt(TextBuscaID.getText()));
+                usuarioCli.setIdUsuario(Integer.parseInt(idPropietario));
                 usuarioCli.setNome(TextNome.getText());
                 usuarioCli.setApelido1(TextApelido.getText());
                 usuarioCli.setApelido2(TextApelido2.getText());
@@ -2364,11 +2327,11 @@ public class XanelaPropietario extends javax.swing.JFrame {
                 usuarioCli.setTelefono(TextTelf.getText());
                 usuarioCli.setEmail(TextEmail.getText());
                 loxicaUsuario.validarUpdate(usuarioCli);
-                clean();
+                clean();*/
 
-            } else if (String.valueOf(ComboRol.getSelectedItem()).equals("Propietario")) {
+           // } else if (String.valueOf(ComboRol.getSelectedItem()).equals("Propietario")) {
                 Usuario usuarioPro = new Propietario();
-                usuarioPro.setIdUsuario(Integer.parseInt(TextBuscaID.getText()));
+                usuarioPro.setIdUsuario(Integer.parseInt(idPropietario));
                 usuarioPro.setNome(TextNome.getText());
                 usuarioPro.setApelido1(TextApelido.getText());
                 usuarioPro.setApelido2(TextApelido2.getText());
@@ -2378,7 +2341,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
                 usuarioPro.setEmail(TextEmail.getText());
                 loxicaUsuario.validarUpdate(usuarioPro);
                 clean();
-            }
+           // }
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "Error rexistrando datos", "Error", JOptionPane.ERROR_MESSAGE);
         }
@@ -2392,15 +2355,15 @@ public class XanelaPropietario extends javax.swing.JFrame {
      */
     private void BotonBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarActionPerformed
 
-        if (String.valueOf(ComboRol.getSelectedItem()).equals("Propietario")) {
+       // if (String.valueOf(ComboRol.getSelectedItem()).equals("Propietario")) {
             Usuario usuario = new Propietario();
-            usuario.setIdUsuario(Integer.parseInt(TextBuscaID.getText()));
+            usuario.setIdUsuario(Integer.parseInt(idPropietario));
             loxicaUsuario.validarDelete(usuario);
-        } else if (String.valueOf(ComboRol.getSelectedItem()).equals("Cliente")) {
+        /*} else if (String.valueOf(ComboRol.getSelectedItem()).equals("Cliente")) {
             Usuario usuarioCliente = new Cliente();
             usuarioCliente.setIdUsuario(Integer.parseInt(TextBuscaID.getText()));
             loxicaUsuario.validarDelete(usuarioCliente);
-        }
+        }*/
         // TODO add your handling code here:
     }//GEN-LAST:event_BotonBorrarActionPerformed
 
@@ -2411,15 +2374,15 @@ public class XanelaPropietario extends javax.swing.JFrame {
     private void BotonBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBuscar1ActionPerformed
 
             Usuario usuarioPro = new Propietario();
-            usuarioPro.setIdUsuario(Integer.parseInt(TextBuscaID.getText()));
+            usuarioPro.setIdUsuario(Integer.parseInt(idPropietario));
             usuarioPro.setNome(loxicaPropietario.validarFindByIdPropietario(usuarioPro).getNome());
             usuarioPro.setApelido1(loxicaPropietario.validarFindByIdPropietario(usuarioPro).getApelido1());
             usuarioPro.setApelido2(loxicaPropietario.validarFindByIdPropietario(usuarioPro).getApelido2());
             usuarioPro.setRua(loxicaPropietario.validarFindByIdPropietario(usuarioPro).getRua());
-           usuarioPro.setNumero(loxicaPropietario.validarFindByIdPropietario(usuarioPro).getNumero());
+            usuarioPro.setNumero(loxicaPropietario.validarFindByIdPropietario(usuarioPro).getNumero());
             usuarioPro.setTelefono(loxicaPropietario.validarFindByIdPropietario(usuarioPro).getTelefono());
             usuarioPro.setEmail(loxicaPropietario.validarFindByIdPropietario(usuarioPro).getEmail());
-            usuarioPro.setRol(loxicaPropietario.validarFindByIdPropietario(usuarioPro).getRol());
+          //  usuarioPro.setRol(loxicaPropietario.validarFindByIdPropietario(usuarioPro).getRol());
 
             TextNome.setText(usuarioPro.getNome());
             TextApelido.setText(usuarioPro.getApelido1());
@@ -2428,7 +2391,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
             TextNum.setText(String.valueOf(usuarioPro.getNumero()));
             TextTelf.setText(usuarioPro.getTelefono());
             TextEmail.setText(usuarioPro.getEmail());
-            ComboRol.setSelectedItem(String.valueOf(usuarioPro.getRol()));
+           // ComboRol.setSelectedItem(String.valueOf(usuarioPro.getRol()));
 
             //   }
 
@@ -2594,14 +2557,14 @@ public class XanelaPropietario extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BgPropietario;
-    private javax.swing.JButton BotonActualizar;
     private javax.swing.JButton BotonActualizar1;
+    private javax.swing.JButton BotonActualizarLocal;
     private javax.swing.JButton BotonBorrar;
     private javax.swing.JButton BotonBuscar;
     private javax.swing.JButton BotonBuscar1;
     private javax.swing.JButton BotonBuscarCarta;
     private javax.swing.JButton BotonBuscarMarca;
-    private javax.swing.JButton BotonEliminar;
+    private javax.swing.JButton BotonEliminarLocal;
     private javax.swing.JButton BotonGardarCarta;
     private javax.swing.JButton BotonGardarLocal;
     private javax.swing.JButton BotonLimpar;
@@ -2619,7 +2582,6 @@ public class XanelaPropietario extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> ComboMarcas;
     private javax.swing.JComboBox<String> ComboPrato;
     private javax.swing.JComboBox<String> ComboProdutoBebidas;
-    private javax.swing.JComboBox<String> ComboRol;
     private javax.swing.JComboBox<String> ComboTipoBebidas;
     private javax.swing.JComboBox<String> ComboTipoLocal;
     private javax.swing.JLabel LabeLEngadeLocal;
@@ -2652,12 +2614,9 @@ public class XanelaPropietario extends javax.swing.JFrame {
     private javax.swing.JTabbedPane TabInicialPro;
     private javax.swing.JTextField TextApelido;
     private javax.swing.JTextField TextApelido2;
-    private javax.swing.JTextField TextBuscaID;
-    private javax.swing.JTextField TextBuscaLocal;
     private javax.swing.JTextField TextCarta;
     private javax.swing.JTextField TextEmail;
     private javax.swing.JTextField TextEmailLocal;
-    private javax.swing.JTextField TextEspecialidade;
     private javax.swing.JTextField TextIdLocalCarta;
     private javax.swing.JTextField TextIdPrezoVenda;
     private javax.swing.JTextField TextNome;
@@ -2699,7 +2658,6 @@ public class XanelaPropietario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;

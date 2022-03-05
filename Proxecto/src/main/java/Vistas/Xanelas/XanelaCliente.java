@@ -50,6 +50,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     LoxicaUsuario loxicaUsuario = new LoxicaUsuario();
     LoxicaLocal loxicaLocal = new LoxicaLocal();
     LoxicaConcello loxicaConcello = new LoxicaConcello();
+    String idUsuario = System.getProperty("idUsuario");
 
     /**
      * Creates new form XanelaCliente
@@ -57,6 +58,8 @@ public class XanelaCliente extends javax.swing.JFrame {
     public XanelaCliente() {
         initComponents();
         load();
+
+
 
         ComboEspecialidadelBusc.addItem("");
         ComboEspecialidadelBusc.addItem("Copas");
@@ -1823,7 +1826,7 @@ public class XanelaCliente extends javax.swing.JFrame {
         //     if(String.valueOf(ComboRol.getSelectedItem()).equals("Propietario")) {
         Usuario usuarioPro = new Propietario();
         //            usuarioPro.setIdUsuario(loxicaPropietario.validarFindByIdPropietario(usuarioPro).getIdUsuario());
-        usuarioPro.setIdUsuario(Integer.parseInt(TextBuscaID.getText()));
+        usuarioPro.setIdUsuario(Integer.parseInt(idUsuario));
         usuarioPro.setNome(loxicaPropietario.validarFindByIdPropietario(usuarioPro).getNome());
         usuarioPro.setApelido1(loxicaPropietario.validarFindByIdPropietario(usuarioPro).getApelido1());
         usuarioPro.setApelido2(loxicaPropietario.validarFindByIdPropietario(usuarioPro).getApelido2());
@@ -1888,7 +1891,7 @@ public class XanelaCliente extends javax.swing.JFrame {
         try {
             if (String.valueOf(ComboRolCli.getSelectedItem()).equals("Cliente")) {
                 Usuario usuarioCli = new Cliente();
-                usuarioCli.setIdUsuario(Integer.parseInt(TextBuscaID.getText()));
+                usuarioCli.setIdUsuario(Integer.parseInt(idUsuario));
                 usuarioCli.setNome(TextNomeCli.getText());
                 usuarioCli.setApelido1(TextApelidoCli.getText());
                 usuarioCli.setApelido2(TextApelido2Cli.getText());
@@ -1901,7 +1904,7 @@ public class XanelaCliente extends javax.swing.JFrame {
 
             } else if (String.valueOf(ComboRolCli.getSelectedItem()).equals("Propietario")) {
                 Usuario usuarioPro = new Propietario();
-                usuarioPro.setIdUsuario(Integer.parseInt(TextBuscaID.getText()));
+                usuarioPro.setIdUsuario(Integer.parseInt(idUsuario));
                 usuarioPro.setNome(TextNomeCli.getText());
                 usuarioPro.setApelido1(TextApelidoCli.getText());
                 usuarioPro.setApelido2(TextApelido2Cli.getText());
@@ -1932,7 +1935,7 @@ public class XanelaCliente extends javax.swing.JFrame {
             loxicaUsuario.validarDelete(usuario);
         } else if (String.valueOf(ComboRolCli.getSelectedItem()).equals("Cliente")) {
             Usuario usuarioCliente = new Cliente();
-            usuarioCliente.setIdUsuario(Integer.parseInt(TextBuscaID.getText()));
+            usuarioCliente.setIdUsuario(Integer.parseInt(idUsuario));
             loxicaUsuario.validarDelete(usuarioCliente);
         }
         // TODO add your handling code here:

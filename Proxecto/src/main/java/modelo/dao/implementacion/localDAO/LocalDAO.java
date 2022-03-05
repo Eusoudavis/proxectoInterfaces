@@ -106,6 +106,7 @@ public class LocalDAO implements Interfaz<Local> {
             ResultSet resultSet = sentenza.executeQuery();
 
             if (resultSet.next()){
+                local.setIdLocal(resultSet.getInt("id_local"));
                 local.setNomeLocal(resultSet.getString("nome_local"));
                 local.setRua(resultSet.getString("rua"));
                 local.setNumero(resultSet.getInt("numero"));

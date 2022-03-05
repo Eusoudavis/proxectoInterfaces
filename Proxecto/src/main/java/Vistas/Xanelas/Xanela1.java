@@ -310,6 +310,7 @@ public class Xanela1 extends javax.swing.JFrame {
 
         if (loxicaPropietario.validarFindByIdPropietario(usuario).getRol().equals("Propietario") &&
                 loxicaPropietario.validarFindByIdPropietario(usuario).getContrasinal().equals(ContrasinalText.getText())){
+            System.setProperty("idPropietario", UsuarioText.getText());
             new XanelaPropietario().setVisible(true);
             this.setVisible(false);
         }else{
@@ -320,7 +321,7 @@ public class Xanela1 extends javax.swing.JFrame {
 
             if (loxicaPropietario.validarFindByIdPropietario(usuario).getRol().equals("Cliente") &&
                 loxicaPropietario.validarFindByIdPropietario(usuario).getContrasinal().equals(ContrasinalText.getText())){
-                System.setProperty("idUsuario", String.valueOf(usuarioBD.getIdUsuario()));
+                System.setProperty("idUsuario", UsuarioText.getText());
                 new XanelaCliente().setVisible(true);
             this.setVisible(false);
         }}
