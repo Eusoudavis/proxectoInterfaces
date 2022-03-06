@@ -5,7 +5,6 @@
  */
 package Vistas.Xanelas;
 
-import Controlador.Coordinador;
 import com.formdev.flatlaf.FlatLightLaf;
 import modelo.Loxica.LoxicaCliente;
 import modelo.Loxica.LoxicaPropietario;
@@ -32,8 +31,8 @@ public class Xanela1 extends javax.swing.JFrame {
      */
     public Xanela1() {
         initComponents();
-        
-         this.setFocusTraversalPolicy(new LayoutFocusTraversalPolicy());
+
+        this.setFocusTraversalPolicy(new LayoutFocusTraversalPolicy());
 
         Busqueda busqueda = new Busqueda();
         busqueda.setSize(580, 70);
@@ -44,11 +43,11 @@ public class Xanela1 extends javax.swing.JFrame {
         PanelBuscador.revalidate();
         PanelBuscador.repaint();
 
-       // PanelTaboaRe paneTaRe = new PanelTaboaRe();
+        // PanelTaboaRe paneTaRe = new PanelTaboaRe();
         //paneTaRe.setSize(580, 540);
-       // paneTaRe.setLocation(0, 0);
+        // paneTaRe.setLocation(0, 0);
 
-       // PanelCorpo.removeAll();
+        // PanelCorpo.removeAll();
         //PanelCorpo.add(paneTaRe);
         //PanelCorpo.revalidate();
         //PanelCorpo.repaint();
@@ -157,12 +156,12 @@ public class Xanela1 extends javax.swing.JFrame {
         javax.swing.GroupLayout PanelBuscadorLayout = new javax.swing.GroupLayout(PanelBuscador);
         PanelBuscador.setLayout(PanelBuscadorLayout);
         PanelBuscadorLayout.setHorizontalGroup(
-            PanelBuscadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 580, Short.MAX_VALUE)
+                PanelBuscadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 580, Short.MAX_VALUE)
         );
         PanelBuscadorLayout.setVerticalGroup(
-            PanelBuscadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 70, Short.MAX_VALUE)
+                PanelBuscadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 70, Short.MAX_VALUE)
         );
 
         bg.add(PanelBuscador, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 580, 70));
@@ -188,9 +187,11 @@ public class Xanela1 extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnSaidaMouseClicked(evt);
             }
+
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnSaidaMouseEntered(evt);
             }
+
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnSaidaMouseExited(evt);
             }
@@ -199,16 +200,16 @@ public class Xanela1 extends javax.swing.JFrame {
         javax.swing.GroupLayout BarraSuperiorLayout = new javax.swing.GroupLayout(BarraSuperior);
         BarraSuperior.setLayout(BarraSuperiorLayout);
         BarraSuperiorLayout.setHorizontalGroup(
-            BarraSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BarraSuperiorLayout.createSequentialGroup()
-                .addComponent(btnSaida, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 539, Short.MAX_VALUE))
+                BarraSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(BarraSuperiorLayout.createSequentialGroup()
+                                .addComponent(btnSaida, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 539, Short.MAX_VALUE))
         );
         BarraSuperiorLayout.setVerticalGroup(
-            BarraSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BarraSuperiorLayout.createSequentialGroup()
-                .addComponent(btnSaida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                BarraSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(BarraSuperiorLayout.createSequentialGroup()
+                                .addComponent(btnSaida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
         );
 
         bg.add(BarraSuperior, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 40));
@@ -222,17 +223,17 @@ public class Xanela1 extends javax.swing.JFrame {
         javax.swing.GroupLayout PanelCorpoLayout = new javax.swing.GroupLayout(PanelCorpo);
         PanelCorpo.setLayout(PanelCorpoLayout);
         PanelCorpoLayout.setHorizontalGroup(
-            PanelCorpoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelCorpoLayout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 570, Short.MAX_VALUE)
-                .addContainerGap())
+                PanelCorpoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(PanelCorpoLayout.createSequentialGroup()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 570, Short.MAX_VALUE)
+                                .addContainerGap())
         );
         PanelCorpoLayout.setVerticalGroup(
-            PanelCorpoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelCorpoLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(194, Short.MAX_VALUE))
+                PanelCorpoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(PanelCorpoLayout.createSequentialGroup()
+                                .addGap(19, 19, 19)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(194, Short.MAX_VALUE))
         );
 
         bg.add(PanelCorpo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 580, 540));
@@ -248,6 +249,7 @@ public class Xanela1 extends javax.swing.JFrame {
 
     /**
      * Método para o control da posición da interfaz na pantalla
+     *
      * @param evt
      */
     private void BarraSuperiorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BarraSuperiorMousePressed
@@ -260,6 +262,7 @@ public class Xanela1 extends javax.swing.JFrame {
 
     /**
      * Método para o control da posición da interfaz na pantalla
+     *
      * @param evt
      */
     private void BarraSuperiorMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BarraSuperiorMouseDragged
@@ -272,6 +275,7 @@ public class Xanela1 extends javax.swing.JFrame {
 
     /**
      * Método para pechar a aplicación
+     *
      * @param evt
      */
     private void btnSaidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSaidaMouseClicked
@@ -297,44 +301,59 @@ public class Xanela1 extends javax.swing.JFrame {
 
     /**
      * Método que comproba en bbdd o usuario, rol e contrasinal para iniciar sesión
+     *
      * @param evt
      */
     private void BotonInicioSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonInicioSesionActionPerformed
 
-          if (!UsuarioText.getText().equals("") && !ContrasinalText.getText().equals(""));
+        String user = UsuarioText.getText();
+        String pwd = ContrasinalText.getText();
+        if (!user.equals("") && !user.isBlank() && !pwd.equals("") && !pwd.isBlank()) {
 
-        Usuario usuario = new Propietario();
-        usuario.setIdUsuario(Integer.parseInt(UsuarioText.getText()));
-        usuario.setContrasinal(ContrasinalText.getText());
-        usuario.setRol(loxicaPropietario.validarFindByIdPropietario(usuario).getRol());
+            if (user.length() > 3 && pwd.length() >= 3) {
+                Usuario usuario = new Propietario();
+                usuario.setIdUsuario(Integer.parseInt(UsuarioText.getText()));
+                usuario.setContrasinal(user);
+                usuario.setRol(loxicaPropietario.validarFindByIdPropietario(usuario).getRol());
 
-        if (loxicaPropietario.validarFindByIdPropietario(usuario).getRol().equals("Propietario") &&
-                loxicaPropietario.validarFindByIdPropietario(usuario).getContrasinal().equals(ContrasinalText.getText())){
-            System.setProperty("idPropietario", UsuarioText.getText());
-            new XanelaPropietario().setVisible(true);
-            this.setVisible(false);
-        }else{
-            Usuario usuarioBD = new Cliente();
-            usuarioBD.setIdUsuario(Integer.parseInt(UsuarioText.getText()));
-            usuarioBD.setContrasinal(ContrasinalText.getText());
-            usuarioBD.setRol(loxicaPropietario.validarFindByIdPropietario(usuarioBD).getRol());
+                if (loxicaPropietario.validarFindByIdPropietario(usuario).getRol().equals("Propietario") &&
+                        loxicaPropietario.validarFindByIdPropietario(usuario).getContrasinal().equals(pwd)) {
+                    System.setProperty("idPropietario", UsuarioText.getText());
+                    new XanelaPropietario().setVisible(true);
+                    this.setVisible(false);
+                } else {
+                    Usuario usuarioBD = new Cliente();
+                    usuarioBD.setIdUsuario(Integer.parseInt(UsuarioText.getText()));
+                    usuarioBD.setContrasinal(user);
+                    usuarioBD.setRol(loxicaPropietario.validarFindByIdPropietario(usuarioBD).getRol());
 
-            if (loxicaPropietario.validarFindByIdPropietario(usuario).getRol().equals("Cliente") &&
-                loxicaPropietario.validarFindByIdPropietario(usuario).getContrasinal().equals(ContrasinalText.getText())){
-                System.setProperty("idUsuario", UsuarioText.getText());
-                new XanelaCliente().setVisible(true);
-            this.setVisible(false);
-        }}
+                    if (loxicaPropietario.validarFindByIdPropietario(usuario).getRol().equals("Cliente") &&
+                            loxicaPropietario.validarFindByIdPropietario(usuario).getContrasinal().equals(pwd)) {
+                        System.setProperty("idUsuario", UsuarioText.getText());
+                        new XanelaCliente().setVisible(true);
+                        this.setVisible(false);
+                    }
+                }
+            } else {
+                JOptionPane.showMessageDialog (null, "Usuario ou Contrasinal demasiado cortos. Min 3 caracteres");
+                return;
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Por favor complete todos os campos");
+            return;
+        }
+    }
 
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonInicioSesionActionPerformed
+    // TODO add your handling code here:
+//GEN-LAST:event_BotonInicioSesionActionPerformed
 
     /**
      * Método que abre o JDialog para o rexistro
+     *
      * @param evt
      */
     private void BotonRexistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRexistroActionPerformed
-        
+
         new DialogoRexistro(this, true).setVisible(true);
 
 // TODO add your handling code here:

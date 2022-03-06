@@ -60,7 +60,6 @@ public class XanelaCliente extends javax.swing.JFrame {
         load();
 
 
-
         ComboEspecialidadelBusc.addItem("");
         ComboEspecialidadelBusc.addItem("Copas");
         ComboRolCli.addItem("");
@@ -1929,15 +1928,18 @@ public class XanelaCliente extends javax.swing.JFrame {
      * @param evt
      */
     private void BotonBorrarCliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarCliActionPerformed
-        if (String.valueOf(ComboRolCli.getSelectedItem()).equals("Propietario")) {
+     /*   if (String.valueOf(ComboRolCli.getSelectedItem()).equals("Propietario")) {
             Usuario usuario = new Propietario();
             usuario.setIdUsuario(Integer.parseInt(TextBuscaID.getText()));
             loxicaUsuario.validarDelete(usuario);
-        } else if (String.valueOf(ComboRolCli.getSelectedItem()).equals("Cliente")) {
-            Usuario usuarioCliente = new Cliente();
-            usuarioCliente.setIdUsuario(Integer.parseInt(idUsuario));
-            loxicaUsuario.validarDelete(usuarioCliente);
-        }
+        } else if (String.valueOf(ComboRolCli.getSelectedItem()).equals("Cliente")) {*/
+        Usuario usuarioCliente = new Cliente();
+        usuarioCliente.setIdUsuario(Integer.parseInt(idUsuario));
+        loxicaUsuario.validarDelete(usuarioCliente);
+        Xanela1 xanela1 = new Xanela1();
+        xanela1.setVisible(true);
+        this.setVisible(false);
+        // }
         // TODO add your handling code here:
     }//GEN-LAST:event_BotonBorrarCliActionPerformed
 
@@ -2013,71 +2015,6 @@ public class XanelaCliente extends javax.swing.JFrame {
         } catch (ClassNotFoundException | SQLException | JRException e) {
             JOptionPane.showMessageDialog(null, "Ocurrió este error " + e.getMessage());
         }
-        /*String titalos[] = {"nome", "Direccion", "Concello"};
-        String datos[] = new String[3];
-        DefaultTableModel modelo = new DefaultTableModel(null, titalos);
-        //  TaboaInfoLocal = new JTable(modelo);
-        List<Local> locais = loxicaLocal.validarRead();
-        for (Local local : locais
-        ) {
-        datos[0] = local.getNomeLocal();
-        datos[1] = local.getRua();
-        datos[2] = local.getConcello().getNomeConcello();
-        modelo.addRow(datos);
-        }*/
-        //  TaboaInfoLocal.setModel(modelo);
-        //TabInicial.setSelectedIndex(3);
-        // TODO add your handling code here:
-        /*String titalos[] = {"nome", "Direccion", "Concello"};
-        String datos[] = new String[3];
-        DefaultTableModel modelo = new DefaultTableModel(null, titalos);
-        //  TaboaInfoLocal = new JTable(modelo);
-        List<Local> locais = loxicaLocal.validarRead();
-        for (Local local : locais
-        ) {
-        datos[0] = local.getNomeLocal();
-        datos[1] = local.getRua();
-        datos[2] = local.getConcello().getNomeConcello();
-        modelo.addRow(datos);
-        }*/
-        //  TaboaInfoLocal.setModel(modelo);
-        //TabInicial.setSelectedIndex(3);
-        // TODO add your handling code here:
-        
-        /*String titalos[] = {"nome", "Direccion", "Concello"};
-        String datos[] = new String[3];
-        DefaultTableModel modelo = new DefaultTableModel(null, titalos);
-        //  TaboaInfoLocal = new JTable(modelo);
-        List<Local> locais = loxicaLocal.validarRead();
-        for (Local local : locais
-        ) {
-        datos[0] = local.getNomeLocal();
-        datos[1] = local.getRua();
-        datos[2] = local.getConcello().getNomeConcello();
-        modelo.addRow(datos);
-        }*/
-        //  TaboaInfoLocal.setModel(modelo);
-        //TabInicial.setSelectedIndex(3);
-        // TODO add your handling code here:
-        
-        /*String titalos[] = {"nome", "Direccion", "Concello"};
-        String datos[] = new String[3];
-        DefaultTableModel modelo = new DefaultTableModel(null, titalos);
-        //  TaboaInfoLocal = new JTable(modelo);
-
-        List<Local> locais = loxicaLocal.validarRead();
-        for (Local local : locais
-        ) {
-            datos[0] = local.getNomeLocal();
-            datos[1] = local.getRua();
-            datos[2] = local.getConcello().getNomeConcello();
-            modelo.addRow(datos);
-        }*/
-        //  TaboaInfoLocal.setModel(modelo);
-
-        //TabInicial.setSelectedIndex(3);
-
-        // TODO add your handling code here:
     }//GEN-LAST:event_BotonIrActionPerformed
 
     /**
@@ -2088,8 +2025,6 @@ public class XanelaCliente extends javax.swing.JFrame {
     private void btnMinimizaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMinimizaMouseClicked
 
         this.setExtendedState(1);
-
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnMinimizaMouseClicked
 
     /**

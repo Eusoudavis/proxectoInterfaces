@@ -22,6 +22,7 @@ import java.util.List;
 
 /**
  * Clase que representa a interface na aplicación
+ *
  * @author david
  */
 public class DialogoRexistro extends javax.swing.JDialog {
@@ -118,12 +119,12 @@ public class DialogoRexistro extends javax.swing.JDialog {
         javax.swing.GroupLayout PanelEixeLayout = new javax.swing.GroupLayout(PanelEixe);
         PanelEixe.setLayout(PanelEixeLayout);
         PanelEixeLayout.setHorizontalGroup(
-            PanelEixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 520, Short.MAX_VALUE)
+                PanelEixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 520, Short.MAX_VALUE)
         );
         PanelEixeLayout.setVerticalGroup(
-            PanelEixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 120, Short.MAX_VALUE)
+                PanelEixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 120, Short.MAX_VALUE)
         );
 
         jPanel2.add(PanelEixe, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 120));
@@ -215,7 +216,7 @@ public class DialogoRexistro extends javax.swing.JDialog {
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 72, 193));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("N�");
+        jLabel7.setText("N�");
         jLabel7.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, 90, 40));
 
@@ -292,12 +293,12 @@ public class DialogoRexistro extends javax.swing.JDialog {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -321,6 +322,7 @@ public class DialogoRexistro extends javax.swing.JDialog {
 
     /**
      * Método para control da ubicación da interface en pantalla
+     *
      * @param evt
      */
     private void PanelEixeMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelEixeMousePressed
@@ -333,6 +335,7 @@ public class DialogoRexistro extends javax.swing.JDialog {
 
     /**
      * Método para control da ubicación da interface en pantalla
+     *
      * @param evt
      */
     private void PanelEixeMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelEixeMouseDragged
@@ -346,65 +349,100 @@ public class DialogoRexistro extends javax.swing.JDialog {
 
     /**
      * Método para a creación e gardado de usuario na bbdd
+     *
      * @param evt
      */
     private void BotonGardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGardarActionPerformed
         try {
-            if (String.valueOf(ComboRol.getSelectedItem()).equals("Cliente")) {
-                Usuario usuarioCli = new Cliente();
-                usuarioCli.setNome(TextNome.getText());
-                usuarioCli.setApelido1(TextApelido.getText());
-                usuarioCli.setApelido2(TextApelido2.getText());
-                usuarioCli.setRua(TextRua.getText());
-                String concello = String.valueOf(ComboConcello.getSelectedItem());
-                Concello council = new Concello();
-                council.setNomeConcello(concello);
-                usuarioCli.setConcello(council);
-                usuarioCli.setNumero(Integer.parseInt(TextNum.getText()));
-                usuarioCli.setTelefono(TextTelf.getText());
-                usuarioCli.setEmail(TextEmail.getText());
-                usuarioCli.setContrasinal(TextContrasinal.getText());
-                usuarioCli.setRol(String.valueOf(ComboRol.getSelectedItem()));
-                loxicaUsuario.validarCreateUsuario(usuarioCli);
-                loxicaCliente.validarCreateCliente(usuarioCli);
-                clean();
+            String nome = TextNome.getText();
+            String apelido1 = TextApelido.getText();
+            String apelido2 = TextApelido2.getText();
+            String rua = TextRua.getText();
+            String concelloText = String.valueOf(ComboConcello.getSelectedItem());
+            int num = Integer.parseInt(TextNum.getText());
+            String telefono = TextTelf.getText();
+            String email = TextEmail.getText();
+            String contrasinal = TextContrasinal.getText();
+            String rol = String.valueOf(ComboRol.getSelectedItem());
 
-            } else if (String.valueOf(ComboRol.getSelectedItem()).equals("Propietario")) {
-                Usuario usuarioPro = new Propietario();
-                usuarioPro.setNome(TextNome.getText());
-                usuarioPro.setApelido1(TextApelido.getText());
-                usuarioPro.setApelido2(TextApelido2.getText());
-                usuarioPro.setRua(TextRua.getText());
-                String concello = String.valueOf(ComboConcello.getSelectedItem());
-                Concello council = new Concello();
-                council.setNomeConcello(concello);
-                usuarioPro.setConcello(council);
-                usuarioPro.setNumero(Integer.parseInt(TextNum.getText()));
-                usuarioPro.setTelefono(TextTelf.getText());
-                usuarioPro.setEmail(TextEmail.getText());
-                usuarioPro.setContrasinal(TextContrasinal.getText());
-                usuarioPro.setRol(String.valueOf(ComboRol.getSelectedItem()));
-                loxicaUsuario.validarCreateUsuario(usuarioPro);
-                loxicaPropietario.validarCreatePropietario(usuarioPro);
-                clean();
+
+            if (!rol.isEmpty() && !rol.isBlank()) {
+                if (rol.equals("Cliente")) {
+                    Usuario usuarioCli = new Cliente();
+                    if (!nome.isEmpty() && !nome.isBlank() && nome.length() > 3 &&
+                            !apelido1.isEmpty() && !apelido1.isBlank() && !apelido2.isBlank() && !apelido2.isEmpty() && !rua.isEmpty() && !rua.isBlank()
+                            && !concelloText.isBlank() && !concelloText.isEmpty() && num > 0 && !telefono.isEmpty() && !telefono.isBlank()
+                            && !email.isBlank() && !email.isEmpty() && !contrasinal.isEmpty() && !contrasinal.isBlank()) {
+                        usuarioCli.setNome(nome);
+                        usuarioCli.setApelido1(apelido1);
+                        usuarioCli.setApelido2(apelido2);
+                        usuarioCli.setRua(rua);
+                        String concello = concelloText;
+                        Concello council = new Concello();
+                        council.setNomeConcello(concello);
+                        usuarioCli.setConcello(council);
+                        usuarioCli.setNumero(num);
+                        usuarioCli.setTelefono(telefono);
+                        usuarioCli.setEmail(email);
+                        usuarioCli.setContrasinal(contrasinal);
+                        usuarioCli.setRol(rol);
+                        loxicaUsuario.validarCreateUsuario(usuarioCli);
+                        loxicaCliente.validarCreateCliente(usuarioCli);
+                        clean();
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Datos introducidos non válidos");
+                    }
+                } else if (rol.equals("Propietario")) {
+                    Usuario usuarioPro = new Propietario();
+                    if (!nome.isEmpty() && !nome.isBlank() && nome.length() > 3 &&
+                            !apelido1.isEmpty() && !apelido1.isBlank() && !apelido2.isBlank() && !apelido2.isEmpty() && !rua.isEmpty() && !rua.isBlank()
+                            && !concelloText.isBlank() && !concelloText.isEmpty() && num > 0 && !telefono.isEmpty() && !telefono.isBlank()
+                            && !email.isBlank() && !email.isEmpty() && !contrasinal.isEmpty() && !contrasinal.isBlank()) {
+                        usuarioPro.setNome(nome);
+                        usuarioPro.setApelido1(apelido1);
+                        usuarioPro.setApelido2(apelido2);
+                        usuarioPro.setRua(rua);
+                        String concello = concelloText;
+                        Concello council = new Concello();
+                        council.setNomeConcello(concello);
+                        usuarioPro.setConcello(council);
+                        usuarioPro.setNumero(num);
+                        usuarioPro.setTelefono(telefono);
+                        usuarioPro.setEmail(email);
+                        usuarioPro.setContrasinal(contrasinal);
+                        usuarioPro.setRol(rol);
+                        loxicaUsuario.validarCreateUsuario(usuarioPro);
+                        loxicaPropietario.validarCreatePropietario(usuarioPro);
+                        clean();
+                    }
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Selecciona un rol");
             }
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Error rexistrando datos", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-    }//GEN-LAST:event_BotonGardarActionPerformed
+
+    }catch(
+    Exception ex)
+
+    {
+        JOptionPane.showMessageDialog(null, "Error rexistrando datos", "Error", JOptionPane.ERROR_MESSAGE);
+    }
+
+}//GEN-LAST:event_BotonGardarActionPerformed
 
     /**
      * Método para cerrar a ventá ao pulsar o botón
+     *
      * @param evt
      */
     private void BotonBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBorrarActionPerformed
 
-                this.processWindowEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
+        this.processWindowEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
 
     }//GEN-LAST:event_BotonBorrarActionPerformed
 
     /**
      * Método que chama ao método clean e o executa ao pulsar o botón
+     *
      * @param evt
      */
     private void BotonGardar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGardar1ActionPerformed
