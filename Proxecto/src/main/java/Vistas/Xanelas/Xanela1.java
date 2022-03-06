@@ -13,8 +13,16 @@ import modelo.vo.Usuario.Cliente;
 import modelo.vo.Usuario.Propietario;
 import modelo.vo.Usuario.Usuario;
 
+import javax.help.HelpBroker;
+import javax.help.HelpSet;
+import javax.help.HelpSetException;
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * @author david
@@ -31,6 +39,7 @@ public class Xanela1 extends javax.swing.JFrame {
      */
     public Xanela1() {
         initComponents();
+        load();
 
         this.setFocusTraversalPolicy(new LayoutFocusTraversalPolicy());
 
@@ -42,15 +51,24 @@ public class Xanela1 extends javax.swing.JFrame {
         PanelBuscador.add(busqueda);
         PanelBuscador.revalidate();
         PanelBuscador.repaint();
+    }
 
-        // PanelTaboaRe paneTaRe = new PanelTaboaRe();
-        //paneTaRe.setSize(580, 540);
-        // paneTaRe.setLocation(0, 0);
+    private void load() {
+        try {
 
-        // PanelCorpo.removeAll();
-        //PanelCorpo.add(paneTaRe);
-        //PanelCorpo.revalidate();
-        //PanelCorpo.repaint();
+            File file = new File("src/main/java/help/help.hs");
+            URL hsURL = file.toURI().toURL();
+
+            HelpSet helpset = new HelpSet(getClass().getClassLoader(), hsURL);
+            HelpBroker hb = helpset.createHelpBroker();
+
+            hb.enableHelpKey(this.rootPane.getContentPane(), "manual", helpset);
+
+        } catch (MalformedURLException ex) {
+            Logger.getLogger(LoadHelp.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (HelpSetException ex) {
+            Logger.getLogger(LoadHelp.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
