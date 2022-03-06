@@ -1806,6 +1806,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     private void BotonActualizarCliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActualizarCliActionPerformed
         try {
            // if (String.valueOf(ComboRolCli.getSelectedItem()).equals("Cliente")) {
+
                 Usuario usuarioCli = new Cliente();
                 usuarioCli.setIdUsuario(Integer.parseInt(idUsuario));
                 usuarioCli.setNome(TextNomeCli.getText());
@@ -1945,7 +1946,6 @@ public class XanelaCliente extends javax.swing.JFrame {
 
     private void botonHelpCliActionPerformed(java.awt.event.ActionEvent evt) {
         try {
-
             File file = new File("src/main/java/help/help.hs");
             URL hsURL = file.toURI().toURL();
 

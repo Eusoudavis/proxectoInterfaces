@@ -354,19 +354,20 @@ public class DialogoRexistro extends javax.swing.JDialog {
      */
     private void BotonGardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGardarActionPerformed
         try {
-            String nome = TextNome.getText().replaceAll("\\p{Punct}", "");
-            String apelido1 = TextApelido.getText().replaceAll("\\p{Punct}", "");
-            String apelido2 = TextApelido2.getText().replaceAll("\\p{Punct}", "");
-            String rua = TextRua.getText().replaceAll("\\p{Punct}", "");
+            String nome = TextNome.getText();
+            String apelido1 = TextApelido.getText();
+            String apelido2 = TextApelido2.getText();
+            String rua = TextRua.getText();
             String concelloText = String.valueOf(ComboConcello.getSelectedItem());
-            int num = Integer.parseInt(TextNum.getText());
-            String telefono = TextTelf.getText().replaceAll("\\p{Punct}", "");
+            int num = Integer.parseInt(TextNum.getText().replaceAll("\\p{Punct}", ""));
+            String telefono = TextTelf.getText();
             String email = TextEmail.getText();
             String contrasinal = TextContrasinal.getText();
             String rol = String.valueOf(ComboRol.getSelectedItem());
 
-
             if (!rol.isEmpty() && !rol.isBlank()) {
+                if (checkStringData(nome)
+                        && checkStringData(apelido1) && checkStringData(apelido2) && checkStringData(rua) && checkStringData(telefono)){
                 if (rol.equals("Cliente")) {
                     Usuario usuarioCli = new Cliente();
                     if (!nome.isEmpty() && !nome.isBlank() && nome.length() > 3 &&
@@ -419,7 +420,12 @@ public class DialogoRexistro extends javax.swing.JDialog {
                     }
                 }
             } else {
+                    JOptionPane.showMessageDialog(null, "Introduce unicamente letras", "Error",
+                            JOptionPane.ERROR_MESSAGE);
+            }
+            }else {
                 JOptionPane.showMessageDialog(null, "Selecciona un rol");
+
             }
 
         } catch (Exception ex) {
@@ -427,6 +433,18 @@ public class DialogoRexistro extends javax.swing.JDialog {
         }
 
     }//GEN-LAST:event_BotonGardarActionPerformed
+
+    public static boolean checkStringData(String numberCheck) {
+        int number = 999;
+        char[] nieCharacterers = numberCheck.toCharArray();
+        for (char c : nieCharacterers) {
+            if (Character.isLetter(c)) {
+                number++;
+            }
+        }
+        return !numberCheck.isEmpty() &&
+                (nieCharacterers.length != 999 && number == nieCharacterers.length + 999);
+    }
 
     /**
      * Método para cerrar a ventá ao pulsar o botón
