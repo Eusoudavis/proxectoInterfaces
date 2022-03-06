@@ -5,7 +5,6 @@ import modelo.dao.interfaces.Interfaz;
 import modelo.vo.Concello.Concello;
 import modelo.vo.Estado;
 import modelo.vo.Local.Local;
-import modelo.vo.Local.TipoLocal;
 
 import javax.swing.*;
 import java.sql.PreparedStatement;
@@ -22,6 +21,7 @@ public class LocalDAO implements Interfaz<Local> {
 
     /**
      * Método para realizar un insert na táboa local
+     *
      * @param local
      */
     @Override
@@ -32,19 +32,19 @@ public class LocalDAO implements Interfaz<Local> {
             Statement estatuto = conexion.getConnection().createStatement();
             estatuto.executeUpdate("INSERT INTO local (nome_local, nome_concello, rua, numero,telefono, email, especialidade, estado) VALUES ('"
                     + local.getNomeLocal() +
-                            "' , '"
+                    "' , '"
                     + local.getConcello().getNomeConcello() +
-                            "' , '"
+                    "' , '"
                     + local.getRua() +
-                            "' , '"
+                    "' , '"
                     + local.getNumero() +
-                            "' , '"
+                    "' , '"
                     + local.getTelefono() +
-                            "' , '"
-                    +local.getEmail() +
-                            "' , '"
-                    +local.getEspecialidade() +
-                           "' , '"
+                    "' , '"
+                    + local.getEmail() +
+                    "' , '"
+                    + local.getEspecialidade() +
+                    "' , '"
                     + Estado.ACTIVO +
                     "')");
             estatuto.close();
@@ -65,7 +65,7 @@ public class LocalDAO implements Interfaz<Local> {
             Conexion conexion = new Conexion();
             PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
             ResultSet resultSet = sentenza.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 local = new Local();
                 local.setIdLocal(resultSet.getInt("id_local"));
                 local.setNomeLocal(resultSet.getString("nome_local"));
@@ -79,29 +79,32 @@ public class LocalDAO implements Interfaz<Local> {
                 local.setEmail(resultSet.getString("email"));
                 local.setEspecialidade(resultSet.getString("especialidade"));
                 //local.getEstado(resultSet.getString("estado"));
-               // TipoLocal tipoLocal = new TipoLocal();
-              //  tipoLocal.setNomeTipo(resultSet.getString(""));
+                // TipoLocal tipoLocal = new TipoLocal();
+                //  tipoLocal.setNomeTipo(resultSet.getString(""));
                 locais.add(local);
-            }sentenza.close();
+            }
+            sentenza.close();
             conexion.desconectar();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        return locais;    }
+        return locais;
+    }
 
     /**
-     *Método para buscar local por nome
+     * Método para buscar local por nome
+     *
      * @param local
      * @return
      */
-    public Local findByName(Local local){
+    public Local findByName(Local local) {
         String sql = "Select * from local where nome_local = ?";
         try {
             Conexion conexion = new Conexion();
             PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
             sentenza.setString(1, local.getNomeLocal());
             ResultSet resultSet = sentenza.executeQuery();
-            if (resultSet.next()){
+            if (resultSet.next()) {
                 local.setIdLocal(resultSet.getInt("id_local"));
                 local.setNomeLocal(resultSet.getString("nome_local"));
                 local.setRua(resultSet.getString("rua"));
@@ -111,7 +114,7 @@ public class LocalDAO implements Interfaz<Local> {
                 Concello concello = new Concello();
                 concello.setNomeConcello(resultSet.getString("nome_concello"));
                 local.setConcello(concello);
-            }else {
+            } else {
                 local = new Local();
             }
             sentenza.close();
@@ -124,10 +127,11 @@ public class LocalDAO implements Interfaz<Local> {
 
     /**
      * Método para buscar local por idMax
+     *
      * @param local
      * @return
      */
-    public Local findByIdMax(Local local){
+    public Local findByIdMax(Local local) {
         String sql = "Select MAX(id_local) as id_local from local";
 
         try {
@@ -135,9 +139,10 @@ public class LocalDAO implements Interfaz<Local> {
             PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
             ResultSet resultSet = sentenza.executeQuery();
 
-            if (resultSet.next()){
+            if (resultSet.next()) {
                 local.setIdLocal(resultSet.getInt("id_local"));
-            }sentenza.close();
+            }
+            sentenza.close();
             conexion.desconectar();
 
         } catch (SQLException throwables) {
@@ -153,6 +158,7 @@ public class LocalDAO implements Interfaz<Local> {
 
     /**
      * Método para actualizar datos dun local
+     *
      * @param local
      * @return
      */
@@ -185,6 +191,7 @@ public class LocalDAO implements Interfaz<Local> {
 
     /**
      * Método para borrar un local
+     *
      * @param local
      */
     @Override
@@ -214,7 +221,7 @@ public class LocalDAO implements Interfaz<Local> {
             sentenza.setString(1, local.getConcello().getNomeConcello());
             sentenza.setString(2, local.getEspecialidade());
             ResultSet resultSet = sentenza.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 local = new Local();
                 local.setIdLocal(resultSet.getInt("id_local"));
                 local.setNomeLocal(resultSet.getString("nome_local"));
@@ -232,13 +239,15 @@ public class LocalDAO implements Interfaz<Local> {
                 //  tipoLocal.setNomeTipo(resultSet.getString(""));
                 locais.add(local);
 
-            }sentenza.close();
+            }
+            sentenza.close();
             conexion.desconectar();
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        return locais;    }
+        return locais;
+    }
 
     public List<Local> readByCouncilParam(Local local) {
         List<Local> locais = new ArrayList<>();
@@ -249,7 +258,7 @@ public class LocalDAO implements Interfaz<Local> {
             PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
             sentenza.setString(1, local.getConcello().getNomeConcello());
             ResultSet resultSet = sentenza.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 local = new Local();
                 local.setIdLocal(resultSet.getInt("id_local"));
                 local.setNomeLocal(resultSet.getString("nome_local"));
@@ -267,13 +276,15 @@ public class LocalDAO implements Interfaz<Local> {
                 //  tipoLocal.setNomeTipo(resultSet.getString(""));
                 locais.add(local);
 
-            }sentenza.close();
+            }
+            sentenza.close();
             conexion.desconectar();
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        return locais;    }
+        return locais;
+    }
 
     public List<Local> readBySpecialtyParam(Local local) {
         List<Local> locais = new ArrayList<>();
@@ -284,7 +295,7 @@ public class LocalDAO implements Interfaz<Local> {
             PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
             sentenza.setString(1, local.getEspecialidade());
             ResultSet resultSet = sentenza.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 local = new Local();
                 local.setIdLocal(resultSet.getInt("id_local"));
                 local.setNomeLocal(resultSet.getString("nome_local"));
@@ -302,13 +313,15 @@ public class LocalDAO implements Interfaz<Local> {
                 //  tipoLocal.setNomeTipo(resultSet.getString(""));
                 locais.add(local);
 
-            }sentenza.close();
+            }
+            sentenza.close();
             conexion.desconectar();
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        return locais;    }
+        return locais;
+    }
 
     public List<Local> readByOwner(String idPropietario) {
         List<Local> locais = new ArrayList<>();
@@ -324,7 +337,7 @@ public class LocalDAO implements Interfaz<Local> {
             PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
             sentenza.setString(1, idPropietario);
             ResultSet resultSet = sentenza.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 local = new Local();
                 local.setIdLocal(resultSet.getInt("id_local"));
                 local.setNomeLocal(resultSet.getString("nome_local"));
@@ -342,36 +355,40 @@ public class LocalDAO implements Interfaz<Local> {
                 //  tipoLocal.setNomeTipo(resultSet.getString(""));
                 locais.add(local);
 
-            }sentenza.close();
+            }
+            sentenza.close();
             conexion.desconectar();
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        return locais;    }
+        return locais;
+    }
 
-    public List<Local> readLocalAndPRopietarioByOwner(String idPropietario) {
-        List<Local> locais = new ArrayList<>();
-        String sql = "SELECT * from local_propietario as lp " +
+    public Local readLocalAndPRopietarioByOwner(String idPropietario, String nomeLocal) {
+        String sql = "SELECT * from local as lo join local_propietario as lp on lo.id_local = lp.id_local " +
                 "join propietario as pr " +
                 "on lp.id_propietario = pr.id_propietario " +
-                "where pr.id_propietario = ?";
-        Local local;
+                "where pr.id_propietario = ? and lo.nome_local =?";
+        Local local = new Local();
         try {
             Conexion conexion = new Conexion();
             PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
             sentenza.setString(1, idPropietario);
+            sentenza.setString(2, nomeLocal);
             ResultSet resultSet = sentenza.executeQuery();
-            while (resultSet.next()){
-                local = new Local();
+            if (resultSet.next()) {
                 local.setIdLocal(resultSet.getInt("id_local"));
-                locais.add(local);
-            }sentenza.close();
+            }else {
+                local= new Local();
+            }
+            sentenza.close();
             conexion.desconectar();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        return locais;    }
+        return local;
+    }
 
 //    public List<Local> findByIdMauitasCcisas(Local local){
 //        List<Local> locais = new ArrayList<>();
@@ -392,5 +409,5 @@ public class LocalDAO implements Interfaz<Local> {
 //            throwables.printStackTrace();
 //        }
 //        return locais;
-   // }
+    // }
 }

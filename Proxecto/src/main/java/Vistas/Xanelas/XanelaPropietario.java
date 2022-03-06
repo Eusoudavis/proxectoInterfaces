@@ -2275,6 +2275,8 @@ public class XanelaPropietario extends javax.swing.JFrame {
         TextNumLocal.setText(null);
         TextTelfLocal.setText(null);
         TextEmailLocal.setText(null);
+        ComboEspecialidadeLocal.setSelectedItem(0);
+        ComboTipoLocal.setSelectedItem(0);
     }
 
     /**
@@ -2386,20 +2388,32 @@ public class XanelaPropietario extends javax.swing.JFrame {
      */
     private void BotonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonBuscarActionPerformed
 
-        Local local = new Local();
-        local.setNomeLocal(TextNomeLocal.getText());
-        //local.setNomeLocal(loxicaLocal.validarFindByName(local).getNomeLocal());
-        local.setRua(loxicaLocal.validarFindByName(local).getRua());
-        local.setNumero(loxicaLocal.validarFindByName(local).getNumero());
-        local.setTelefono(loxicaLocal.validarFindByName(local).getTelefono());
-        local.setEmail(loxicaLocal.validarFindByName(local).getEmail());
-        // TextNomeLocal.setText(local.getNomeLocal());
-        TextPropietario.setText(String.valueOf(loxicaLocal.validarFindByName(local).getIdLocal()));
-        TextRuaLocal.setText(local.getRua());
-        TextNumLocal.setText(String.valueOf(local.getNumero()));
-        TextTelfLocal.setText(local.getTelefono());
-        TextEmailLocal.setText(local.getEmail());
-
+        String nomeLocal = TextNomeLocal.getText();
+        if (!nomeLocal.isBlank() && !nomeLocal.isEmpty() && checkStringData(nomeLocal)) {
+            Local local = new Local();
+            local.setNomeLocal(nomeLocal);
+            //local.setNomeLocal(loxicaLocal.validarFindByName(local).getNomeLocal());
+            Local localBD = loxicaLocal.validatereadLocalAndPRopietarioByOwner(idPropietario, nomeLocal);
+            if (localBD.getIdLocal() != 0){
+            local.setRua(loxicaLocal.validarFindByName(local).getRua());
+            local.setNumero(loxicaLocal.validarFindByName(local).getNumero());
+            local.setTelefono(loxicaLocal.validarFindByName(local).getTelefono());
+            local.setEmail(loxicaLocal.validarFindByName(local).getEmail());
+            // TextNomeLocal.setText(local.getNomeLocal());
+            TextPropietario.setText(String.valueOf(loxicaLocal.validarFindByName(local).getIdLocal()));
+            TextRuaLocal.setText(local.getRua());
+            TextNumLocal.setText(String.valueOf(local.getNumero()));
+            TextTelfLocal.setText(local.getTelefono());
+            TextEmailLocal.setText(local.getEmail());
+            }else {
+                JOptionPane.showMessageDialog(null, "NOME DE LOCAL ERRÓNEO", "Error",
+                        JOptionPane.INFORMATION_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Introduce unicamente letras", "Error",
+                    JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Cumplimenta ben os datos");
+        }
 
         // TODO add your handling code here:
     }//GEN-LAST:event_BotonBuscarActionPerformed
@@ -2412,23 +2426,55 @@ public class XanelaPropietario extends javax.swing.JFrame {
     private void BotonActualizar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActualizar1ActionPerformed
 
         try {
-            Usuario usuarioPro = new Propietario();
-            usuarioPro.setIdUsuario(Integer.parseInt(idPropietario));
-            usuarioPro.setNome(TextNome.getText());
-            usuarioPro.setApelido1(TextApelido.getText());
-            usuarioPro.setApelido2(TextApelido2.getText());
-            usuarioPro.setRua(TextRua.getText());
-            usuarioPro.setNumero(Integer.parseInt(TextNum.getText()));
-            usuarioPro.setTelefono(TextTelf.getText());
-            usuarioPro.setEmail(TextEmail.getText());
-            loxicaUsuario.validarUpdate(usuarioPro);
-            clean();
+            String nome = TextNome.getText();
+            String apelido1 = TextApelido.getText();
+            String apelido2 = TextApelido2.getText();
+            String rua = TextRua.getText();
+            int num = Integer.parseInt(TextNum.getText().replaceAll("\\p{Punct}", ""));
+            String telefono = TextTelf.getText();
+            String email = TextEmail.getText();
+
+            if (!nome.isEmpty() && !nome.isBlank() && nome.length() > 3 &&
+                    !apelido1.isEmpty() && !apelido1.isBlank() && !apelido2.isBlank() && !apelido2.isEmpty() && !rua.isEmpty() && !rua.isBlank()
+                    && num > 0 && !telefono.isEmpty() && !telefono.isBlank() && !email.isBlank() && !email.isEmpty()) {
+                if (checkStringData(nome)
+                        && checkStringData(apelido1) && checkStringData(apelido2) && checkStringData(rua) && checkStringData(telefono)) {
+                    Usuario usuarioPro = new Propietario();
+                    usuarioPro.setIdUsuario(Integer.parseInt(idPropietario));
+                    usuarioPro.setNome(nome);
+                    usuarioPro.setApelido1(apelido1);
+                    usuarioPro.setApelido2(apelido2);
+                    usuarioPro.setRua(rua);
+                    usuarioPro.setNumero(num);
+                    usuarioPro.setTelefono(telefono);
+                    usuarioPro.setEmail(email);
+                    loxicaUsuario.validarUpdate(usuarioPro);
+                    cleanDatos();
+                } else {
+                    JOptionPane.showMessageDialog(null, "Introduce unicamente letras", "Error",
+                            JOptionPane.ERROR_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Cumplimenta ben os datos");
+            }
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "Error rexistrando datos", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
         // TODO add your handling code here:
     }//GEN-LAST:event_BotonActualizar1ActionPerformed
+
+    public static boolean checkStringData(String numberCheck) {
+        int number = 999;
+        char[] nieCharacterers = numberCheck.toCharArray();
+        for (char c : nieCharacterers) {
+            if (Character.isLetter(c)) {
+                number++;
+            }
+        }
+        return !numberCheck.isEmpty() &&
+                (nieCharacterers.length != 999 && number == nieCharacterers.length + 999);
+    }
 
     /**
      * Mï¿½todo para borrar o usuario segï¿½n rol
@@ -2441,8 +2487,8 @@ public class XanelaPropietario extends javax.swing.JFrame {
         Usuario usuario = new Propietario();
         usuario.setIdUsuario(Integer.parseInt(idPropietario));
         locais = loxicaLocal.validarReadPorDono(idPropietario);
-        for (Local local: locais
-             ) {
+        for (Local local : locais
+        ) {
             loxicaLocal.validarDelete(local);
         }
         loxicaUsuario.validarDelete(usuario);

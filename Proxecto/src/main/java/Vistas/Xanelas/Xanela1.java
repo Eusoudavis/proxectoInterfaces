@@ -317,6 +317,18 @@ public class Xanela1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSaidaMouseExited
 
+    public static boolean checkStringData(String numberCheck) {
+        int number = 999;
+        char[] nieCharacterers = numberCheck.toCharArray();
+        for (char c : nieCharacterers) {
+            if (Character.isLetter(c)) {
+                number++;
+            }
+        }
+        return !numberCheck.isEmpty() &&
+                (nieCharacterers.length != 999 && number == nieCharacterers.length + 999);
+    }
+
     /**
      * Método que comproba en bbdd o usuario, rol e contrasinal para iniciar sesión
      *
@@ -328,6 +340,7 @@ public class Xanela1 extends javax.swing.JFrame {
         String pwd = ContrasinalText.getText();
         if (!user.equals("") && !user.isBlank() && !pwd.equals("") && !pwd.isBlank()) {
 
+          //  if (checkStringData(user)){
             if (user.length() >= 1 && pwd.length() >= 3) {
                 Usuario usuario = new Propietario();
                 usuario.setIdUsuario(Integer.parseInt(user));
@@ -361,9 +374,13 @@ public class Xanela1 extends javax.swing.JFrame {
                 return;
             }
 
-        } else {
-            JOptionPane.showMessageDialog(null, "Por favor complete todos os campos");
-            return;
+//        } else {
+//            JOptionPane.showMessageDialog(null, "Por favor complete todos os campos");
+//            return;
+//        }
+        }else {
+            JOptionPane.showMessageDialog(null, "Introduce unicamente letras", "Error",
+                    JOptionPane.ERROR_MESSAGE);
         }
     }
 

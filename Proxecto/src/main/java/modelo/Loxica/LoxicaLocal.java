@@ -39,9 +39,9 @@ public class LoxicaLocal {
         return localDAO.readByOwner(idPropietario);
     }
 
-    public List<Local> validatereadLocalAndPRopietarioByOwner(String idPropietario){
+    public Local validatereadLocalAndPRopietarioByOwner(String idPropietario, String nomeLocal){
         LocalDAO localDAO = new LocalDAO();
-        return localDAO.readLocalAndPRopietarioByOwner(idPropietario);
+        return localDAO.readLocalAndPRopietarioByOwner(idPropietario, nomeLocal);
     }
 
     public Local validarFindByIdMax(Local local){
