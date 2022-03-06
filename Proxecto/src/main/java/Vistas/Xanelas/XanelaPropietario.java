@@ -62,6 +62,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
     List<IngredientePrato> ingredientesPrato;
     List<Prato> pratos;
     List<Ingrediente> ingredientes;
+    List<Local> locais;
 
     /**
      * Creates new form XanelaCliente
@@ -2439,7 +2440,14 @@ public class XanelaPropietario extends javax.swing.JFrame {
         // if (String.valueOf(ComboRol.getSelectedItem()).equals("Propietario")) {
         Usuario usuario = new Propietario();
         usuario.setIdUsuario(Integer.parseInt(idPropietario));
+        locais = loxicaLocal.validarReadPorDono(idPropietario);
+        for (Local local: locais
+             ) {
+            loxicaLocal.validarDelete(local);
+        }
         loxicaUsuario.validarDelete(usuario);
+        JOptionPane.showMessageDialog(null, "USUARIO E LOCAIS ASOCIADOS ELIMINADOS");
+
         Xanela1 xanela1 = new Xanela1();
         xanela1.setVisible(true);
         this.setVisible(false);

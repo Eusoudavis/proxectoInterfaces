@@ -1,22 +1,0 @@
-
-P	java:S125"<This block of commented-out lines of code should be removed.(¼£
-
-S	java:S106*"9Replace this use of System.out or System.err by a logger.(çæïÏøÿÿÿÿ
-A
-java:S11681"+Return an empty collection instead of null.(¥¹ï
-V	java:S125K"<This block of commented-out lines of code should be removed.(®Î¹†şÿÿÿÿ
-V	java:S125M"<This block of commented-out lines of code should be removed.(æ¾ˆÁşÿÿÿÿ
-Q	java:S125d"<This block of commented-out lines of code should be removed.(¥®ëÚ
-V	java:S125j"<This block of commented-out lines of code should be removed.(üçÀáùÿÿÿÿ
-S	java:S106t"9Replace this use of System.out or System.err by a logger.(è—‰ëşÿÿÿÿ
-U
-java:S1128":Remove this unused import 'modelo.vo.Usuario.Propietario'.(åí•õùÿÿÿÿ
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ó¬°Û
-e
-java:S2095c"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÓÌˆ
-]
-java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(‘ö¬‹
-e
-java:S2095="OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÓÌˆ
-^
-java:S2095‰"GUse try-with-resources or close this "Statement" in a "finally" clause.(‘ö¬‹

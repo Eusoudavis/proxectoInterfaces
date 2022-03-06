@@ -306,38 +306,43 @@ public class Xanela1 extends javax.swing.JFrame {
      */
     private void BotonInicioSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonInicioSesionActionPerformed
 
-        String user = UsuarioText.getText();
+        String user = UsuarioText.getText().replaceAll("\\p{Punct}", "");
         String pwd = ContrasinalText.getText();
         if (!user.equals("") && !user.isBlank() && !pwd.equals("") && !pwd.isBlank()) {
 
-            if (user.length() > 3 && pwd.length() >= 3) {
+            if (user.length() >= 1 && pwd.length() >= 3) {
                 Usuario usuario = new Propietario();
-                usuario.setIdUsuario(Integer.parseInt(UsuarioText.getText()));
-                usuario.setContrasinal(user);
-                usuario.setRol(loxicaPropietario.validarFindByIdPropietario(usuario).getRol());
-
-                if (loxicaPropietario.validarFindByIdPropietario(usuario).getRol().equals("Propietario") &&
-                        loxicaPropietario.validarFindByIdPropietario(usuario).getContrasinal().equals(pwd)) {
-                    System.setProperty("idPropietario", UsuarioText.getText());
-                    new XanelaPropietario().setVisible(true);
-                    this.setVisible(false);
-                } else {
-                    Usuario usuarioBD = new Cliente();
-                    usuarioBD.setIdUsuario(Integer.parseInt(UsuarioText.getText()));
-                    usuarioBD.setContrasinal(user);
-                    usuarioBD.setRol(loxicaPropietario.validarFindByIdPropietario(usuarioBD).getRol());
-
-                    if (loxicaPropietario.validarFindByIdPropietario(usuario).getRol().equals("Cliente") &&
+                usuario.setIdUsuario(Integer.parseInt(user));
+                usuario.setContrasinal(pwd);
+                Usuario usuarioBDProba = loxicaUsuario.validarFindById(usuario);
+                if (usuarioBDProba.getIdUsuario() != (0)) {
+                    usuario.setRol(loxicaPropietario.validarFindByIdPropietario(usuario).getRol());
+                    if (loxicaPropietario.validarFindByIdPropietario(usuario).getRol().equals("Propietario") &&
                             loxicaPropietario.validarFindByIdPropietario(usuario).getContrasinal().equals(pwd)) {
-                        System.setProperty("idUsuario", UsuarioText.getText());
-                        new XanelaCliente().setVisible(true);
+                        System.setProperty("idPropietario", user);
+                        new XanelaPropietario().setVisible(true);
                         this.setVisible(false);
+                    } else {
+                        Usuario usuarioBD = new Cliente();
+                        usuarioBD.setIdUsuario(Integer.parseInt(user));
+                        usuarioBD.setContrasinal(pwd);
+                        usuarioBD.setRol(loxicaPropietario.validarFindByIdPropietario(usuarioBD).getRol());
+
+                        if (loxicaPropietario.validarFindByIdPropietario(usuario).getRol().equals("Cliente") &&
+                                loxicaPropietario.validarFindByIdPropietario(usuario).getContrasinal().equals(pwd)) {
+                            System.setProperty("idUsuario", user);
+                            new XanelaCliente().setVisible(true);
+                            this.setVisible(false);
+                        }
                     }
+                } else {
+                    JOptionPane.showMessageDialog(null, "Usuario ou Contrasinal erroneo");
                 }
             } else {
-                JOptionPane.showMessageDialog (null, "Usuario ou Contrasinal demasiado cortos. Min 3 caracteres");
+                JOptionPane.showMessageDialog(null, "Usuario ou Contrasinal demasiado cortos. Min 3 caracteres");
                 return;
             }
+
         } else {
             JOptionPane.showMessageDialog(null, "Por favor complete todos os campos");
             return;

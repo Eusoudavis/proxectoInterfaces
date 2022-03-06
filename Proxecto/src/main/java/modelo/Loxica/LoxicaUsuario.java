@@ -8,6 +8,7 @@ import modelo.dao.interfaces.Interfaz;
 import modelo.vo.Usuario.Usuario;
 
 import javax.swing.*;
+import java.util.List;
 
 public class LoxicaUsuario {
     private Coordinador miCoordinador;
@@ -37,6 +38,11 @@ public class LoxicaUsuario {
 //        UsuarioDAO usuarioDAO = new UsuarioDAO();
 //        return usuarioDAO.findRol(usuario);
 //    }
+
+    public List<Usuario> validarRead(){
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        return usuarioDAO.read();
+    }
 
     public Usuario validarFindById(Usuario usuario){
         UsuarioDAO usuarioDAO = new UsuarioDAO();

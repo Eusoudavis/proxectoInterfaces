@@ -84,7 +84,6 @@ public class LocalDAO implements Interfaz<Local> {
                 locais.add(local);
             }sentenza.close();
             conexion.desconectar();
-
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -96,15 +95,12 @@ public class LocalDAO implements Interfaz<Local> {
      * @return
      */
     public Local findByName(Local local){
-
         String sql = "Select * from local where nome_local = ?";
-
         try {
             Conexion conexion = new Conexion();
             PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
             sentenza.setString(1, local.getNomeLocal());
             ResultSet resultSet = sentenza.executeQuery();
-
             if (resultSet.next()){
                 local.setIdLocal(resultSet.getInt("id_local"));
                 local.setNomeLocal(resultSet.getString("nome_local"));
@@ -115,14 +111,14 @@ public class LocalDAO implements Interfaz<Local> {
                 Concello concello = new Concello();
                 concello.setNomeConcello(resultSet.getString("nome_concello"));
                 local.setConcello(concello);
+            }else {
+                local = new Local();
             }
             sentenza.close();
             conexion.desconectar();
-
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-
         return local;
     }
 
@@ -309,6 +305,69 @@ public class LocalDAO implements Interfaz<Local> {
             }sentenza.close();
             conexion.desconectar();
 
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return locais;    }
+
+    public List<Local> readByOwner(String idPropietario) {
+        List<Local> locais = new ArrayList<>();
+        String sql = "SELECT * from local as lo " +
+                "join local_propietario as lp " +
+                "on lo.id_local = lp.id_local " +
+                "join propietario as pr " +
+                "on lp.id_propietario = pr.id_propietario " +
+                "where pr.id_propietario = ?";
+        Local local;
+        try {
+            Conexion conexion = new Conexion();
+            PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
+            sentenza.setString(1, idPropietario);
+            ResultSet resultSet = sentenza.executeQuery();
+            while (resultSet.next()){
+                local = new Local();
+                local.setIdLocal(resultSet.getInt("id_local"));
+                local.setNomeLocal(resultSet.getString("nome_local"));
+                local.setRangoPrezos(resultSet.getInt("rango_prezos"));
+                Concello concello = new Concello();
+                concello.setNomeConcello(resultSet.getString("nome_concello"));
+                local.setConcello(concello);
+                local.setRua(resultSet.getString("rua"));
+                local.setNumero(resultSet.getInt("numero"));
+                local.setTelefono(resultSet.getString("telefono"));
+                local.setEmail(resultSet.getString("email"));
+                local.setEspecialidade(resultSet.getString("especialidade"));
+                //local.getEstado(resultSet.getString("estado"));
+                // TipoLocal tipoLocal = new TipoLocal();
+                //  tipoLocal.setNomeTipo(resultSet.getString(""));
+                locais.add(local);
+
+            }sentenza.close();
+            conexion.desconectar();
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return locais;    }
+
+    public List<Local> readLocalAndPRopietarioByOwner(String idPropietario) {
+        List<Local> locais = new ArrayList<>();
+        String sql = "SELECT * from local_propietario as lp " +
+                "join propietario as pr " +
+                "on lp.id_propietario = pr.id_propietario " +
+                "where pr.id_propietario = ?";
+        Local local;
+        try {
+            Conexion conexion = new Conexion();
+            PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
+            sentenza.setString(1, idPropietario);
+            ResultSet resultSet = sentenza.executeQuery();
+            while (resultSet.next()){
+                local = new Local();
+                local.setIdLocal(resultSet.getInt("id_local"));
+                locais.add(local);
+            }sentenza.close();
+            conexion.desconectar();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

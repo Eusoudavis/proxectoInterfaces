@@ -34,6 +34,16 @@ public class LoxicaLocal {
         return localDAO.readBySpecialtyParam(local);
     }
 
+    public List<Local> validarReadPorDono(String idPropietario){
+        LocalDAO localDAO = new LocalDAO();
+        return localDAO.readByOwner(idPropietario);
+    }
+
+    public List<Local> validatereadLocalAndPRopietarioByOwner(String idPropietario){
+        LocalDAO localDAO = new LocalDAO();
+        return localDAO.readLocalAndPRopietarioByOwner(idPropietario);
+    }
+
     public Local validarFindByIdMax(Local local){
         LocalDAO localDAO = new LocalDAO();
         return localDAO.findByIdMax(local);

@@ -11,8 +11,6 @@ public class LoxicaCliente {
     private Coordinador miCoordinador;
     public static boolean modifica = false;
 
-
-
     public void validarCreateCliente(Usuario cliente){
         Interfaz clienteDAO;
         clienteDAO = new ClienteDAO();

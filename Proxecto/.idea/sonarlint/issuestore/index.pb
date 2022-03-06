@@ -3,8 +3,6 @@
 0src/main/java/modelo/vo/Produto/Ingrediente.java,1\8\18766272ef4bc4e80f0927d2a399c0e57d84f330
 n
 >src/main/java/modelo/dao/implementacion/cartaDAO/CartaDAO.java,c\f\cf6bd03379c590611c981ebb063b63fa01d8bb47
-a
-1src/main/java/modelo/dao/interfaces/Interfaz.java,9\f\9f8544a544cb57befa9b8bc3c35deda796303571
 _
 /src/main/java/modelo/Loxica/LoxicaConcello.java,d\7\d7e3df613a4ecef846b8ad94f30ef1a9828c2390
 [
@@ -19,14 +17,10 @@ e
 ,src/main/java/modelo/Loxica/LoxicaPrato.java,d\f\df2bcc6eff72e8577ba9f0a604711a84a1ada060
 v
 Fsrc/main/java/modelo/dao/implementacion/produtoDAO/IngredienteDAO.java,5\a\5a99e2c387a690e461671ba7f0be4786d2db53e8
-a
-1src/main/java/Vistas/Xanelas/DialogoRexistro.java,7\5\756dfc0bbad140dd3d28f3213337aa79ed6b9cd1
 i
 9src/main/java/modelo/dao/interfaces/InterfazReducida.java,7\e\7e5088b879d2b4150c1903c19df3377b864459ef
 Z
 *src/main/java/modelo/vo/Produto/Prato.java,6\6\6651714047e9367e5636e1209c016dec0420cdcc
-}
-Msrc/main/java/modelo/dao/implementacion/usuarioDAO/clienteDAO/ClienteDAO.java,7\a\7a616764252966ac58213b5709348ba68ffa84f2
 _
 /src/main/java/modelo/Loxica/LoxicaProducto.java,e\b\eb53b4b969539d4392c64802583a81eb05a11fd4
 a
@@ -67,8 +61,6 @@ w
 Gsrc/main/java/modelo/dao/implementacion/produtoDAO/ProdutoCartaDao.java,e\7\e7f6df9dba0722e84e98219694ea13bee36b01a0
 J
 src/main/java/help/help.hs,2\b\2b9cc4c086c340516a8bea3bccfbde9012166eb0
-_
-/src/main/java/Vistas/Xanelas/XanelaCliente.form,3\5\3553350eda5272ea08f3c85ce5af94a5ce1eaf95
 M
 src/main/java/help/indice.xml,3\4\341dfea3335d108bbb6b53ddeb797355544521de
 U

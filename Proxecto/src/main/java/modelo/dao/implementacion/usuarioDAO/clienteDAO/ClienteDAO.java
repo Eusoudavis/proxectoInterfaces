@@ -33,6 +33,10 @@ public class ClienteDAO implements Interfaz<Usuario> {
             estatuto.close();
             JOptionPane.showMessageDialog(null, "Rexistrouse Exitosamente", "Información",
                     JOptionPane.INFORMATION_MESSAGE);
+
+            String idRexistro = String.valueOf(findById(cliente).getIdUsuario());
+            JOptionPane.showMessageDialog(null, "RECORDA ACCEDER CO TEU USUARIO " + idRexistro, "Información",
+                    JOptionPane.INFORMATION_MESSAGE);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } finally {

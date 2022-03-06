@@ -354,13 +354,13 @@ public class DialogoRexistro extends javax.swing.JDialog {
      */
     private void BotonGardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonGardarActionPerformed
         try {
-            String nome = TextNome.getText();
-            String apelido1 = TextApelido.getText();
-            String apelido2 = TextApelido2.getText();
-            String rua = TextRua.getText();
+            String nome = TextNome.getText().replaceAll("\\p{Punct}", "");
+            String apelido1 = TextApelido.getText().replaceAll("\\p{Punct}", "");
+            String apelido2 = TextApelido2.getText().replaceAll("\\p{Punct}", "");
+            String rua = TextRua.getText().replaceAll("\\p{Punct}", "");
             String concelloText = String.valueOf(ComboConcello.getSelectedItem());
             int num = Integer.parseInt(TextNum.getText());
-            String telefono = TextTelf.getText();
+            String telefono = TextTelf.getText().replaceAll("\\p{Punct}", "");
             String email = TextEmail.getText();
             String contrasinal = TextContrasinal.getText();
             String rol = String.valueOf(ComboRol.getSelectedItem());
@@ -414,20 +414,19 @@ public class DialogoRexistro extends javax.swing.JDialog {
                         loxicaUsuario.validarCreateUsuario(usuarioPro);
                         loxicaPropietario.validarCreatePropietario(usuarioPro);
                         clean();
+                    }else {
+                        JOptionPane.showMessageDialog(null, "Datos introducidos non válidos");
                     }
                 }
             } else {
                 JOptionPane.showMessageDialog(null, "Selecciona un rol");
             }
 
-    }catch(
-    Exception ex)
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Error rexistrando datos", "Error", JOptionPane.ERROR_MESSAGE);
+        }
 
-    {
-        JOptionPane.showMessageDialog(null, "Error rexistrando datos", "Error", JOptionPane.ERROR_MESSAGE);
-    }
-
-}//GEN-LAST:event_BotonGardarActionPerformed
+    }//GEN-LAST:event_BotonGardarActionPerformed
 
     /**
      * Método para cerrar a ventá ao pulsar o botón
