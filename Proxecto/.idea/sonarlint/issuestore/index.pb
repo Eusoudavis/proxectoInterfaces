@@ -65,15 +65,13 @@ Z
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 a
 1src/main/java/modelo/dao/interfaces/Interfaz.java,9\f\9f8544a544cb57befa9b8bc3c35deda796303571
-_
-/src/main/java/Vistas/Xanelas/XanelaCliente.form,3\5\3553350eda5272ea08f3c85ce5af94a5ce1eaf95
 }
 Msrc/main/java/modelo/dao/implementacion/usuarioDAO/clienteDAO/ClienteDAO.java,7\a\7a616764252966ac58213b5709348ba68ffa84f2
 v
 Fsrc/main/java/modelo/dao/implementacion/usuarioDAO/PropietarioDao.java,e\4\e4beebdaead59504aeb5a32e5cd522a0c7cd9f39
-r
-Bsrc/main/java/modelo/dao/implementacion/usuarioDAO/UsuarioDAO.java,b\0\b06727cef14252ca4b6e4db95220eaadbe3773c6
 J
 src/main/java/help/help.hs,2\b\2b9cc4c086c340516a8bea3bccfbde9012166eb0
 M
 src/main/java/help/indice.xml,3\4\341dfea3335d108bbb6b53ddeb797355544521de
+^
+.src/main/java/modelo/Loxica/LoxicaUsuario.java,c\d\cd5b6632f62347c6775ecf3d49292d5614d9fa76

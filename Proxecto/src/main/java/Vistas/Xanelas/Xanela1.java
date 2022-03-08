@@ -43,19 +43,10 @@ public class Xanela1 extends javax.swing.JFrame {
 
         this.setFocusTraversalPolicy(new LayoutFocusTraversalPolicy());
 
-        Busqueda busqueda = new Busqueda();
-        busqueda.setSize(580, 70);
-        busqueda.setLocation(0, 0);
-
-        PanelBuscador.removeAll();
-        PanelBuscador.add(busqueda);
-        PanelBuscador.revalidate();
-        PanelBuscador.repaint();
     }
 
     private void load() {
         try {
-
             File file = new File("src/main/java/help/help.hs");
             URL hsURL = file.toURI().toURL();
 
@@ -93,6 +84,7 @@ public class Xanela1 extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         BotonInicioSesion = new javax.swing.JButton();
         BotonRexistro = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         PanelBuscador = new javax.swing.JPanel();
         BarraSuperior = new javax.swing.JPanel();
         btnSaida = new java.awt.Label();
@@ -167,6 +159,11 @@ public class Xanela1 extends javax.swing.JFrame {
         });
         PanelInicioRexistro.add(BotonRexistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 520, 230, 60));
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("AXUDA -> F1");
+        PanelInicioRexistro.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 0, 84, 26));
+
         bg.add(PanelInicioRexistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 0, 320, 650));
 
         PanelBuscador.setBackground(new java.awt.Color(219, 243, 255));
@@ -174,12 +171,12 @@ public class Xanela1 extends javax.swing.JFrame {
         javax.swing.GroupLayout PanelBuscadorLayout = new javax.swing.GroupLayout(PanelBuscador);
         PanelBuscador.setLayout(PanelBuscadorLayout);
         PanelBuscadorLayout.setHorizontalGroup(
-                PanelBuscadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 580, Short.MAX_VALUE)
+            PanelBuscadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 580, Short.MAX_VALUE)
         );
         PanelBuscadorLayout.setVerticalGroup(
-                PanelBuscadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 70, Short.MAX_VALUE)
+            PanelBuscadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
         );
 
         bg.add(PanelBuscador, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 580, 70));
@@ -205,11 +202,9 @@ public class Xanela1 extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnSaidaMouseClicked(evt);
             }
-
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnSaidaMouseEntered(evt);
             }
-
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 btnSaidaMouseExited(evt);
             }
@@ -218,16 +213,16 @@ public class Xanela1 extends javax.swing.JFrame {
         javax.swing.GroupLayout BarraSuperiorLayout = new javax.swing.GroupLayout(BarraSuperior);
         BarraSuperior.setLayout(BarraSuperiorLayout);
         BarraSuperiorLayout.setHorizontalGroup(
-                BarraSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(BarraSuperiorLayout.createSequentialGroup()
-                                .addComponent(btnSaida, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 539, Short.MAX_VALUE))
+            BarraSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BarraSuperiorLayout.createSequentialGroup()
+                .addComponent(btnSaida, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 539, Short.MAX_VALUE))
         );
         BarraSuperiorLayout.setVerticalGroup(
-                BarraSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(BarraSuperiorLayout.createSequentialGroup()
-                                .addComponent(btnSaida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addContainerGap())
+            BarraSuperiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BarraSuperiorLayout.createSequentialGroup()
+                .addComponent(btnSaida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         bg.add(BarraSuperior, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 40));
@@ -235,23 +230,23 @@ public class Xanela1 extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 72, 193));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("<html>\n<body>\nBENVIDO \n<br>\n WELCOME \n<br>\n BIENVENIDO\n</body>\n</html>");
+        jLabel1.setText("<html> <body> BENVIDO  <br>  WELCOME  <br>  BIENVENIDO </body> </html>");
         jLabel1.setToolTipText("");
 
         javax.swing.GroupLayout PanelCorpoLayout = new javax.swing.GroupLayout(PanelCorpo);
         PanelCorpo.setLayout(PanelCorpoLayout);
         PanelCorpoLayout.setHorizontalGroup(
-                PanelCorpoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(PanelCorpoLayout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 570, Short.MAX_VALUE)
-                                .addContainerGap())
+            PanelCorpoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelCorpoLayout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 570, Short.MAX_VALUE)
+                .addContainerGap())
         );
         PanelCorpoLayout.setVerticalGroup(
-                PanelCorpoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(PanelCorpoLayout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(194, Short.MAX_VALUE))
+            PanelCorpoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelCorpoLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(194, Short.MAX_VALUE))
         );
 
         bg.add(PanelCorpo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 580, 540));
@@ -348,11 +343,14 @@ public class Xanela1 extends javax.swing.JFrame {
                 Usuario usuarioBDProba = loxicaUsuario.validarFindById(usuario);
                 if (usuarioBDProba.getIdUsuario() != (0)) {
                     usuario.setRol(loxicaPropietario.validarFindByIdPropietario(usuario).getRol());
-                    if (loxicaPropietario.validarFindByIdPropietario(usuario).getRol().equals("Propietario") &&
-                            loxicaPropietario.validarFindByIdPropietario(usuario).getContrasinal().equals(pwd)) {
+                    if (loxicaPropietario.validarFindByIdPropietario(usuario).getRol().equals("Propietario")) {
+                           if(loxicaPropietario.validarFindByIdPropietario(usuario).getContrasinal().equals(pwd)) {
                         System.setProperty("idPropietario", user);
                         new XanelaPropietario().setVisible(true);
                         this.setVisible(false);
+                           }else {
+                               JOptionPane.showMessageDialog(null, "Usuario ou Contrasinal erroneo");
+                           }
                     } else {
                         Usuario usuarioBD = new Cliente();
                         usuarioBD.setIdUsuario(Integer.parseInt(user));
@@ -364,6 +362,8 @@ public class Xanela1 extends javax.swing.JFrame {
                             System.setProperty("idUsuario", user);
                             new XanelaCliente().setVisible(true);
                             this.setVisible(false);
+                        }else {
+                            JOptionPane.showMessageDialog(null, "Usuario ou Contrasinal erroneo");
                         }
                     }
                 } else {
@@ -373,15 +373,14 @@ public class Xanela1 extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Usuario ou Contrasinal demasiado cortos. Min 3 caracteres");
                 return;
             }
-
-//        } else {
-//            JOptionPane.showMessageDialog(null, "Por favor complete todos os campos");
-//            return;
-//        }
-        }else {
-            JOptionPane.showMessageDialog(null, "Introduce unicamente letras", "Error",
-                    JOptionPane.ERROR_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "Por favor complete todos os campos");
+            return;
         }
+//        }else {
+//            JOptionPane.showMessageDialog(null, "Introduce unicamente letras ou números", "Error",
+//                    JOptionPane.ERROR_MESSAGE);
+//        }
     }
 
     // TODO add your handling code here:
@@ -456,6 +455,7 @@ public class Xanela1 extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel infoText;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     // End of variables declaration//GEN-END:variables

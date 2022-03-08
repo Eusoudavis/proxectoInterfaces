@@ -18,7 +18,15 @@ import modelo.vo.Usuario.Usuario;
 
 import javax.swing.*;
 import java.awt.event.WindowEvent;
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.help.HelpBroker;
+import javax.help.HelpSet;
+import javax.help.HelpSetException;
 
 /**
  * Clase que representa a interface na aplicación
@@ -39,11 +47,10 @@ public class DialogoRexistro extends javax.swing.JDialog {
     public DialogoRexistro(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        load();
         ComboRol.addItem("");
         ComboRol.addItem("Cliente");
         ComboRol.addItem("Propietario");
-//        ConcelloDAO concelloDAO = new ConcelloDAO();
-//        concelloDAO.read();
 
         ComboConcello.addItem("");
         ConcelloDAO concelloDAO = new ConcelloDAO();
@@ -53,6 +60,22 @@ public class DialogoRexistro extends javax.swing.JDialog {
             ComboConcello.addItem(String.valueOf(council.getNomeConcello()));
         }
 
+    }
+     private void load() {
+        try {
+            File file = new File("src/main/java/help/help.hs");
+            URL hsURL = file.toURI().toURL();
+
+            HelpSet helpset = new HelpSet(getClass().getClassLoader(), hsURL);
+            HelpBroker hb = helpset.createHelpBroker();
+
+            hb.enableHelpKey(this.rootPane.getContentPane(), "manual", helpset);
+
+        } catch (MalformedURLException ex) {
+            Logger.getLogger(LoadHelp.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (HelpSetException ex) {
+            Logger.getLogger(LoadHelp.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public DialogoRexistro() {
@@ -71,6 +94,7 @@ public class DialogoRexistro extends javax.swing.JDialog {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         PanelEixe = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         TextNome = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -116,15 +140,25 @@ public class DialogoRexistro extends javax.swing.JDialog {
             }
         });
 
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("AXUDA -> F1");
+
         javax.swing.GroupLayout PanelEixeLayout = new javax.swing.GroupLayout(PanelEixe);
         PanelEixe.setLayout(PanelEixeLayout);
         PanelEixeLayout.setHorizontalGroup(
-                PanelEixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 520, Short.MAX_VALUE)
+            PanelEixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelEixeLayout.createSequentialGroup()
+                .addContainerGap(416, Short.MAX_VALUE)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
         PanelEixeLayout.setVerticalGroup(
-                PanelEixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 120, Short.MAX_VALUE)
+            PanelEixeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelEixeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         jPanel2.add(PanelEixe, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 120));
@@ -216,7 +250,7 @@ public class DialogoRexistro extends javax.swing.JDialog {
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 72, 193));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("N�");
+        jLabel7.setText("N�");
         jLabel7.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, 90, 40));
 
@@ -293,12 +327,12 @@ public class DialogoRexistro extends javax.swing.JDialog {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -360,70 +394,76 @@ public class DialogoRexistro extends javax.swing.JDialog {
             String rua = TextRua.getText();
             String concelloText = String.valueOf(ComboConcello.getSelectedItem());
             int num = Integer.parseInt(TextNum.getText().replaceAll("\\p{Punct}", ""));
-            String telefono = TextTelf.getText();
+            String telefono = TextTelf.getText().replaceAll("\\p{Punct}", "");
             String email = TextEmail.getText();
             String contrasinal = TextContrasinal.getText();
             String rol = String.valueOf(ComboRol.getSelectedItem());
 
             if (!rol.isEmpty() && !rol.isBlank()) {
                 if (checkStringData(nome)
-                        && checkStringData(apelido1) && checkStringData(apelido2) && checkStringData(rua) && checkStringData(telefono)){
-                if (rol.equals("Cliente")) {
-                    Usuario usuarioCli = new Cliente();
-                    if (!nome.isEmpty() && !nome.isBlank() && nome.length() > 3 &&
-                            !apelido1.isEmpty() && !apelido1.isBlank() && !apelido2.isBlank() && !apelido2.isEmpty() && !rua.isEmpty() && !rua.isBlank()
-                            && !concelloText.isBlank() && !concelloText.isEmpty() && num > 0 && !telefono.isEmpty() && !telefono.isBlank()
-                            && !email.isBlank() && !email.isEmpty() && !contrasinal.isEmpty() && !contrasinal.isBlank()) {
-                        usuarioCli.setNome(nome);
-                        usuarioCli.setApelido1(apelido1);
-                        usuarioCli.setApelido2(apelido2);
-                        usuarioCli.setRua(rua);
-                        String concello = concelloText;
-                        Concello council = new Concello();
-                        council.setNomeConcello(concello);
-                        usuarioCli.setConcello(council);
-                        usuarioCli.setNumero(num);
-                        usuarioCli.setTelefono(telefono);
-                        usuarioCli.setEmail(email);
-                        usuarioCli.setContrasinal(contrasinal);
-                        usuarioCli.setRol(rol);
-                        loxicaUsuario.validarCreateUsuario(usuarioCli);
-                        loxicaCliente.validarCreateCliente(usuarioCli);
-                        clean();
-                    } else {
-                        JOptionPane.showMessageDialog(null, "Datos introducidos non válidos");
+                        && checkStringData(apelido1)
+                        && checkStringData(apelido2)
+                        && checkStringData(rua)) {
+                    if (rol.equals("Cliente")) {
+                        Usuario usuarioCli = new Cliente();
+                        if (!nome.isEmpty() && !nome.isBlank() && nome.length() >= 3 &&
+                                !apelido1.isEmpty() && !apelido1.isBlank() && !apelido2.isBlank() && !apelido2.isEmpty() && !rua.isEmpty() && !rua.isBlank()
+                                && !concelloText.isBlank() && !concelloText.isEmpty() && num > 0 && !telefono.isEmpty() && !telefono.isBlank()
+                                && !email.isBlank() && !email.isEmpty() && !contrasinal.isEmpty() && !contrasinal.isBlank() && contrasinal.length() >= 3) {
+                            usuarioCli.setNome(nome);
+                            usuarioCli.setApelido1(apelido1);
+                            usuarioCli.setApelido2(apelido2);
+                            usuarioCli.setRua(rua);
+                            String concello = concelloText;
+                            Concello council = new Concello();
+                            council.setNomeConcello(concello);
+                            usuarioCli.setConcello(council);
+                            usuarioCli.setNumero(num);
+                            usuarioCli.setTelefono(telefono);
+                            usuarioCli.setEmail(email);
+                            usuarioCli.setContrasinal(contrasinal);
+                            usuarioCli.setRol(rol);
+                            loxicaUsuario.validarCreateUsuario(usuarioCli);
+                            loxicaCliente.validarCreateCliente(usuarioCli);
+                            clean();
+                        } else {
+                            JOptionPane.showMessageDialog(null, "Datos introducidos non válidos");
+                        }
+                    } else if (rol.equals("Propietario")) {
+                        Usuario usuarioPro = new Propietario();
+                        if (!nome.isEmpty() && !nome.isBlank() && nome.length() >= 3 &&
+                                !apelido1.isEmpty() && !apelido1.isBlank() && !apelido2.isBlank() && !apelido2.isEmpty() && !rua.isEmpty() && !rua.isBlank()
+                                && !concelloText.isBlank() && !concelloText.isEmpty() && num > 0 && !telefono.isEmpty() && !telefono.isBlank()
+                                && !email.isBlank() && !email.isEmpty() && !contrasinal.isEmpty() && !contrasinal.isBlank() && contrasinal.length() >= 3) {
+                            usuarioPro.setNome(nome);
+                            usuarioPro.setApelido1(apelido1);
+                            usuarioPro.setApelido2(apelido2);
+                            usuarioPro.setRua(rua);
+                            String concello = concelloText;
+                            Concello council = new Concello();
+                            council.setNomeConcello(concello);
+                            usuarioPro.setConcello(council);
+                            usuarioPro.setNumero(num);
+                            usuarioPro.setTelefono(telefono);
+                            usuarioPro.setEmail(email);
+                            usuarioPro.setContrasinal(contrasinal);
+                            usuarioPro.setRol(rol);
+                            loxicaUsuario.validarCreateUsuario(usuarioPro);
+                            loxicaPropietario.validarCreatePropietario(usuarioPro);
+                            clean();
+                        } else {
+                            JOptionPane.showMessageDialog(null, "Datos introducidos non válidos");
+                            JOptionPane.showMessageDialog(null, "RECORDA: NOME MIN 3 CARACTERES");
+                            JOptionPane.showMessageDialog(null, "RECORDA: PWD MIN 3 CARACTERES");
+
+
+                        }
                     }
-                } else if (rol.equals("Propietario")) {
-                    Usuario usuarioPro = new Propietario();
-                    if (!nome.isEmpty() && !nome.isBlank() && nome.length() > 3 &&
-                            !apelido1.isEmpty() && !apelido1.isBlank() && !apelido2.isBlank() && !apelido2.isEmpty() && !rua.isEmpty() && !rua.isBlank()
-                            && !concelloText.isBlank() && !concelloText.isEmpty() && num > 0 && !telefono.isEmpty() && !telefono.isBlank()
-                            && !email.isBlank() && !email.isEmpty() && !contrasinal.isEmpty() && !contrasinal.isBlank()) {
-                        usuarioPro.setNome(nome);
-                        usuarioPro.setApelido1(apelido1);
-                        usuarioPro.setApelido2(apelido2);
-                        usuarioPro.setRua(rua);
-                        String concello = concelloText;
-                        Concello council = new Concello();
-                        council.setNomeConcello(concello);
-                        usuarioPro.setConcello(council);
-                        usuarioPro.setNumero(num);
-                        usuarioPro.setTelefono(telefono);
-                        usuarioPro.setEmail(email);
-                        usuarioPro.setContrasinal(contrasinal);
-                        usuarioPro.setRol(rol);
-                        loxicaUsuario.validarCreateUsuario(usuarioPro);
-                        loxicaPropietario.validarCreatePropietario(usuarioPro);
-                        clean();
-                    }else {
-                        JOptionPane.showMessageDialog(null, "Datos introducidos non válidos");
-                    }
-                }
-            } else {
+                } else {
                     JOptionPane.showMessageDialog(null, "Introduce unicamente letras", "Error",
                             JOptionPane.ERROR_MESSAGE);
-            }
-            }else {
+                }
+            } else {
                 JOptionPane.showMessageDialog(null, "Selecciona un rol");
 
             }
@@ -532,6 +572,7 @@ public class DialogoRexistro extends javax.swing.JDialog {
     private javax.swing.JTextField TextTelf;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
