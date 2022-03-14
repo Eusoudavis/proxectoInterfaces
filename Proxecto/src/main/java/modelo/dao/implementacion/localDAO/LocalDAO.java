@@ -56,6 +56,11 @@ public class LocalDAO implements Interfaz<Local> {
         }
     }
 
+    /**
+     * Método que busca todos os locais gardados na base de datos
+     *
+     * @return devolve unha lista de locais
+     */
     @Override
     public List<Local> read() {
         List<Local> locais = new ArrayList<>();
@@ -92,10 +97,11 @@ public class LocalDAO implements Interfaz<Local> {
     }
 
     /**
-     * Método para buscar local por nome
+     * Método para buscar local por nome por parámetro
      *
-     * @param local
-     * @return
+     * @param local parámetro cos datos precisos para a búsqueda
+     *
+     * @return devolve o local que coincida coa búsqueda
      */
     public Local findByName(Local local) {
         String sql = "Select * from local where nome_local = ?";
@@ -128,8 +134,8 @@ public class LocalDAO implements Interfaz<Local> {
     /**
      * Método para buscar local por idMax
      *
-     * @param local
-     * @return
+     * @param local parámetro coa información necesaria para o utilizar o método
+     * @return devolve o local que coincida ca búsqueda
      */
     public Local findByIdMax(Local local) {
         String sql = "Select MAX(id_local) as id_local from local";
@@ -159,8 +165,8 @@ public class LocalDAO implements Interfaz<Local> {
     /**
      * Método para actualizar datos dun local
      *
-     * @param local
-     * @return
+     * @param local Parámetro cos valores necesarios para executar o método
+     * @return devolve un booleano que indica se se realizou ou non
      */
     @Override
     public boolean update(Local local) {
@@ -192,7 +198,7 @@ public class LocalDAO implements Interfaz<Local> {
     /**
      * Método para borrar un local
      *
-     * @param local
+     * @param local Parámetro cos valores necesarios para executar o método
      */
     @Override
     public void delete(Local local) {
@@ -211,6 +217,11 @@ public class LocalDAO implements Interfaz<Local> {
         }
     }
 
+    /**
+     *
+     * @param local
+     * @return
+     */
     public List<Local> readByParam(Local local) {
         List<Local> locais = new ArrayList<>();
         String sql = "Select * from local where nome_concello =? and especialidade = ?";
@@ -234,11 +245,7 @@ public class LocalDAO implements Interfaz<Local> {
                 local.setTelefono(resultSet.getString("telefono"));
                 local.setEmail(resultSet.getString("email"));
                 local.setEspecialidade(resultSet.getString("especialidade"));
-                //local.getEstado(resultSet.getString("estado"));
-                // TipoLocal tipoLocal = new TipoLocal();
-                //  tipoLocal.setNomeTipo(resultSet.getString(""));
                 locais.add(local);
-
             }
             sentenza.close();
             conexion.desconectar();
@@ -249,6 +256,11 @@ public class LocalDAO implements Interfaz<Local> {
         return locais;
     }
 
+    /**
+     *
+     * @param local
+     * @return
+     */
     public List<Local> readByCouncilParam(Local local) {
         List<Local> locais = new ArrayList<>();
         String sql = "Select * from local l where l.nome_concello =?";
@@ -271,11 +283,7 @@ public class LocalDAO implements Interfaz<Local> {
                 local.setTelefono(resultSet.getString("telefono"));
                 local.setEmail(resultSet.getString("email"));
                 local.setEspecialidade(resultSet.getString("especialidade"));
-                //local.getEstado(resultSet.getString("estado"));
-                // TipoLocal tipoLocal = new TipoLocal();
-                //  tipoLocal.setNomeTipo(resultSet.getString(""));
                 locais.add(local);
-
             }
             sentenza.close();
             conexion.desconectar();
@@ -286,10 +294,14 @@ public class LocalDAO implements Interfaz<Local> {
         return locais;
     }
 
+    /**
+     *
+     * @param local
+     * @return
+     */
     public List<Local> readBySpecialtyParam(Local local) {
         List<Local> locais = new ArrayList<>();
         String sql = "Select * from local where especialidade = ?";
-        //Local local;
         try {
             Conexion conexion = new Conexion();
             PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
@@ -308,11 +320,7 @@ public class LocalDAO implements Interfaz<Local> {
                 local.setTelefono(resultSet.getString("telefono"));
                 local.setEmail(resultSet.getString("email"));
                 local.setEspecialidade(resultSet.getString("especialidade"));
-                //local.getEstado(resultSet.getString("estado"));
-                // TipoLocal tipoLocal = new TipoLocal();
-                //  tipoLocal.setNomeTipo(resultSet.getString(""));
                 locais.add(local);
-
             }
             sentenza.close();
             conexion.desconectar();
@@ -323,6 +331,11 @@ public class LocalDAO implements Interfaz<Local> {
         return locais;
     }
 
+    /**
+     *
+     * @param idPropietario
+     * @return
+     */
     public List<Local> readByOwner(String idPropietario) {
         List<Local> locais = new ArrayList<>();
         String sql = "SELECT * from local as lo " +
@@ -350,11 +363,7 @@ public class LocalDAO implements Interfaz<Local> {
                 local.setTelefono(resultSet.getString("telefono"));
                 local.setEmail(resultSet.getString("email"));
                 local.setEspecialidade(resultSet.getString("especialidade"));
-                //local.getEstado(resultSet.getString("estado"));
-                // TipoLocal tipoLocal = new TipoLocal();
-                //  tipoLocal.setNomeTipo(resultSet.getString(""));
                 locais.add(local);
-
             }
             sentenza.close();
             conexion.desconectar();
@@ -365,6 +374,12 @@ public class LocalDAO implements Interfaz<Local> {
         return locais;
     }
 
+    /**
+     *
+     * @param idPropietario
+     * @param nomeLocal
+     * @return
+     */
     public Local readLocalAndPRopietarioByOwner(String idPropietario, String nomeLocal) {
         String sql = "SELECT * from local as lo join local_propietario as lp on lo.id_local = lp.id_local " +
                 "join propietario as pr " +
@@ -389,25 +404,4 @@ public class LocalDAO implements Interfaz<Local> {
         }
         return local;
     }
-
-//    public List<Local> findByIdMauitasCcisas(Local local){
-//        List<Local> locais = new ArrayList<>();
-//        String sql = "Select * from local where nome_concello = ? and ";
-//
-//        try {
-//            Conexion conexion = new Conexion();
-//            PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
-//            sentenza.setInt();
-//            ResultSet resultSet = sentenza.executeQuery();
-//
-//            if (resultSet.next()){
-//                local.setIdLocal(resultSet.getInt("id_local"));
-//            }sentenza.close();
-//            conexion.desconectar();
-//
-//        } catch (SQLException throwables) {
-//            throwables.printStackTrace();
-//        }
-//        return locais;
-    // }
 }

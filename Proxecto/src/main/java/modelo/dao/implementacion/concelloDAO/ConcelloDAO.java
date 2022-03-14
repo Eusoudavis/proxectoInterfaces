@@ -31,7 +31,6 @@ public class ConcelloDAO implements InterfazReducida<Concello> {
             ResultSet resultSet = sentenza.executeQuery();
             while (resultSet.next()){
                 concello = new Concello();
-             //   concello.setIdConcello(resultSet.getInt("id_concello"));
                 concello.setCodigoPostal(resultSet.getInt("codigo_postal"));
                 concello.setNomeConcello(resultSet.getString("nome_concello"));
                 concellos.add(concello);
@@ -48,11 +47,11 @@ public class ConcelloDAO implements InterfazReducida<Concello> {
     }
 
     /**
+     * Método para buscar un concello por parámetro
      *
+     * @param concello parámetro coa información necesaria para a execución do método
      *
-     *
-     * @param concello
-     * @return
+     * @return devólve o concello que coincida ca búsqueda
      */
     @Override
     public Concello findByName(Concello concello) {
@@ -66,7 +65,6 @@ public class ConcelloDAO implements InterfazReducida<Concello> {
             ResultSet resultSet = sentenza.executeQuery();
             if (resultSet.next()){
                 concello1 = new Concello();
-              //  concello1.setIdConcello(resultSet.getInt("id_concello"));
                 concello1.setCodigoPostal(resultSet.getInt("codigo_postal"));
                 concello1.setNomeConcello(resultSet.getString("nome_concello"));
             }
