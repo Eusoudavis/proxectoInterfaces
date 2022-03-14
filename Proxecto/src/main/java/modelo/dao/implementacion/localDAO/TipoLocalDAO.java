@@ -16,12 +16,11 @@ import java.util.List;
 public class TipoLocalDAO implements Interfaz<TipoLocal> {
     @Override
     public void create(TipoLocal tipoLocal) {
-
     }
 
     /**
      *Método para buscar todos os tipos de local na bbdd
-     * @return
+     * @return lista de tipos de local
      */
     @Override
     public List<TipoLocal> read() {
@@ -38,6 +37,8 @@ public class TipoLocalDAO implements Interfaz<TipoLocal> {
                 tipoLocal.setNomeTipo(resultSet.getString("nome_tipo"));
                 tipoLocalList.add(tipoLocal);
             }
+            sentenza.close();
+            conexion.desconectar();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -45,7 +46,7 @@ public class TipoLocalDAO implements Interfaz<TipoLocal> {
     }
 
     /**
-     *Método para buscar por nome
+     *Método para buscar tipos de local por nome
      * @param tipoLocal
      * @return
      */
@@ -62,6 +63,8 @@ public class TipoLocalDAO implements Interfaz<TipoLocal> {
             if (resultSet.next()){
                 tipoLocal.setIdTipoLocal(resultSet.getInt("id_tipo_local"));
             }
+            sentenza.close();
+            conexion.desconectar();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

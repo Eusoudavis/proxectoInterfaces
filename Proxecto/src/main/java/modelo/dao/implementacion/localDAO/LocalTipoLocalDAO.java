@@ -14,8 +14,8 @@ import java.util.List;
 public class LocalTipoLocalDAO implements Interfaz<LocalTipoLocal> {
 
     /**
-     *Método para realizar un insert na bbdd
-     * @param localTipoLocal
+     *Método para realizar un insert cos datos recibidos por parámetro na bbdd na táboa pertinente
+     * @param localTipoLocal parámetro recibido cos datos necesarios
      */
     @Override
     public void create(LocalTipoLocal localTipoLocal) {
@@ -25,6 +25,9 @@ public class LocalTipoLocalDAO implements Interfaz<LocalTipoLocal> {
             Statement estatuto = conexion.getConnection().createStatement();
             estatuto.executeUpdate("Insert into local_tipo_local values ("
             + localTipoLocal.getTipoLocal().getIdTipoLocal() + ", " + localTipoLocal.getLocal().getIdLocal() +");");
+
+            estatuto.close();
+            conexion.desconectar();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

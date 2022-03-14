@@ -16,8 +16,9 @@ import java.util.List;
 public class ConcelloDAO implements InterfazReducida<Concello> {
 
     /**
+     *Método para buscar todas os concellos na bbdd
      *
-     * @return
+     * @return lista de concellos
      */
     @Override
     public List<Concello> read() {
@@ -43,11 +44,12 @@ public class ConcelloDAO implements InterfazReducida<Concello> {
 
     @Override
     public Concello findById(Concello concello) {
-
         return null;
     }
 
     /**
+     *
+     *
      *
      * @param concello
      * @return

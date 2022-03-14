@@ -1,9 +1,0 @@
-
-]	java:S125!"<This block of commented-out lines of code should be removed.(νώΣ€ώÿÿÿÿ8½βΠ¥ξ/
-]	java:S125C"<This block of commented-out lines of code should be removed.(ή²ϊϊÿÿÿÿ8©’Ρ¥ξ/
-U	java:S106J"9Replace this use of System.out or System.err by a logger.(†χτ8·³όμ/
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‹ζΨ¥ϋÿÿÿÿ8Ή³όμ/
-l
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ΣΜ8Κ³όμ/
-l
-java:S2095>"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ΣΜ8Κ³όμ/

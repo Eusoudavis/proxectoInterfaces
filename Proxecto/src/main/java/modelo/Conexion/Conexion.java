@@ -9,7 +9,7 @@ import java.sql.SQLException;
  */
 public class Conexion {
     /**
-     * Atributos de clase
+     * Atributos de clase que definen a ruta da base de datos
      */
     static String bd = "proxectofinal";
     static String login = "root";
@@ -38,7 +38,7 @@ public class Conexion {
             System.out.println(e);
         }
     }
-    /**Permite retornar a conexi�n*/
+    /**Permite retornar a conexión mediante patrón de deseño singleton*/
     public Connection getConnection(){
         return conn;
     }

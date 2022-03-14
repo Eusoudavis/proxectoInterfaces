@@ -20,9 +20,9 @@ import java.util.List;
 public class LocalDAO implements Interfaz<Local> {
 
     /**
-     * Método para realizar un insert na táboa local
+     * Método para realizar un insert dos datos recibidos na táboa local da base de datos
      *
-     * @param local
+     * @param local parámetro recibido cos valores necesarios
      */
     @Override
     public void create(Local local) {

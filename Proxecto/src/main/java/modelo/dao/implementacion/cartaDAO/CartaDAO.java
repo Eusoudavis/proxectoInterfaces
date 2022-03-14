@@ -20,8 +20,8 @@ import java.util.List;
 public class CartaDAO implements Interfaz<Carta> {
 
     /**
-     *Método para crear unha carta na bbdd
-     * @param carta
+     *Método para crear unha carta na bbdd a través dos datos recibidos por parámetros
+     * @param carta obxecto que recibe
      */
     @Override
     public void create(Carta carta) {
@@ -42,8 +42,9 @@ public class CartaDAO implements Interfaz<Carta> {
     }
 
     /**
-     *Método para buscar cartas na bbdd
-     * @return
+     *Método para buscar todas as cartas na bbdd
+     *
+     * @return lista de cartas
      */
     @Override
     public List<Carta> read() {
@@ -65,9 +66,10 @@ public class CartaDAO implements Interfaz<Carta> {
     }
 
     /**
-     * Método para buscar unha carta na bbdd por id_local
-     * @param local
-     * @return
+     * Método para buscar unha carta na bbdd por id_local recibido por parámetro
+     * @param local parámetro recibido
+     * @return lista de cartas que coincidan ca búsqueda
+     *
      */
     public List<Carta> findByIdLocal(Local local){
         Carta carta = null;
@@ -97,8 +99,8 @@ public class CartaDAO implements Interfaz<Carta> {
 
     /**
      * Método para buscar unha carta na bbdd por nome
-     * @param carta
-     * @return
+     * @param carta parámetro recibido
+     *  @return Carta que coincida ca búsqueda
      */
     public Carta findByNomeCarta(Carta carta){
         String sql = "select id_carta from carta where nome_carta = ?";
@@ -122,8 +124,8 @@ public class CartaDAO implements Interfaz<Carta> {
 
     /**
      * Método para buscar unha carta na bbdd por id máximo
-     * @param carta
-     * @return
+     * @param carta parámetro recibido
+     * @return carta que coincida ca búsqueda
      */
     public Carta findByIdMax(Carta carta){
         String sql = "select MAX(id_carta) as id_carta from carta";
@@ -147,9 +149,9 @@ public class CartaDAO implements Interfaz<Carta> {
     }
 
     /**
-     *Método para buscar unha carta na bbdd
-     * @param carta
-     * @return
+     *Método para buscar unha carta na bbdd mediante id
+     * @param carta parámetro recibido
+     * @return carta que coincida ca búsqueda
      */
     @Override
     public Carta findById(Carta carta) {
