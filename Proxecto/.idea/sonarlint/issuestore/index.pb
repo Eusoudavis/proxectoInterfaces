@@ -45,12 +45,8 @@ g
 7src/main/java/modelo/Loxica/LoxicaLocalPropietario.java,c\3\c31f476837d84bf0e1bdb8087762b71b224874bb
 p
 @src/main/java/modelo/dao/implementacion/LocalPropietarioDAO.java,e\7\e7b53ffd64261e9be70d0eb487b12ff86212c2ce
-Z
-*src/main/java/Vistas/Xanelas/Busqueda.form,4\0\40de367bfc31030ff2dacc53dfce1a37897b5538
 q
 Asrc/main/java/modelo/dao/implementacion/produtoDAO/BebidaDAO.java,f\7\f76b31640e56af34a723ac4dcd5247f4cd3e5f27
-Z
-*src/main/java/Vistas/Xanelas/Busqueda.java,0\4\04e5f9988b12b91d87edf0793a6cab924e63275e
 S
 #src/main/java/modelo/vo/Estado.java,9\8\98c439dd9bc1e93db83ac6feaf96ee2422cd67aa
 X
@@ -59,10 +55,6 @@ c
 3src/main/java/modelo/Loxica/LoxicaProdutoCarta.java,6\f\6f3d75e8dafcabf4906014c9c09550514055bae7
 w
 Gsrc/main/java/modelo/dao/implementacion/produtoDAO/ProdutoCartaDao.java,e\7\e7f6df9dba0722e84e98219694ea13bee36b01a0
-Z
-*src/main/java/Vistas/Xanelas/LoadHelp.java,0\5\055254323b27c367da6890765b5f70da9ed0e8f0
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 a
 1src/main/java/modelo/dao/interfaces/Interfaz.java,9\f\9f8544a544cb57befa9b8bc3c35deda796303571
 }

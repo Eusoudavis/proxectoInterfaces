@@ -1,4 +1,4 @@
-package Vistas.Xanelas;
+package Vistas;
 
 public class LoadHelp {
 }
