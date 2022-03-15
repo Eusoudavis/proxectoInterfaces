@@ -42,7 +42,7 @@ import java.util.logging.Logger;
 public class XanelaCliente extends javax.swing.JFrame {
 
     /**
-     * Atributos de clase e instanciacións
+     * Atributos de clase e instanciaciï¿½ns
      */
     public int xMouse, yMouse;
     LoxicaPropietario loxicaPropietario = new LoxicaPropietario();
@@ -164,8 +164,6 @@ public class XanelaCliente extends javax.swing.JFrame {
         TextApelido2Cli = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         TextRuaCli = new javax.swing.JTextField();
-        jLabel34 = new javax.swing.JLabel();
-        ComboConcelloCli = new javax.swing.JComboBox<>();
         jLabel38 = new javax.swing.JLabel();
         TextNumCli = new javax.swing.JTextField();
         jLabel35 = new javax.swing.JLabel();
@@ -604,7 +602,7 @@ public class XanelaCliente extends javax.swing.JFrame {
             }
         });
 
-        jLabel9.setText("BUSCA INFORMACIÓN COMPLETA DUN LOCAL");
+        jLabel9.setText("BUSCA INFORMACION COMPLETA DUN LOCAL");
 
         javax.swing.GroupLayout PanelPri2Layout = new javax.swing.GroupLayout(PanelPri2);
         PanelPri2.setLayout(PanelPri2Layout);
@@ -643,7 +641,7 @@ public class XanelaCliente extends javax.swing.JFrame {
             }
         });
 
-        jLabel10.setText("PECHA A APLICACIÓN");
+        jLabel10.setText("PECHA A APLICACIÃ“N");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -959,13 +957,13 @@ public class XanelaCliente extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 72, 193));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("<html>\n<body>\nAGORA QUÉ VEN?\n <br>\nPOIS DEIXAR OS DATOS DE CONTACTO E UBICACION\n<br>\nFIXATE BEN XA QUE TAMEN O VERAN NOS RESULTADOS\n<br>\nDAS BUSQUEDAS. TODOS OS CAMPOS SON OBLIGATORIOS\n<br>\nSE O TEU LOCAL TEN ALGUNHA ESPECIALIDADE, ENGADEA.\n</body\n></html>");
+        jLabel17.setText("<html>\n<body>\nSE QUERES ESES DATOS NUN FICHEIRO\n <br>\nPODES BUSCAR POR LOCAL NA VISTA ANTERIOR\n<br>\nE XERA UN PDF CON TODA A INFO\n<br>\n</body\n></html>");
         jLabel17.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 72, 193));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("<html>\n<body>\nVAMOS PASIÑO PASENIÑO A PASIÑO PASENIÑO. \n <br>\n PRIMEIRO INTRODUCE OS DATOS BÁSICOS PARA \n<br>\nRELACIONAR O TEU LOCAL CONTGO\n</body\n></html>");
+        jLabel14.setText("<html> <body> BUSCA UN LOCAL POR NOME   <br>  PRIMEIRO INTRODUCE O NOME  <br>DALLE A BUSCAR </body ></html>");
         jLabel14.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         BotonBuscarUnLocal.setBackground(new java.awt.Color(204, 255, 255));
@@ -1146,19 +1144,10 @@ public class XanelaCliente extends javax.swing.JFrame {
         TextRuaCli.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         TextRuaCli.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
-        jLabel34.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel34.setForeground(new java.awt.Color(0, 72, 193));
-        jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel34.setText("CONCELLO");
-        jLabel34.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
-
-        ComboConcelloCli.setBackground(new java.awt.Color(0, 72, 193));
-        ComboConcelloCli.setForeground(new java.awt.Color(255, 255, 255));
-
         jLabel38.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(0, 72, 193));
         jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel38.setText("Nº");
+        jLabel38.setText("N");
         jLabel38.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         TextNumCli.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -1223,7 +1212,7 @@ public class XanelaCliente extends javax.swing.JFrame {
         jLabel39.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(0, 72, 193));
         jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel39.setText("<html>\n<body>\nAGORA QUÉ VEN?\n <br>\nPOIS DEIXAR OS DATOS DE CONTACTO E UBICACION\n<br>\nFIXATE BEN XA QUE TAMEN O VERAN NOS RESULTADOS\n<br>\nDAS BUSQUEDAS. TODOS OS CAMPOS SON OBLIGATORIOS\n<br>\nSE O TEU LOCAL TEN ALGUNHA ESPECIALIDADE, ENGADEA.\n</body\n></html>");
+        jLabel39.setText("<html> <body> AGORA QUÃ‰ VEN?  <br>MANEXAR OS TEUS DATOS <br> FIXATE BEN. SE VAS A MODIFICAR DATOS<br> UNICAMENTE PODES FACELO DOS <br> CAMPOS QUE APAREZAN CUBERTOS<br> TODOS ESES CAMPOS SON OBLIGATORIOS <br> </body ></html>");
         jLabel39.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         javax.swing.GroupLayout PanelTerLayout = new javax.swing.GroupLayout(PanelTer);
@@ -1242,13 +1231,9 @@ public class XanelaCliente extends javax.swing.JFrame {
                                 .addComponent(BotonBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(TextNomeCli, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(PanelTerLayout.createSequentialGroup()
-                        .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(ComboConcelloCli, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)
                         .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(TextNumCli, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(TextNumCli))
                     .addGroup(PanelTerLayout.createSequentialGroup()
                         .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
@@ -1308,12 +1293,10 @@ public class XanelaCliente extends javax.swing.JFrame {
                                 .addGroup(PanelTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(TextRuaCli, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(10, 10, 10)
-                                .addGroup(PanelTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(ComboConcelloCli, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TextNumCli, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(9, 9, 9)
+                                .addGroup(PanelTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(TextNumCli, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(10, 10, 10)
                                 .addGroup(PanelTerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1356,18 +1339,13 @@ public class XanelaCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     /**
-     * Método para navegar entre paneis
+     * Mï¿½todo para navegar entre paneis
      *
      * @param evt
      */
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
         //  TabInicial.setSelectedIndex(1);
-
-        TabInicial.setSelectedIndex(1);
-        Busqueda busqueda = new Busqueda();
-        busqueda.setSize(580, 70);
-        busqueda.setLocation(0, 0);
 
       /*  PanelBusquedaCli.removeAll();
         PanelBusquedaCli.add(busqueda);
@@ -1377,7 +1355,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
-     * Método para navegar entre paneis
+     * Mï¿½todo para navegar entre paneis
      *
      * @param evt
      */
@@ -1388,7 +1366,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
-     * Método para navegar entre paneis
+     * Mï¿½todo para navegar entre paneis
      *
      * @param evt
      */
@@ -1400,7 +1378,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
-     * Método para navegar entre paneis
+     * Mï¿½todo para navegar entre paneis
      *
      * @param evt
      */
@@ -1412,7 +1390,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
-     * Método para navegar entre paneis
+     * Mï¿½todo para navegar entre paneis
      *
      * @param evt
      */
@@ -1421,7 +1399,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelMesaMouseClicked
 
     /**
-     * Método para navegar entre paneis
+     * Mï¿½todo para navegar entre paneis
      *
      * @param evt
      */
@@ -1430,7 +1408,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelBuscarMouseClicked
 
     /**
-     * Método para navegar entre paneis
+     * Mï¿½todo para navegar entre paneis
      *
      * @param evt
      */
@@ -1439,7 +1417,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelFavMouseClicked
 
     /**
-     * Método para navegar entre paneis
+     * Mï¿½todo para navegar entre paneis
      *
      * @param evt
      */
@@ -1448,7 +1426,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelDatosCliMouseClicked
 
     /**
-     * Método para cerrar sesión
+     * Mï¿½todo para cerrar sesiï¿½n
      *
      * @param evt
      */
@@ -1460,7 +1438,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelMarchoMouseClicked
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1471,7 +1449,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_LabelBuscarMouseEntered
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1481,7 +1459,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelFavMouseEntered
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1491,7 +1469,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelDatosCliMouseEntered
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1501,7 +1479,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelMarchoMouseEntered
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1511,7 +1489,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelFixoMouseEntered
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1520,7 +1498,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelFixoMouseClicked
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1530,7 +1508,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelFixoMouseExited
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1540,7 +1518,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelBuscarMouseExited
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1550,7 +1528,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelBuscarMouseEntered
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1560,7 +1538,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelFavMouseExited
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1570,7 +1548,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelDatosCliMouseExited
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1580,20 +1558,16 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelMarchoMouseExited
 
     /**
-     * Método para navegar entre paneis
+     * Mï¿½todo para navegar entre paneis
      *
      * @param evt
      */
     private void LabelBuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LabelBuscarMouseClicked
-        TabInicial.setSelectedIndex(1);
-        Busqueda busqueda = new Busqueda();
-        busqueda.setSize(580, 70);
-        busqueda.setLocation(0, 0);
 
     }//GEN-LAST:event_LabelBuscarMouseClicked
 
     /**
-     * Método para navegar entre paneis
+     * Mï¿½todo para navegar entre paneis
      *
      * @param evt
      */
@@ -1602,7 +1576,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_LabelFavMouseClicked
 
     /**
-     * Método para navegar entre paneis
+     * Mï¿½todo para navegar entre paneis
      *
      * @param evt
      */
@@ -1611,7 +1585,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_LabelDatosCliMouseClicked
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1622,7 +1596,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelMesaMouseEntered
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1633,7 +1607,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelMesaMouseExited
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1643,7 +1617,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_LabelFavMouseEntered
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1653,7 +1627,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_LabelFavMouseExited
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1663,7 +1637,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_LabelDatosCliMouseEntered
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1673,7 +1647,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_LabelDatosCliMouseExited
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1683,7 +1657,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_LabelBuscarMouseExited
 
     /**
-     * Método para cerrar a aplicación
+     * Mï¿½todo para cerrar a aplicaciï¿½n
      *
      * @param evt
      */
@@ -1693,7 +1667,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSaidaMouseClicked
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1706,7 +1680,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSaidaMouseEntered
 
     /**
-     * Método para variar cor dun elemento
+     * Mï¿½todo para variar cor dun elemento
      *
      * @param evt
      */
@@ -1741,7 +1715,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_PanelSuperiorMousePressed
 
     /**
-     * Método para consultar os datos de usuario
+     * Mï¿½todo para consultar os datos de usuario
      *
      * @param evt
      */
@@ -1769,7 +1743,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonBuscar1ActionPerformed
 
     /**
-     * Método para limar cadros de texto
+     * Mï¿½todo para limar cadros de texto
      */
     private void cleanDatos() {
         TextNomeCli.setText(null);
@@ -1784,7 +1758,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }
 
     /**
-     * Método que chama polo cleanDatos
+     * Mï¿½todo que chama polo cleanDatos
      *
      * @param evt
      */
@@ -1793,7 +1767,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonLimparCliActionPerformed
 
     /**
-     * Método Para Actualizar os datos do cliente
+     * Mï¿½todo Para Actualizar os datos do cliente
      *
      * @param evt
      */
@@ -1841,7 +1815,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonActualizarCliActionPerformed
 
     /**
-     * Método para borrar cliente
+     * Mï¿½todo para borrar cliente
      *
      * @param evt
      */
@@ -1856,7 +1830,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonBorrarCliActionPerformed
 
     /**
-     * Método para limpar datos dos campos seleccionados
+     * Mï¿½todo para limpar datos dos campos seleccionados
      */
     public void cleanDatosLocal() {
         TextNomeLocalCli.setText(null);
@@ -1868,7 +1842,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }
 
     /**
-     * Método para navegar polos paneles do JFrame
+     * Mï¿½todo para navegar polos paneles do JFrame
      *
      * @param evt
      */
@@ -1896,10 +1870,10 @@ public class XanelaCliente extends javax.swing.JFrame {
                         JasperViewer.viewReport(jp, true);
                         JasperExportManager.exportReportToPdfFile(jp, "local.pdf");
                     } catch (ClassNotFoundException | SQLException | JRException e) {
-                        JOptionPane.showMessageDialog(null, "Ocurrió este error " + e.getMessage());
+                        JOptionPane.showMessageDialog(null, "Ocurriï¿½ este error " + e.getMessage());
                     }
                 } else {
-                    JOptionPane.showMessageDialog(null, "Nome de Local Erróneo", "Error",
+                    JOptionPane.showMessageDialog(null, "Nome de Local Errï¿½neo", "Error",
                             JOptionPane.ERROR_MESSAGE);
                 }
             } else {
@@ -1910,7 +1884,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonIrActionPerformed
 
     /**
-     * Método para minimizar a ventá
+     * Mï¿½todo para minimizar a ventï¿½
      *
      * @param evt
      */
@@ -1920,7 +1894,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMinimizaMouseClicked
 
     /**
-     * Método para cambiar cor dun elemento
+     * Mï¿½todo para cambiar cor dun elemento
      *
      * @param evt
      */
@@ -1933,7 +1907,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMinimizaMouseEntered
 
     /**
-     * Método para cambiar cor dun elemento
+     * Mï¿½todo para cambiar cor dun elemento
      *
      * @param evt
      */
@@ -2018,7 +1992,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_ComboEspecialidadelBuscActionPerformed
 
     /**
-     * Método que chama por cleanDatosLocal
+     * Mï¿½todo que chama por cleanDatosLocal
      *
      * @param evt
      */
@@ -2029,7 +2003,7 @@ public class XanelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonLimparDatosLocalActionPerformed
 
     /**
-     * Método para buscar un local
+     * Mï¿½todo para buscar un local
      *
      * @param evt
      */
@@ -2134,7 +2108,6 @@ public class XanelaCliente extends javax.swing.JFrame {
     private javax.swing.JButton BotonLimparCli;
     private javax.swing.JButton BotonLimparDatosLocal;
     private javax.swing.JComboBox<String> ComboConcelloBusc;
-    private javax.swing.JComboBox<String> ComboConcelloCli;
     private javax.swing.JComboBox<String> ComboEspecialidadelBusc;
     private javax.swing.JLabel LabelBuscar;
     private javax.swing.JLabel LabelDatosCli;
@@ -2197,7 +2170,6 @@ public class XanelaCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel38;

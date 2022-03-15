@@ -827,7 +827,7 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel40">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="PECHA A APLICACI&#xd3;N"/>
+                            <Property name="text" type="java.lang.String" value="PECHA A APLICACION"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -911,7 +911,7 @@
                           <Color blue="c1" green="48" red="0" type="rgb"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt; &lt;body&gt; AGORA PROBA ISTO  &lt;br&gt; CREA UNHA CARTA, DE COMIDAS OU BEBIDAS &lt;br&gt; E DESPOIS ENG&#xc1;DELLE OS PRODUCTOS &lt;/body &gt;&lt;/html&gt;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt; &lt;body&gt; CUBRE OS 3 PRIMEIROS CAMPOS  &lt;br&gt; GARDA A CARTA  &lt;/body &gt;&lt;/html&gt;"/>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
                             <MatteColorBorder>
@@ -1062,7 +1062,7 @@
                           <Color blue="c1" green="48" red="0" type="rgb"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;body&gt;&#xa;VALE, AGORA ISTO VAI IR AS&#xcd;&#xa; &lt;br&gt;&#xa;ELIXE UNHA DAS CARTAS QUE CREACHES&#xa;&lt;br&gt;&#xa;ENGADE OS PRODUCTOS, LISTO&#xa;&lt;/body&#xa;&gt;&lt;/html&gt;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;body&gt;&#xa;VALE, AGORA ISTO VAI IR AS&#xcd;&#xa; &lt;br&gt;&#xa;BUSCA O LOCAL ASOCIADO O TEU ID&#xa;&lt;br&gt;&#xa;ENGADE OS PRODUCTOS, LISTO&#xa;&lt;/body&#xa;&gt;&lt;/html&gt;"/>
                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                           <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
                             <MatteColorBorder>
@@ -1153,16 +1153,6 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton7">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="BORRAR"/>
-                  </Properties>
-                  <Constraints>
-                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="490" y="600" width="110" height="30"/>
-                    </Constraint>
-                  </Constraints>
-                </Component>
                 <Component class="javax.swing.JLabel" name="jLabel11">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="PREZO VENDA"/>
@@ -1242,7 +1232,7 @@
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="320" y="600" width="130" height="30"/>
+                      <AbsoluteConstraints x="380" y="600" width="130" height="30"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -2172,7 +2162,7 @@
                       <Color blue="c1" green="48" red="0" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt; &lt;body&gt;  VE&#xd1;A, XA QUEDA POUCO   &lt;br&gt; SIMPLEMENTE ENGADE DE QUE TIPO &#xc9; O TEU LOCAL E ALE &lt;br&gt; A CORRER &lt;br&gt; SE TES CARTA E A QUERES ENGADIR TAMEN PODES, FAINO &lt;/body&gt; &lt;/html&gt;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt; &lt;body&gt;  SE QUERES MODIFICAR DATOS   &lt;br&gt; BUSCA O LOCAL POR NOME &lt;br&gt;SO PODERAS CAMBIAR OS DATOS &lt;br&gt; QUE APAREZAN CUMPLIMENTADOS DA BUSQUEDA &lt;/body&gt; &lt;/html&gt;"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
                         <MatteColorBorder>

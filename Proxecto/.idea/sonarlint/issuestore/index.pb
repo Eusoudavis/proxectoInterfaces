@@ -5,14 +5,8 @@ B
 ProxectoOscar.puml,0\4\04866a2687e99b09a57f3280ff9f2bce3be2062f
 V
 &.idea/artifacts/ProxectoOscar_jar2.xml,1\9\19b48c128f2094a29b6747c0da6a17da653afaf2
-[
-+src/main/java/Vistas/XanelaPropietario.form,0\5\05494e399aa9e6d66b8f2e344ec9d2bd1cd8c1bc
 Q
 !src/main/java/Vistas/Xanela1.form,0\2\025a1c389e8a9c1a181f25ea298c6a3d8d2aa68d
-W
-'src/main/java/Vistas/XanelaCliente.form,b\c\bcc8023767c542c7c250c3e74e2c42c0b3e7fd9c
-Y
-)src/main/java/Vistas/DialogoRexistro.form,7\8\7897db6065817fae945a936c526118fdd191022f
 V
 &src/main/java/Vistas/PanelTaboaRe.form,7\c\7c4aa4855680a45a4e5175b49653dac8b89a75a7
 R
@@ -21,10 +15,6 @@ R
 "src/main/java/Vistas/LoadHelp.java,5\3\53e4160e6192d5d1b9c04377bfe5d6c154bb5149
 V
 &src/main/java/Vistas/PanelTaboaRe.java,7\4\742385ce892fcc78c85c0e4155b8b71dfcf571cb
-W
-'src/main/java/Vistas/XanelaCliente.java,6\5\658bcf29a9e3da73d0b35d8083fa93e54143f164
-[
-+src/main/java/Vistas/XanelaPropietario.java,0\8\08a876ea92e713e9229932fee5d45f75d38e2024
 S
 #src/main/java/help/html/manual.html,9\c\9c6e8ebcea86d239d0cb93581433fc2a49434a69
 J
