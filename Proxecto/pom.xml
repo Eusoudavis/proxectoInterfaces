@@ -69,6 +69,11 @@
             <artifactId>launch4j-maven-plugin</artifactId>
             <version>2.1.2</version>
         </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.11</version>
+        </dependency>
     </dependencies>
     <build>
 
@@ -153,7 +158,5 @@
 
 
         </plugins>
-        <!-- 14/03/2022-->
-
     </build>
 </project>

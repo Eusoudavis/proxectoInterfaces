@@ -12,6 +12,7 @@ import modelo.Loxica.LoxicaUsuario;
 import modelo.vo.Usuario.Cliente;
 import modelo.vo.Usuario.Propietario;
 import modelo.vo.Usuario.Usuario;
+import org.apache.commons.codec.digest.DigestUtils;
 
 import javax.help.HelpBroker;
 import javax.help.HelpSet;
@@ -332,10 +333,10 @@ public class Xanela1 extends javax.swing.JFrame {
     private void BotonInicioSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonInicioSesionActionPerformed
 
         String user = UsuarioText.getText().replaceAll("\\p{Punct}", "");
-        String pwd = ContrasinalText.getText();
+        String pwd = DigestUtils.md5Hex(String.valueOf(ContrasinalText.getPassword()));
+       // String pwd = ContrasinalText.getText();
         if (!user.equals("") && !user.isBlank() && !pwd.equals("") && !pwd.isBlank()) {
 
-          //  if (checkStringData(user)){
             if (user.length() >= 1 && pwd.length() >= 3) {
                 Usuario usuario = new Propietario();
                 usuario.setIdUsuario(Integer.parseInt(user));
@@ -377,14 +378,7 @@ public class Xanela1 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Por favor complete todos os campos");
             return;
         }
-//        }else {
-//            JOptionPane.showMessageDialog(null, "Introduce unicamente letras ou números", "Error",
-//                    JOptionPane.ERROR_MESSAGE);
-//        }
     }
-
-    // TODO add your handling code here:
-//GEN-LAST:event_BotonInicioSesionActionPerformed
 
     /**
      * Método que abre o JDialog para o rexistro

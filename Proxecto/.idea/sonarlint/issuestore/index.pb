@@ -53,10 +53,6 @@ a
 Msrc/main/java/modelo/dao/implementacion/usuarioDAO/clienteDAO/ClienteDAO.java,7\a\7a616764252966ac58213b5709348ba68ffa84f2
 v
 Fsrc/main/java/modelo/dao/implementacion/usuarioDAO/PropietarioDao.java,e\4\e4beebdaead59504aeb5a32e5cd522a0c7cd9f39
-J
-src/main/java/help/help.hs,2\b\2b9cc4c086c340516a8bea3bccfbde9012166eb0
-M
-src/main/java/help/indice.xml,3\4\341dfea3335d108bbb6b53ddeb797355544521de
 ^
 .src/main/java/modelo/Loxica/LoxicaUsuario.java,c\d\cd5b6632f62347c6775ecf3d49292d5614d9fa76
 =
@@ -79,14 +75,10 @@ R
 "src/main/java/Vistas/Busqueda.form,4\1\41cf77ae28f132ef081096791d0c71ebb85fcd36
 R
 "src/main/java/Vistas/Busqueda.java,9\7\973c544b5a3c6d555d0e10a4b5293082aa84526c
-Y
-)src/main/java/Vistas/DialogoRexistro.java,0\b\0b8b35fc6fe5d87fc8eb5ef047a7e354d6816a09
 R
 "src/main/java/Vistas/LoadHelp.java,5\3\53e4160e6192d5d1b9c04377bfe5d6c154bb5149
 V
 &src/main/java/Vistas/PanelTaboaRe.java,7\4\742385ce892fcc78c85c0e4155b8b71dfcf571cb
-Q
-!src/main/java/Vistas/Xanela1.java,f\e\fee162e909a99c9d9905156689433e4ff55e21db
 W
 'src/main/java/Vistas/XanelaCliente.java,6\5\658bcf29a9e3da73d0b35d8083fa93e54143f164
 [

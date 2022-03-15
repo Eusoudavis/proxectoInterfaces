@@ -15,6 +15,7 @@ import modelo.vo.Concello.Concello;
 import modelo.vo.Usuario.Cliente;
 import modelo.vo.Usuario.Propietario;
 import modelo.vo.Usuario.Usuario;
+import org.apache.commons.codec.digest.DigestUtils;
 
 import javax.swing.*;
 import java.awt.event.WindowEvent;
@@ -396,7 +397,8 @@ public class DialogoRexistro extends javax.swing.JDialog {
             int num = Integer.parseInt(TextNum.getText().replaceAll("\\p{Punct}", ""));
             String telefono = TextTelf.getText().replaceAll("\\p{Punct}", "");
             String email = TextEmail.getText();
-            String contrasinal = TextContrasinal.getText();
+            String contrasinal = DigestUtils.md5Hex(String.valueOf(TextContrasinal.getText()));
+            //String contrasinal = TextContrasinal.getText();
             String rol = String.valueOf(ComboRol.getSelectedItem());
 
             if (!rol.isEmpty() && !rol.isBlank()) {
