@@ -1,10 +1,9 @@
-insert into tipo_local (nome_tipo) values ("bar")
-insert into tipo_local (nome_tipo) values ("restaurante")
-insert into tipo_local (nome_tipo) values ("copas")
-insert into tipo_local (nome_tipo) values ("bodega")
-insert into tipo_local (nome_tipo) values ("cerveceria")
-insert into tipo_local (nome_tipo) values ("café")
-insert into tipo_local (nome_tipo) values ("pub")
-insert into tipo_local (nome_tipo) values ("bbarar")
-insert into tipo_local (nome_tipo) values ("bar")
+insert into tipo_local (nome_tipo) values ("bar");
+insert into tipo_local (nome_tipo) values ("restaurante");
+insert into tipo_local (nome_tipo) values ("copas");
+insert into tipo_local (nome_tipo) values ("bodega");
+insert into tipo_local (nome_tipo) values ("cerveceria");
+insert into tipo_local (nome_tipo) values ("café");
+insert into tipo_local (nome_tipo) values ("pub");
+
 

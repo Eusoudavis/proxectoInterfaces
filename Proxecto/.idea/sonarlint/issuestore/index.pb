@@ -83,3 +83,13 @@ W
 'src/main/java/Vistas/XanelaCliente.java,6\5\658bcf29a9e3da73d0b35d8083fa93e54143f164
 [
 +src/main/java/Vistas/XanelaPropietario.java,0\8\08a876ea92e713e9229932fee5d45f75d38e2024
+S
+#src/main/java/help/html/manual.html,9\c\9c6e8ebcea86d239d0cb93581433fc2a49434a69
+J
+src/main/java/help/help.hs,2\b\2b9cc4c086c340516a8bea3bccfbde9012166eb0
+J
+src/main/java/help/map.jhm,d\6\d6c3cc0dba907f85da729bc1777448e5abeea416
+T
+$src/main/java/help/tablacontidos.xml,5\4\54753f6caa7f7abf87f24d99cff96c8c7f6e4c8e
+U
+%src/main/java/help/html/instalar.html,d\c\dc6fbb28771ac407e4cc8bb00e8ea0d07ae20f1e
