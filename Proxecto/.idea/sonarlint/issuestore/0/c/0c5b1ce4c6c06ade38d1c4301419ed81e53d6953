@@ -1,15 +1,0 @@
-
-S	java:S106+"9Replace this use of System.out or System.err by a logger.(çæïÏøÿÿÿÿ
-A
-java:S11682"+Return an empty collection instead of null.(¥¹ï
-7
-java:S1116Q"Remove this empty statement.(Åñ­õşÿÿÿÿ
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(êŸß­
-]
-java:S2095u"GUse try-with-resources or close this "Statement" in a "finally" clause.(‘ö¬‹
-]
-java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(‘ö¬‹
-e
-java:S2095?"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÓÌˆ
-e
-java:S2095U"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÓÌˆ

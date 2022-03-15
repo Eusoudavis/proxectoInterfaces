@@ -1,6 +1,0 @@
-
-M
-java:S1128"2Remove this unused import 'modelo.vo.Local.Local'.(þ»€»þÿÿÿÿ
-Q
-java:S1128"6Remove this unused import 'modelo.vo.Usuario.Usuario'.(µ­Äúùÿÿÿÿ
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ï³¥Å

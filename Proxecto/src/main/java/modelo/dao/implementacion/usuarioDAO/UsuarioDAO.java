@@ -86,27 +86,6 @@ public class UsuarioDAO implements Interfaz<Usuario> {
         return usuarios;
     }
 
-//    public Usuario findRol (Usuario usuario){
-//        String sql = "Select idUsuario, rol, contrasinal from usuario where idUsuario =?";
-//        try {
-//            Conexion conexion = new Conexion();
-//            PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
-//            sentenza.setInt(1, usuario.getIdUsuario());
-//            ResultSet resultSet = sentenza.executeQuery();
-//
-//            if (resultSet.next()){
-//                usuario = new Propietario();
-//                usuario.setIdUsuario(resultSet.getInt("idUsuario"));
-//                usuario.setRol(resultSet.getString("rol"));
-//                usuario.setContrasinal(resultSet.getString("contrasinal"));
-//            }
-//        } catch (SQLException throwables) {
-//            throwables.printStackTrace();
-//        }
-//
-//        return usuario;
-//    }
-
     /**
      * Métpdp para buscar usuario por id
      *
@@ -135,11 +114,7 @@ public class UsuarioDAO implements Interfaz<Usuario> {
                     usuario.setNumero(resultSet.getInt("numero"));
                     usuario.setTelefono(resultSet.getString("telefono"));
                     usuario.setEmail(resultSet.getString("email"));
-                    // usuario.setEstado((Estado) resultSet.getObject("estado"));
                     usuario.setRol(resultSet.getString("rol"));
-//                Concello concello = new Concello();
-//                concello.setNomeConcello(resultSet.getString("nome_concello"));
-//                usuario.setConcello(concello);
                     usuario.setContrasinal(resultSet.getString("contrasinal"));
                 }
             }else {

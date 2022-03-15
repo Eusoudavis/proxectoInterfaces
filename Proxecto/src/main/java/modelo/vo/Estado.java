@@ -8,13 +8,8 @@ import lombok.Getter;
 
 @Getter
 public enum Estado {
-
 	ACTIVO,
 	SUSPENDIDO;
-
 	Estado() {
 	}
-
-
-
 }
