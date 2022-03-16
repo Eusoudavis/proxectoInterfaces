@@ -74,7 +74,6 @@ public class LocalDAO implements Interfaz<Local> {
                 local = new Local();
                 local.setIdLocal(resultSet.getInt("id_local"));
                 local.setNomeLocal(resultSet.getString("nome_local"));
-                local.setRangoPrezos(resultSet.getInt("rango_prezos"));
                 Concello concello = new Concello();
                 concello.setNomeConcello(resultSet.getString("nome_concello"));
                 local.setConcello(concello);
@@ -83,9 +82,6 @@ public class LocalDAO implements Interfaz<Local> {
                 local.setTelefono(resultSet.getString("telefono"));
                 local.setEmail(resultSet.getString("email"));
                 local.setEspecialidade(resultSet.getString("especialidade"));
-                //local.getEstado(resultSet.getString("estado"));
-                // TipoLocal tipoLocal = new TipoLocal();
-                //  tipoLocal.setNomeTipo(resultSet.getString(""));
                 locais.add(local);
             }
             sentenza.close();
@@ -236,7 +232,6 @@ public class LocalDAO implements Interfaz<Local> {
                 local = new Local();
                 local.setIdLocal(resultSet.getInt("id_local"));
                 local.setNomeLocal(resultSet.getString("nome_local"));
-                local.setRangoPrezos(resultSet.getInt("rango_prezos"));
                 Concello concello = new Concello();
                 concello.setNomeConcello(resultSet.getString("nome_concello"));
                 local.setConcello(concello);
@@ -274,7 +269,6 @@ public class LocalDAO implements Interfaz<Local> {
                 local = new Local();
                 local.setIdLocal(resultSet.getInt("id_local"));
                 local.setNomeLocal(resultSet.getString("nome_local"));
-                local.setRangoPrezos(resultSet.getInt("rango_prezos"));
                 Concello concello = new Concello();
                 concello.setNomeConcello(resultSet.getString("nome_concello"));
                 local.setConcello(concello);
@@ -311,7 +305,6 @@ public class LocalDAO implements Interfaz<Local> {
                 local = new Local();
                 local.setIdLocal(resultSet.getInt("id_local"));
                 local.setNomeLocal(resultSet.getString("nome_local"));
-                local.setRangoPrezos(resultSet.getInt("rango_prezos"));
                 Concello concello = new Concello();
                 concello.setNomeConcello(resultSet.getString("nome_concello"));
                 local.setConcello(concello);
@@ -354,7 +347,6 @@ public class LocalDAO implements Interfaz<Local> {
                 local = new Local();
                 local.setIdLocal(resultSet.getInt("id_local"));
                 local.setNomeLocal(resultSet.getString("nome_local"));
-                local.setRangoPrezos(resultSet.getInt("rango_prezos"));
                 Concello concello = new Concello();
                 concello.setNomeConcello(resultSet.getString("nome_concello"));
                 local.setConcello(concello);

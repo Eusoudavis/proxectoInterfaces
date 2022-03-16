@@ -41,8 +41,6 @@ q
 Asrc/main/java/modelo/dao/implementacion/produtoDAO/BebidaDAO.java,f\7\f76b31640e56af34a723ac4dcd5247f4cd3e5f27
 S
 #src/main/java/modelo/vo/Estado.java,9\8\98c439dd9bc1e93db83ac6feaf96ee2422cd67aa
-X
-(src/main/java/modelo/vo/Local/Local.java,e\4\e44d421713966910bf3cd29932eaec44a2f3c2aa
 c
 3src/main/java/modelo/Loxica/LoxicaProdutoCarta.java,6\f\6f3d75e8dafcabf4906014c9c09550514055bae7
 w
@@ -93,3 +91,13 @@ T
 $src/main/java/help/tablacontidos.xml,5\4\54753f6caa7f7abf87f24d99cff96c8c7f6e4c8e
 U
 %src/main/java/help/html/instalar.html,d\c\dc6fbb28771ac407e4cc8bb00e8ea0d07ae20f1e
+X
+(src/main/BBDD/ReiniciarAutoincrement.txt,6\e\6ebeebbb35dd481801f91ff514102a899bb2b7e4
+L
+src/main/BBDD/TipoBebida.txt,4\7\47dc70f70637584d2e8ff873f7dcc6f14e81aa7b
+I
+src/main/BBDD/Bebidas.txt,9\1\919d6387c98c85fe7eaba2b57c45556ad69feeae
+K
+src/main/BBDD/tipolocal.txt,f\9\f93062c4d7c12ff5e8e583ec75683169e846b089
+I
+src/main/BBDD/bbddfin.txt,d\f\dffc034e7e0b6b51e09cc0ac67b4dd4a89fffc9b

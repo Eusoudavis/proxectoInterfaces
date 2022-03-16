@@ -3,7 +3,6 @@ package modelo.vo.Local;
 import modelo.vo.Carta.Carta;
 import modelo.vo.Concello.Concello;
 import modelo.vo.Estado;
-import modelo.vo.Horario;
 import modelo.vo.Produto.Produto;
 import lombok.Data;
 import modelo.vo.Produto.ProdutoCarta;
@@ -23,8 +22,6 @@ public class Local {
 	//private TipoLocal tipo;
 	private String especialidade;
 	private Concello concello;
-	private double rangoPrezos;
-	private Horario idHorario;
 	private Estado estado;
 	/**
 	 * Array de
