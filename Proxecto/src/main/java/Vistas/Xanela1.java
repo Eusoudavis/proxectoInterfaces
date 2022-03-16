@@ -13,7 +13,6 @@ import modelo.vo.Usuario.Cliente;
 import modelo.vo.Usuario.Propietario;
 import modelo.vo.Usuario.Usuario;
 import org.apache.commons.codec.digest.DigestUtils;
-
 import javax.help.HelpBroker;
 import javax.help.HelpSet;
 import javax.help.HelpSetException;
@@ -257,9 +256,8 @@ public class Xanela1 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void UsuarioTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsuarioTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_UsuarioTextActionPerformed
+    private void UsuarioTextActionPerformed(java.awt.event.ActionEvent evt) {
+    }
 
     /**
      * Método para o control da posición da interfaz na pantalla

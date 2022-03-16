@@ -133,7 +133,7 @@
                             <classPath>
                                 <mainClass>Vistas.Xanela1</mainClass>
                             </classPath>
-                             <icon>C:\Users\dgcives.MAXIMINO\Desktop\repositorio\proxectoInterfaces\Proxecto\src\main\java\Vistas\imaxeProxecto\barbeer.ico</icon>
+                             <icon>src\main\java\Vistas\imaxeProxecto\barbeer.ico</icon>
                             <jre>
                                 <minVersion>16.0</minVersion>
                                 <maxVersion>17.0</maxVersion>

@@ -763,7 +763,7 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel9">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="BUSCA INFORMACI&#xd3;N COMPLETA DUN LOCAL"/>
+                            <Property name="text" type="java.lang.String" value="BUSCA INFORMACION COMPLETA DUN LOCAL"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -1501,7 +1501,7 @@
                       <Color blue="c1" green="48" red="0" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;body&gt;&#xa;AGORA QU&#xc9; VEN?&#xa; &lt;br&gt;&#xa;POIS DEIXAR OS DATOS DE CONTACTO E UBICACION&#xa;&lt;br&gt;&#xa;FIXATE BEN XA QUE TAMEN O VERAN NOS RESULTADOS&#xa;&lt;br&gt;&#xa;DAS BUSQUEDAS. TODOS OS CAMPOS SON OBLIGATORIOS&#xa;&lt;br&gt;&#xa;SE O TEU LOCAL TEN ALGUNHA ESPECIALIDADE, ENGADEA.&#xa;&lt;/body&#xa;&gt;&lt;/html&gt;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;body&gt;&#xa;SE QUERES ESES DATOS NUN FICHEIRO&#xa; &lt;br&gt;&#xa;PODES BUSCAR POR LOCAL NA VISTA ANTERIOR&#xa;&lt;br&gt;&#xa;E XERA UN PDF CON TODA A INFO&#xa;&lt;br&gt;&#xa;&lt;/body&#xa;&gt;&lt;/html&gt;"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
                         <MatteColorBorder>
@@ -1520,7 +1520,7 @@
                       <Color blue="c1" green="48" red="0" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;body&gt;&#xa;VAMOS PASI&#xd1;O PASENI&#xd1;O A PASI&#xd1;O PASENI&#xd1;O. &#xa; &lt;br&gt;&#xa; PRIMEIRO INTRODUCE OS DATOS B&#xc1;SICOS PARA &#xa;&lt;br&gt;&#xa;RELACIONAR O TEU LOCAL CONTGO&#xa;&lt;/body&#xa;&gt;&lt;/html&gt;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt; &lt;body&gt; BUSCA UN LOCAL POR NOME   &lt;br&gt;  PRIMEIRO INTRODUCE O NOME  &lt;br&gt;DALLE A BUSCAR &lt;/body &gt;&lt;/html&gt;"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
                         <MatteColorBorder>
@@ -1617,13 +1617,9 @@
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel34" min="-2" pref="90" max="-2" attributes="0"/>
-                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                  <Component id="ComboConcelloCli" min="-2" pref="110" max="-2" attributes="0"/>
-                                  <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
                                   <Component id="jLabel38" min="-2" pref="90" max="-2" attributes="0"/>
-                                  <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                  <Component id="TextNumCli" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="TextNumCli" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel35" min="-2" pref="90" max="-2" attributes="0"/>
@@ -1697,12 +1693,10 @@
                                               <Component id="jLabel6" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
                                               <Component id="TextRuaCli" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel34" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
-                                              <Component id="ComboConcelloCli" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
-                                              <Component id="jLabel38" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
-                                              <Component id="TextNumCli" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="TextNumCli" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                                              <Component id="jLabel38" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
@@ -1887,41 +1881,6 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel34">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Tahoma" size="14" style="1"/>
-                    </Property>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="c1" green="48" red="0" type="rgb"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="CONCELLO"/>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                        <MatteColorBorder>
-                          <Color PropertyName="color" blue="c1" green="48" red="0" type="rgb"/>
-                        </MatteColorBorder>
-                      </Border>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JComboBox" name="ComboConcelloCli">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="c1" green="48" red="0" type="rgb"/>
-                    </Property>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                    </Property>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="0"/>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
                 <Component class="javax.swing.JLabel" name="jLabel38">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -1931,7 +1890,7 @@
                       <Color blue="c1" green="48" red="0" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="N&#xba;"/>
+                    <Property name="text" type="java.lang.String" value="N"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
                         <MatteColorBorder>
@@ -2098,7 +2057,7 @@
                       <Color blue="c1" green="48" red="0" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;&lt;body&gt;&#xa;AGORA QU&#xc9; VEN?&#xa; &lt;br&gt;&#xa;POIS DEIXAR OS DATOS DE CONTACTO E UBICACION&#xa;&lt;br&gt;&#xa;FIXATE BEN XA QUE TAMEN O VERAN NOS RESULTADOS&#xa;&lt;br&gt;&#xa;DAS BUSQUEDAS. TODOS OS CAMPOS SON OBLIGATORIOS&#xa;&lt;br&gt;&#xa;SE O TEU LOCAL TEN ALGUNHA ESPECIALIDADE, ENGADEA.&#xa;&lt;/body&#xa;&gt;&lt;/html&gt;"/>
+                    <Property name="text" type="java.lang.String" value="&lt;html&gt; &lt;body&gt; AGORA QU&#xc9; VEN?  &lt;br&gt;MANEXAR OS TEUS DATOS &lt;br&gt; FIXATE BEN. SE VAS A MODIFICAR DATOS&lt;br&gt; UNICAMENTE PODES FACELO DOS &lt;br&gt; CAMPOS QUE APAREZAN CUBERTOS&lt;br&gt; TODOS ESES CAMPOS SON OBLIGATORIOS &lt;br&gt; &lt;/body &gt;&lt;/html&gt;"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
                         <MatteColorBorder>

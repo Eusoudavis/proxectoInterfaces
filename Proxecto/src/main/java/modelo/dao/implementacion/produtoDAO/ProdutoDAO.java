@@ -203,21 +203,6 @@ public class ProdutoDAO implements InterfazProduto<Produto> {
 
     @Override
     public Produto findById(Produto produto) {
-//        String sql = "SELECT * FROM produto WHERE id_produto = ?";
-//
-//        try {
-//            Conexion conexion = new Conexion();
-//            PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
-//            sentenza.setInt(1, produto.getId());
-//            ResultSet resultSet = sentenza.executeQuery();
-//
-//            if (resultSet.next()){
-//                produto = new Produto() {
-//                }
-//            }
-//        } catch (SQLException throwables) {
-//            throwables.printStackTrace();
-//        }
         return null;
     }
 

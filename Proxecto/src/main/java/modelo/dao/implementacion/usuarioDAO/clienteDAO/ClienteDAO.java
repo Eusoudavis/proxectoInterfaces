@@ -27,7 +27,6 @@ public class ClienteDAO implements Interfaz<Usuario> {
         Conexion conexion = new Conexion();
         try {
             Statement estatuto = conexion.getConnection().createStatement();
-            //  findById(propietario);
             estatuto.executeUpdate("Insert into cliente Values ("
                     +cliente.getIdUsuario() + ")");
             estatuto.close();
@@ -76,11 +75,7 @@ public class ClienteDAO implements Interfaz<Usuario> {
                 usuario.setNumero(resultSet.getInt("numero"));
                 usuario.setTelefono(resultSet.getString("telefono"));
                 usuario.setEmail(resultSet.getString("email"));
-                //usuario.setEstado((Estado) resultSet.getObject("estado"));
                 usuario.setRol(resultSet.getString("rol"));
-//                Concello concello = new Concello();
-//                concello.setNomeConcello(resultSet.getString("nome_concello"));
-//                usuario.setConcello(concello);
                 usuario.setContrasinal(resultSet.getString("contrasinal"));
             }
         } catch (SQLException throwables) {
@@ -101,7 +96,6 @@ public class ClienteDAO implements Interfaz<Usuario> {
         Conexion conexion = new Conexion();
         try {
             PreparedStatement sentenza = conexion.getConnection().prepareStatement(sql);
-            //sentenza.setInt(1, usuario.getIdUsuario());
             ResultSet resultSet = sentenza.executeQuery();
 
             if (resultSet.next()){

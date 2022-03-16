@@ -53,8 +53,8 @@ public class ProdutoCartaDao implements Interfaz<ProdutoCarta> {
                 produtoCarta.setEncargo(resultSet.getBoolean("encargo"));
                 produtoCarta.setEspecialidade(resultSet.getBoolean("especialidade"));
             }
-          //  sentenza.close();
-           // conexion.desconectar();
+            sentenza.close();
+            conexion.desconectar();
         } catch (SQLException throwables) {
             produtoCarta = null;
             throwables.printStackTrace();

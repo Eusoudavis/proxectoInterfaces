@@ -258,7 +258,6 @@ public class XanelaPropietario extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         ComboTipoBebidas = new javax.swing.JComboBox<>();
-        jButton7 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         ComboIngrediente = new javax.swing.JComboBox<>();
@@ -806,7 +805,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
             }
         });
 
-        jLabel40.setText("PECHA A APLICACI”N");
+        jLabel40.setText("PECHA A APLICACION");
 
         javax.swing.GroupLayout PanelChauLayout = new javax.swing.GroupLayout(PanelChau);
         PanelChau.setLayout(PanelChauLayout);
@@ -894,7 +893,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         LabelInfoCarta.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         LabelInfoCarta.setForeground(new java.awt.Color(0, 72, 193));
         LabelInfoCarta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LabelInfoCarta.setText("<html> <body> AGORA PROBA ISTO  <br> CREA UNHA CARTA, DE COMIDAS OU BEBIDAS <br> E DESPOIS ENG¡DELLE OS PRODUCTOS </body ></html>");
+        LabelInfoCarta.setText("<html> <body> CUBRE OS 3 PRIMEIROS CAMPOS  <br> GARDA A CARTA  </body ></html>");
         LabelInfoCarta.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         javax.swing.GroupLayout PanelInfoCartaLayout = new javax.swing.GroupLayout(PanelInfoCarta);
@@ -959,7 +958,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         LabelInfoCalCarta.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         LabelInfoCalCarta.setForeground(new java.awt.Color(0, 72, 193));
         LabelInfoCalCarta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LabelInfoCalCarta.setText("<html>\n<body>\nVALE, AGORA ISTO VAI IR ASÕ\n <br>\nELIXE UNHA DAS CARTAS QUE CREACHES\n<br>\nENGADE OS PRODUCTOS, LISTO\n</body\n></html>");
+        LabelInfoCalCarta.setText("<html>\n<body>\nVALE, AGORA ISTO VAI IR AS√ç\n <br>\nBUSCA O LOCAL ASOCIADO O TEU ID\n<br>\nENGADE OS PRODUCTOS, LISTO\n</body\n></html>");
         LabelInfoCalCarta.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -1000,9 +999,6 @@ public class XanelaPropietario extends javax.swing.JFrame {
         ComboTipoBebidas.setForeground(new java.awt.Color(219, 243, 255));
         PanelSeg.add(ComboTipoBebidas, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 400, 310, 30));
 
-        jButton7.setText("BORRAR");
-        PanelSeg.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 600, 110, 30));
-
         jLabel11.setText("PREZO VENDA");
         PanelSeg.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 370, 110, 20));
 
@@ -1025,7 +1021,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
                 BotonSaveCartProActionPerformed(evt);
             }
         });
-        PanelSeg.add(BotonSaveCartPro, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 600, 130, 30));
+        PanelSeg.add(BotonSaveCartPro, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 600, 130, 30));
 
         ComboCarta.setBackground(new java.awt.Color(0, 72, 193));
         ComboCarta.setForeground(new java.awt.Color(255, 255, 255));
@@ -1239,19 +1235,19 @@ public class XanelaPropietario extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 72, 193));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("<html>\n<body>\nVAMOS PASI—O PASENI—O A PASI—O PASENI—O. \n <br>\n PRIMEIRO INTRODUCE OS DATOS B¡SICOS PARA \n<br>\nRELACIONAR O TEU LOCAL CONTGO\n</body\n></html>");
+        jLabel14.setText("<html>\n<body>\nVAMOS PASI√ëO PASENI√ëO A PASI√ëO PASENI√ëO. \n <br>\n PRIMEIRO INTRODUCE OS DATOS B√ÅSICOS PARA \n<br>\nRELACIONAR O TEU LOCAL CONTGO\n</body\n></html>");
         jLabel14.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 72, 193));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("<html>\n<body>\nAGORA QU… VEN?\n <br>\nPOIS DEIXAR OS DATOS DE CONTACTO E UBICACION\n<br>\nFIXATE BEN XA QUE TAMEN O VERAN NOS RESULTADOS\n<br>\nDAS BUSQUEDAS. TODOS OS CAMPOS SON OBLIGATORIOS\n<br>\nSE O TEU LOCAL TEN ALGUNHA ESPECIALIDADE, ENGADEA.\n</body\n></html>");
+        jLabel17.setText("<html>\n<body>\nAGORA QU√â VEN?\n <br>\nPOIS DEIXAR OS DATOS DE CONTACTO E UBICACION\n<br>\nFIXATE BEN XA QUE TAMEN O VERAN NOS RESULTADOS\n<br>\nDAS BUSQUEDAS. TODOS OS CAMPOS SON OBLIGATORIOS\n<br>\nSE O TEU LOCAL TEN ALGUNHA ESPECIALIDADE, ENGADEA.\n</body\n></html>");
         jLabel17.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(0, 72, 193));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel18.setText("<html> <body>  VE—A, XA QUEDA POUCO   <br> SIMPLEMENTE ENGADE DE QUE TIPO … O TEU LOCAL E ALE <br> A CORRER <br> SE TES CARTA E A QUERES ENGADIR TAMEN PODES, FAINO </body> </html>");
+        jLabel18.setText("<html> <body>  SE QUERES MODIFICAR DATOS   <br> BUSCA O LOCAL POR NOME <br>SO PODERAS CAMBIAR OS DATOS <br> QUE APAREZAN CUMPLIMENTADOS DA BUSQUEDA </body> </html>");
         jLabel18.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         BotonGardarLocal.setBackground(new java.awt.Color(204, 255, 255));
@@ -1449,7 +1445,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
                 .addContainerGap(105, Short.MAX_VALUE))
         );
 
-        jLabel14.getAccessibleContext().setAccessibleName("VAMOS PASI—O PASENI—O A PASI—O PASENI—O. \n");
+        jLabel14.getAccessibleContext().setAccessibleName("VAMOS PASI√ëO PASENI√ëO A PASI√ëO PASENI√ëO. \n");
 
         TabInicialPro.addTab("tab3", PanelTer);
 
@@ -1515,7 +1511,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         jLabel38.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(0, 72, 193));
         jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel38.setText("N∫");
+        jLabel38.setText("N¬∫");
         jLabel38.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         ComboConcello.setBackground(new java.awt.Color(0, 72, 193));
@@ -1583,7 +1579,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
         jLabel39.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(0, 72, 193));
         jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel39.setText("<html>\n<body>\nAGORA QU… VEN?\n <br>\nPOIS DEIXAR OS DATOS DE CONTACTO E UBICACION\n<br>\nFIXATE BEN XA QUE TAMEN O VERAN NOS RESULTADOS\n<br>\nDAS BUSQUEDAS. TODOS OS CAMPOS SON OBLIGATORIOS\n<br>\nSE O TEU LOCAL TEN ALGUNHA ESPECIALIDADE, ENGADEA.\n</body\n></html>");
+        jLabel39.setText("<html>\n<body>\nAGORA QU√â VEN?\n <br>\nPOIS DEIXAR OS DATOS DE CONTACTO E UBICACION\n<br>\nFIXATE BEN XA QUE TAMEN O VERAN NOS RESULTADOS\n<br>\nDAS BUSQUEDAS. TODOS OS CAMPOS SON OBLIGATORIOS\n<br>\nSE O TEU LOCAL TEN ALGUNHA ESPECIALIDADE, ENGADEA.\n</body\n></html>");
         jLabel39.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 72, 193)));
 
         javax.swing.GroupLayout PanelCuarLayout = new javax.swing.GroupLayout(PanelCuar);
@@ -2466,7 +2462,7 @@ public class XanelaPropietario extends javax.swing.JFrame {
                 TextTelfLocal.setText(local.getTelefono());
                 TextEmailLocal.setText(local.getEmail());
             } else {
-                JOptionPane.showMessageDialog(null, "NOME DE LOCAL ERR”NEO", "Error",
+                JOptionPane.showMessageDialog(null, "NOME DE LOCAL ERRÔøΩNEO", "Error",
                         JOptionPane.INFORMATION_MESSAGE);
             }
         } else {
@@ -2834,7 +2830,6 @@ public class XanelaPropietario extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

@@ -1,6 +1,5 @@
 package modelo.Loxica;
 
-import Controlador.Coordinador;
 import modelo.dao.implementacion.cartaDAO.CartaDAO;
 import modelo.vo.Carta.Carta;
 import modelo.vo.Local.Local;
@@ -11,25 +10,24 @@ import java.util.List;
  * Clase que representa a LoxicaCarta na aplicación
  */
 public class LoxicaCarta {
-    private Coordinador miCoordinador;
-    public static boolean modifica = false;
-    public List<Carta> validarFindByIdLocal(Local local){
+
+    public List<Carta> validarFindByIdLocal(Local local) {
         CartaDAO cartaDAO = new CartaDAO();
         return cartaDAO.findByIdLocal(local);
     }
 
-    public  Carta validarBuscarPorNome(Carta carta){
+    public Carta validarBuscarPorNome(Carta carta) {
         CartaDAO cartaDAO = new CartaDAO();
         return cartaDAO.findByNomeCarta(carta);
     }
 
-    public void validarCreate(Carta carta){
+    public void validarCreate(Carta carta) {
         CartaDAO cartaDAO = new CartaDAO();
         cartaDAO.create(carta);
     }
 
-    public Carta validarFindIdMax(Carta carta){
+    public Carta validarFindIdMax(Carta carta) {
         CartaDAO cartaDAO = new CartaDAO();
-       return cartaDAO.findByIdMax(carta);
+        return cartaDAO.findByIdMax(carta);
     }
 }
